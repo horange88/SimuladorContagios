@@ -1,5 +1,6 @@
 package com.ingSoft.simulador;
 
+
 import java.util.ArrayList;
 
 
@@ -108,13 +109,13 @@ public class Poblacion implements Subject {
 	}
 	
 	@Override
-	public void atachObserver(Object o) {
+	public void atachObserver(Observer o) {
 		// TODO Auto-generated method stub
 		observers.add(o);
 		
 	}
 	@Override
-	public void detachObserver(Object o) {
+	public void detachObserver(Observer o) {
 		int i = observers.lastIndexOf(o);
 		if (i>=0) {
 			
