@@ -1,21 +1,21 @@
 package com.ingSoft.simulador;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.Assert.*;
 
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 
-class PersonaTest {
+public class PersonaTest {
 
 	@Test
-	void testVelocidadCalculaaDebeSerCero() {
+	public void testVelocidadCalculaaDebeSerCero() {
 		Area a = new Area(100,100);
 		Persona p = new Persona(a);
 		p.calcularVelocidad();
-		assertEquals(0, p.getVel().getVelx(), "La velocidad debe ser 0");
-		assertEquals(0, p.getVel().getVely(), "La velocidad debe ser 0");
+		assertEquals(0, p.getVel().getVelx());
+		assertEquals(0, p.getVel().getVely());
 	}
 	
-	void testVelocidadCalculadaDebeCumplirLimites() {
+	public void testVelocidadCalculadaDebeCumplirLimites() {
 		Area a = new Area(100,100);
 		Persona p = new Persona(a);
 		int m =10;
@@ -31,7 +31,7 @@ class PersonaTest {
 	}
 
 	@Test
-	void testMover() {
+	public void testMover() {
 		Area a = new Area(100,100);
 		Persona p = new Persona(a);
 		p.getPos().setPosx(0);
@@ -40,13 +40,13 @@ class PersonaTest {
 		p.getVel().setVely(10);
 		p.mover();
 		
-		assertEquals(15, p.getPos().getPosx(), "La posición x debe ser 15");
-		assertEquals(10, p.getPos().getPosy(), "La posición y debe ser 10");
+		assertEquals(15, p.getPos().getPosx());
+		assertEquals(10, p.getPos().getPosy());
 
 	}
 	
 	@Test
-	void testNoExcederLimitesArea() {
+	public void testNoExcederLimitesArea() {
 		Area a = new Area(100,100);
 		Persona p = new Persona(a);
 		p.getPos().setPosx(10);
@@ -55,8 +55,8 @@ class PersonaTest {
 		p.getVel().setVely(-10);
 		p.mover();
 		
-		assertEquals(10, p.getPos().getPosx(), "La posición x debe ser 10");
-		assertEquals(0, p.getPos().getPosy(), "La posición y debe ser 0");
+		assertEquals(10, p.getPos().getPosx());
+		assertEquals(0, p.getPos().getPosy());
 		
 		p.getPos().setPosx(95);
 		p.getPos().setPosy(97);
@@ -64,21 +64,21 @@ class PersonaTest {
 		p.getVel().setVely(10);
 		p.mover();
 		
-		assertEquals(95, p.getPos().getPosx(), "La posición x debe ser 95");
-		assertEquals(97, p.getPos().getPosy(), "La posición y debe ser 97");
+		assertEquals(95, p.getPos().getPosx());
+		assertEquals(97, p.getPos().getPosy());
 
 	}
 
 	@Test
-	void testEnfermar() {
+	public void testEnfermar() {
 		Persona p = new Persona();
 		p.enfermar();
-		assertEquals(Estados.Enfermo, p.getEstado(), "La persona debe enfermar");
+		assertEquals(Estados.Enfermo, p.getEstado());
 		
 	}
 
 	@Test
-	void testEvolucionarEnfermedad() {
+	public void testEvolucionarEnfermedad() {
 		Persona p = new Persona();
 		p.setDuracionEnfermedad(100);
 		p.evolucionarEnfermedad();
@@ -90,7 +90,7 @@ class PersonaTest {
 	}
 	
 	@Test
-	void testEvolucionarEnfermedadNoDeberiaSerNegativo() {
+	public void testEvolucionarEnfermedadNoDeberiaSerNegativo() {
 		Persona p = new Persona();
 		p.setDuracionEnfermedad(0);
 		p.evolucionarEnfermedad();
@@ -98,7 +98,7 @@ class PersonaTest {
 	}
 
 	@Test
-	void testFinEnfermedad() {
+	public void testFinEnfermedad() {
 		Persona p = new Persona();
 		p.setDuracionEnfermedad(10);
 		assertFalse(p.finEnfermedad());
@@ -107,21 +107,21 @@ class PersonaTest {
 	}
 
 	@Test
-	void testRecuperar() {
+	public void testRecuperar() {
 		Persona p = new Persona();
 		p.recuperar();
-		assertEquals(Estados.Recuperado, p.getEstado(), "La persona debe recuperarse");
+		assertEquals(Estados.Recuperado, p.getEstado());
 	}
 
 	@Test
-	void testMorir() {
+	public void testMorir() {
 		Persona p = new Persona();
 		p.morir();
-		assertEquals(Estados.Muerto, p.getEstado(), "La persona debe recuperarse");
+		assertEquals(Estados.Muerto, p.getEstado());
 	}
 
 	@Test
-	void testDebeMorir() {
+	public void testDebeMorir() {
 		Persona p = new Persona();
 		p.setMortalidad(1);
 		for(int i=0;i<100;i++) {

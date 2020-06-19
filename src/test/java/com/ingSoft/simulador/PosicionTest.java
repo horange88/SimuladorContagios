@@ -1,13 +1,12 @@
 package com.ingSoft.simulador;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.Assert.*;
 
-import org.junit.jupiter.api.Test;
-
-class PosicionTest {
+import org.junit.Test;
+public class PosicionTest {
 
 	@Test
-	void testPosicionArea() {
+	public void testPosicionArea() {
 		int ancho =10;
 		int alto =20;
 		Area a = new Area(ancho, alto);
@@ -20,7 +19,7 @@ class PosicionTest {
 	}
 
 	@Test
-	void testMover() {
+	public void testMover() {
 		Area a = new Area(100,80);
 		Posicion p= new Posicion(a);
 		Velocidad v = new Velocidad();
@@ -30,12 +29,12 @@ class PosicionTest {
 		v.setVely(10);
 		p.mover(v);
 		
-		assertEquals(15, p.getPosx(), "La posición x debe ser 15");
-		assertEquals(10, p.getPosy(), "La posición y debe ser 10");
+		assertEquals(15, p.getPosx());
+		assertEquals(10, p.getPosy());
 	}
 	
 	@Test
-	void testMoverNoDebeExcederLimites() {
+	public void testMoverNoDebeExcederLimites() {
 		Area a = new Area(100,80);
 		Posicion p= new Posicion(a);
 		Velocidad v = new Velocidad();
@@ -45,8 +44,8 @@ class PosicionTest {
 		v.setVely(-10);
 		p.mover(v);
 		
-		assertEquals(0, p.getPosx(), "La posición x debe ser 0");
-		assertEquals(0, p.getPosy(), "La posición y debe ser 0");
+		assertEquals(0, p.getPosx());
+		assertEquals(0, p.getPosy());
 		
 		p.setPosx(90);
 		p.setPosy(90);
@@ -54,8 +53,8 @@ class PosicionTest {
 		v.setVely(30);
 		p.mover(v);
 		
-		assertEquals(90, p.getPosx(), "La posición x debe ser 90");
-		assertEquals(90, p.getPosy(), "La posición y debe ser 90");
+		assertEquals(90, p.getPosx());
+		assertEquals(90, p.getPosy());
 	}
 
 }

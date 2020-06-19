@@ -1,13 +1,12 @@
 package com.ingSoft.simulador;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.Assert.*;
 
-import org.junit.jupiter.api.Test;
-
-class SimuladorTest {
+import org.junit.Test;
+public class SimuladorTest {
 
 	@Test
-	void testTodoseberianMorir() {
+	public void testTodoseberianMorir() {
 		Area a = new Area(10,10);
 		Poblacion p= new Poblacion(a,10,10);
 		Simulador s = new Simulador(a,p);
@@ -22,7 +21,7 @@ class SimuladorTest {
 	}
 	
 	@Test
-	void testTodoseberianRecuperarse() {
+	public void testTodoseberianRecuperarse() {
 		Area a = new Area(10,10);
 		Poblacion p= new Poblacion(a,10,10);
 		Simulador s = new Simulador(a,p);
@@ -37,7 +36,7 @@ class SimuladorTest {
 	}
 
 	@Test
-	void testTransmitirATodos() {
+	public void testTransmitirATodos() {
 		// fail("Not yet implemented");
 		Area a = new Area(10,10);
 		Poblacion p= new Poblacion(a,10,1);
@@ -51,7 +50,7 @@ class SimuladorTest {
 	}
 	
 	@Test
-	void testTransmitirANadie() {
+	public void testTransmitirANadie() {
 		// fail("Not yet implemented");
 		Area a = new Area(10,10);
 		Poblacion p= new Poblacion(a,10,1);
@@ -71,7 +70,7 @@ class SimuladorTest {
 	}
 
 	@Test
-	void testEstanCerca() {
+	public void testEstanCerca() {
 		Persona p1 = new Persona();
 		Persona p2 = new Persona();
 		p1.getPos().setPosx(0);
@@ -92,7 +91,7 @@ class SimuladorTest {
 	}
 
 	@Test
-	void testDibujar() {
+	public void testDibujar() {
 		// fail("Not yet implemented");
 	}
 
