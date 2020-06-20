@@ -1,6 +1,5 @@
 package com.ingSoft.simulador;
 
-import java.awt.Color;
 import java.util.ArrayList;
 
 public class Simulador {
@@ -140,29 +139,7 @@ public class Simulador {
 	}
 
 	public void dibujar() {
-		for (Persona sano : poblacion.getSanas()) {
-			visor.agregarCirculo(sano, ColoresEstados.colorSano, sano.getPos().getPosx(), sano.getPos().getPosy(), 10);
-		}
-		for (Persona enfermo : poblacion.getEnfermas()) {
-			visor.agregarCirculo(enfermo, ColoresEstados.colorEnfermo, enfermo.getPos().getPosx(),
-					enfermo.getPos().getPosy(), 10);
 
-		}
-		for (Persona recuperado : poblacion.getRecuperadas()) {
-			visor.agregarCirculo(recuperado, ColoresEstados.colorRecuperado, recuperado.getPos().getPosx(),
-					recuperado.getPos().getPosy(), 10);
-		}
-		for (Persona muerto : poblacion.getMuertas()) {
-			visor.agregarCirculo(muerto, ColoresEstados.colorMuerto, muerto.getPos().getPosx(),
-					muerto.getPos().getPosy(), 10);
-		}
-		visor.redibujar();
-		try {
-
-			Thread.sleep(10);
-		} catch (Exception e) {
-
-		}
 
 	}
 
