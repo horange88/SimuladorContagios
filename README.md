@@ -17,14 +17,16 @@ El archivo simulador.jar es un archivo de tipo ejecutable que  da inicio el prog
 https://drive.google.com/drive/folders/19ubgpriPBDchA6j1QlIhXV7PuHbEBm-b?usp=sharing
 
 # Licencia 
-Este proyecto está bajo la Licencia XXX
+Este proyecto está bajo la Licencia GPL
 
 # Herramientas:
-GitHub - control de versiones y gestion de deefectos
+GitHub - control de versiones y gestion de defectos
 
 Circlci - integracion continua
 
-Maven - gestion de proyectos
+Maven - gestion de tareas
+
+JUnit - pruebas unitarias
 
 # Autores:
 Rueda Horacio
