@@ -25,8 +25,6 @@ public class Simulador {
 		poblacion = p;
 		radioContagio = 0;
 		mortalidad = 0;
-		visor = VisorSimulador.getVisor();
-		visor.setArea(a);
 	}
 
 	public VisorSimulador getVisor() {
@@ -35,6 +33,7 @@ public class Simulador {
 
 	public void setVisor(VisorSimulador visor) {
 		this.visor = visor;
+		visor.setArea(area);
 	}
 
 	public Poblacion getPoblacion() {

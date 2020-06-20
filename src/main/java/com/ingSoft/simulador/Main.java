@@ -9,6 +9,7 @@ public class Main {
 		Poblacion p = new Poblacion(area, 150,10);
 		Log log = new Log();
 		Simulador simulador = new Simulador(area,p);
+		simulador.setVisor(VisorSimulador.getVisor());
 		simulador.setMortalidad((float) 0.1);
 		simulador.setMovilidad(3);
 		simulador.setDuracionEnfermedad(500);
