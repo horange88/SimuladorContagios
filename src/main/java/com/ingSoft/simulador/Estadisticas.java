@@ -1,8 +1,8 @@
 package com.ingSoft.simulador;
 
-public class Estadisticas implements Observer {
-	private Subject poblacion; 
-	public Estadisticas(Subject poblacion) {
+public class Estadisticas implements ObserverPoblacion {
+	private SubjectPoblacion poblacion; 
+	public Estadisticas(SubjectPoblacion poblacion) {
 		this.poblacion = poblacion;
 	}
 	void display(int cantSanos, int cantEnfermos, int cantMuertos, int cantRecuperados) {
@@ -10,7 +10,7 @@ public class Estadisticas implements Observer {
 	}
 
 	@Override
-	public void update() {
+	public void updatePoblacion() {
 		Poblacion p = (Poblacion)poblacion;
 		display(p.getCantSanos(), p.getCantEnfermos(), p.getCantMuertos(), p.getCantRecuperados());
 	}

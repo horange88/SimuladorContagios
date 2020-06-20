@@ -4,14 +4,14 @@ package com.ingSoft.simulador;
 import java.util.ArrayList;
 
 
-public class Poblacion implements Subject {
+public class Poblacion implements SubjectPoblacion {
 	private ArrayList<Persona> sanas;
 	private ArrayList<Persona> enfermas;
 	private ArrayList<Persona> recuperadas;
 	private ArrayList<Persona> muertas;
 	private Area area;
 	
-	private ArrayList<Observer> observers;
+	private ArrayList<ObserverPoblacion> observers;
 	
 	public Poblacion(Area area, int cantPersonas, int cantEnfermas) {
 		this.area = area;
@@ -20,7 +20,7 @@ public class Poblacion implements Subject {
 		enfermas = new ArrayList<Persona>();
 		recuperadas = new ArrayList<Persona>();
 		muertas = new ArrayList<Persona>();
-		observers = new ArrayList<Observer>();
+		observers = new ArrayList<ObserverPoblacion>();
 		
 		iniciarSanos(cantPersonas-cantEnfermas);
 		iniciarEnfermos(cantEnfermas);
@@ -81,21 +81,21 @@ public class Poblacion implements Subject {
 		sanas.remove(p);
 		enfermas.add(p);
 		p.enfermar();
-		notifyObserver();
+		notifyObserverPoblacion();
 	}
 	public void morirPersona(Persona p)
 	{
 		enfermas.remove(p);
 		muertas.add(p);
 		p.morir();
-		notifyObserver();
+		notifyObserverPoblacion();
 	}
 	public void recuperarPersona(Persona p)
 	{
 		enfermas.remove(p);
 		recuperadas.add(p);
 		p.recuperar();
-		notifyObserver();
+		notifyObserverPoblacion();
 	}
 	
 	public void animar()
@@ -147,13 +147,12 @@ public class Poblacion implements Subject {
 		}
 	}
 	@Override
-	public void atachObserver(Observer o) {
-		// TODO Auto-generated method stub
+	public void atachObserverPoblacion(ObserverPoblacion o) {
 		observers.add(o);
 		
 	}
 	@Override
-	public void detachObserver(Observer o) {
+	public void detachObserverPoblacion(ObserverPoblacion o) {
 		int i = observers.lastIndexOf(o);
 		if (i>=0) {
 			
@@ -162,11 +161,11 @@ public class Poblacion implements Subject {
 		
 	}
 	@Override
-	public void notifyObserver() {
+	public void notifyObserverPoblacion() {
 		for(int i =0;i<observers.size();i++)
 		{
-			Observer observer = (Observer)observers.get(i);
-			observer.update();
+			ObserverPoblacion observer = (ObserverPoblacion)observers.get(i);
+			observer.updatePoblacion();
 		}
 	}
 

@@ -2,7 +2,7 @@ package com.ingSoft.simulador;
 
 import java.util.ArrayList;
 
-public class Simulador {
+public class Simulador implements SubjectParametros {
 	private Poblacion poblacion;
 	private Area area;
 	private int cantEnfermos;
@@ -15,11 +15,13 @@ public class Simulador {
 	private int tiempoSimulacion;
 	private VisorSimulador visor;
 	private int pasoActual;
+	private ArrayList<ObserverParametros> observers;
 
 	public Simulador() {
 		radioContagio = 0;
 		mortalidad = 0;
 		pasoActual = 0;
+		observers = new ArrayList<ObserverParametros>();
 	}
 
 	public Simulador(Area a, Poblacion p) {
@@ -28,6 +30,7 @@ public class Simulador {
 		radioContagio = 0;
 		mortalidad = 0;
 		pasoActual = 0;
+		observers = new ArrayList<ObserverParametros>();
 	}
 
 	public int getPasoActual() {
@@ -65,8 +68,12 @@ public class Simulador {
 	}
 
 	public void setMovilidad(int movilidad) {
-		this.movilidad = movilidad;
-		poblacion.setMovilidad(movilidad);
+		if (movilidad >= 0) {
+
+			this.movilidad = movilidad;
+			poblacion.setMovilidad(movilidad);
+			notifyObserverParametros();
+		}
 	}
 
 	public float getMortalidad() {
@@ -76,6 +83,7 @@ public class Simulador {
 	public void setMortalidad(float mortalidad) {
 		this.mortalidad = mortalidad;
 		poblacion.setMortalidad(mortalidad);
+		notifyObserverParametros();
 	}
 
 	public int getTiempoSimulacion() {
@@ -180,6 +188,30 @@ public class Simulador {
 
 		}
 
+	}
+
+	@Override
+	public void atachObserverParametros(ObserverParametros o) {
+		observers.add(o);
+
+	}
+
+	@Override
+	public void detachObserverParametros(ObserverParametros o) {
+		int i = observers.lastIndexOf(o);
+		if (i >= 0) {
+
+			observers.remove(i);
+		}
+
+	}
+
+	@Override
+	public void notifyObserverParametros() {
+		for (int i = 0; i < observers.size(); i++) {
+			ObserverParametros observer = (ObserverParametros) observers.get(i);
+			observer.updateParametros();
+		}
 	}
 
 }

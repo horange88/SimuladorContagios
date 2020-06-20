@@ -1,6 +1,6 @@
 package com.ingSoft.simulador;
 
-public class Contador implements Observer{
+public class Contador implements ObserverPoblacion{
 	private int cantSanos;
 	private int cantEnfermos;
 	private int cantMuertos;
@@ -10,7 +10,7 @@ public class Contador implements Observer{
 		poblacion = p;
 	}
 	@Override
-	public void update() {
+	public void updatePoblacion() {
 		cantSanos = poblacion.getCantSanos();
 		cantEnfermos = poblacion.getCantEnfermos();
 		cantMuertos = poblacion.getCantMuertos();

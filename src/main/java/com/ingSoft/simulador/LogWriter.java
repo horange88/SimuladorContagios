@@ -1,10 +1,13 @@
 package com.ingSoft.simulador;
 
-public class Log implements ObserverPoblacion, ObserverParametros{
+import java.io.File;
+import java.io.FileWriter;
+
+public class LogWriter implements ObserverPoblacion, ObserverParametros {
 	private Poblacion poblacion;
 	private Simulador simulador;
 
-	public Log(Simulador s) {
+	public LogWriter(Simulador s) {
 		simulador = s;
 		poblacion = simulador.getPoblacion();
 		poblacion.atachObserverPoblacion(this);
@@ -15,30 +18,52 @@ public class Log implements ObserverPoblacion, ObserverParametros{
 		poblacion = p;
 		poblacion.atachObserverPoblacion(this);
 	}
+
 	public String logPoblacion() {
 		return "Paso: " + simulador.getPasoActual() + ". Sanos: " + poblacion.getCantSanos() + ". Enfermos: "
 				+ poblacion.getCantEnfermos() + ". Muertos: " + poblacion.getCantMuertos() + ". Recuperados: "
 				+ poblacion.getCantRecuperados();
-		
+
 	}
-	
+
 	public String logParametros() {
-		return "Parametros seteados: Movilidad: " + simulador.getMovilidad() + ". Mortalidad: " + simulador.getMortalidad();
-		
+		return "Parametros seteados: Movilidad: " + simulador.getMovilidad() + ". Mortalidad: "
+				+ simulador.getMortalidad();
+
 	}
-	
+
 	public void displayPoblacion() {
-		System.out.println(logPoblacion());
+		try {
+			File file = new File("log.log");
+			FileWriter myWriter = new FileWriter(file,true);
+			myWriter.write(logPoblacion());
+			myWriter.write("\r\n");
+			myWriter.close();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
 	}
+
 	public void displayParametros() {
-		System.out.println(logParametros());
+		try {
+			File file = new File("log.log");
+			FileWriter myWriter = new FileWriter(file,true);
+			myWriter.write(logParametros());
+			myWriter.write("\r\n");
+			myWriter.close();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 
 	@Override
 	public void updatePoblacion() {
 		displayPoblacion();
 
-	}@Override
+	}
+
+	@Override
 	public void updateParametros() {
 		displayParametros();
 
