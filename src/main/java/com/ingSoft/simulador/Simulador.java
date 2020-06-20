@@ -26,7 +26,6 @@ public class Simulador {
 		poblacion = p;
 		radioContagio = 0;
 		mortalidad = 0;
-		visor = new VisorSimulador("Simulador", area.getAncho(), area.getAlto(), Color.white);
 	}
 
 	public Poblacion getPoblacion() {
