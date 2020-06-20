@@ -5,13 +5,39 @@ import java.util.Random;
 public class Persona {
 	private Posicion pos;
 	private Velocidad vel;
-	private Estados Estado;
+	private Estados estado;
 	private int movilidad;
-
+	private int duracionEnfermedad;
+	private float mortalidad;
+	
+	public Persona() {
+		pos = new Posicion();
+		vel = new Velocidad();
+		movilidad = 0;
+		duracionEnfermedad = 0;
+		mortalidad = 0;
+		estado = Estados.Sano;
+	}
 	public Persona(Area area) {
 		pos = new Posicion(area);
 		vel = new Velocidad();
-		movilidad = 10;
+		movilidad = 0;
+		duracionEnfermedad = 0;
+		mortalidad = 0;
+		estado = Estados.Sano;
+		
+	}
+
+	public int getDuracionEnfermedad() {
+		return duracionEnfermedad;
+	}
+
+	public void setDuracionEnfermedad(int duracionEnfermedad) {
+		this.duracionEnfermedad = duracionEnfermedad;
+	}
+
+	public float getMortalidad() {
+		return mortalidad;
 	}
 
 	public Posicion getPos() {
@@ -31,11 +57,11 @@ public class Persona {
 	}
 
 	public Estados getEstado() {
-		return Estado;
+		return estado;
 	}
 
 	public void setEstado(Estados estado) {
-		Estado = estado;
+		this.estado = estado;
 	}
 
 	public int getMovilidad() {
@@ -48,29 +74,42 @@ public class Persona {
 
 	public void calcularVelocidad() {
 		Random r = new Random();
-		vel.setVelx(r.nextInt(2*movilidad+1)-movilidad);
-		vel.setVely(r.nextInt(2*movilidad+1)-movilidad);
+		vel.setVelx(r.nextInt(2 * movilidad + 1) - movilidad);
+		vel.setVely(r.nextInt(2 * movilidad + 1) - movilidad);
 	}
 
 	public void mover() {
-		calcularVelocidad();
 		pos.mover(vel);
 	}
 
 	public void enfermar() {
-		this.Estado = Estados.Enfermo;
+		this.estado = Estados.Enfermo;
 	}
 
-	public void decaer() {
+	public void evolucionarEnfermedad() {
+		if (duracionEnfermedad > 0)
+			duracionEnfermedad--;
+	}
 
+	public boolean finEnfermedad() {
+		return duracionEnfermedad == 0;
 	}
 
 	public void recuperar() {
-		this.Estado = Estados.Recuperado;
+		this.estado = Estados.Recuperado;
 	}
 
 	public void morir() {
-		this.Estado = Estados.Muerto;
+		this.estado = Estados.Muerto;
+	}
+
+	public boolean debeMorir() {
+		Random r = new Random();
+		return r.nextFloat() < mortalidad;
+	}
+
+	public void setMortalidad(float mortalidad) {
+		this.mortalidad = mortalidad;
 	}
 
 }
