@@ -31,11 +31,10 @@ public class VisorSimulador
     /**
      * M�todo Factory para obtener el objeto singleton canvas.
      */
-    public static VisorSimulador getCanvas()
+    public static VisorSimulador getVisor()
     {
         if(canvasSingleton == null) {
-            canvasSingleton = new VisorSimulador("", 300, 300, 
-                                         Color.white);
+            canvasSingleton = new VisorSimulador("Visor de simulador", 500, 300);
         }
         canvasSingleton.setVisible(true);
         return canvasSingleton;
@@ -43,14 +42,15 @@ public class VisorSimulador
 
     //  ----- instance part -----
 
-    private JFrame marco;
-    private CristalCanvas canvas;
+    private JFrame frame;
+    private CristalPanel panel;
     private Graphics2D grafico;
     private Color colorFondo;
     private Image imagenCanvas;
     private List<Object> objetos;
     private HashMap<Object, DescripcionForma> formas;
     private int ancho, alto;
+	private Area area;
     
     /**
      * Crear un Canvas.
@@ -59,27 +59,28 @@ public class VisorSimulador
      * @param altura   la altura deseada para el canvas
      * @param colorFdo el color deseado del fondo del canvas
      */
-    public VisorSimulador(String titulo, int ancho, int altura, Color colorFdo)
+    private VisorSimulador(String titulo, int ancho, int altura)
     {
     	this.ancho = ancho;
     	this.alto = altura;
-        marco  = new JFrame();
-        canvas = new CristalCanvas();
-        marco.setContentPane(canvas);
-        marco.setTitle(titulo);
-        canvas.setPreferredSize(new Dimension(ancho, altura));
-        colorFondo = colorFdo;
-        marco.pack();
+        frame  = new JFrame();
+        panel = new CristalPanel();
+        frame.setContentPane(panel);
+        frame.setTitle(titulo);
+        panel.setPreferredSize(new Dimension(ancho, altura));
+        colorFondo = Color.white;
+        frame.pack();
         objetos = new ArrayList<Object>();
         formas  = new HashMap<Object, DescripcionForma>();
     }
-
-    public int getAncho() {
-		return ancho;
+	
+	public void setArea(Area area) {
+		this.area = area;
 	}
 
-	public int getAlto() {
-		return alto;
+
+	public CristalPanel getPanel() {
+		return panel;
 	}
 
 	/**
@@ -94,48 +95,29 @@ public class VisorSimulador
         if(grafico == null) {
             // primera vez: instancia la imagen de alcance de pantalla y la
             // rellena con el color de fondo.
-            Dimension tamano = canvas.getSize();
-            imagenCanvas = canvas.createImage(tamano.width, tamano.height);
+            Dimension tamano = panel.getSize();
+            imagenCanvas = panel.createImage(tamano.width, tamano.height);
             grafico = (Graphics2D)imagenCanvas.getGraphics();
             grafico.setColor(colorFondo);
             grafico.fillRect(0, 0, tamano.width, tamano.height);
             grafico.setColor(Color.black);
         }
-        marco.setVisible(visible);
-    }
-
-    /**
-     * Dibujar una forma dada sobre el canvas.
-     * @param  referenciaObjeto  un objeto para definir la identidad para esta forma
-     * @param  color             el color de la forma
-     * @param  forma             el objet forma a ser dibujado en el canvas
-     */
-     // Nota: esta es una manera levemente retro de mantener los objetos forma.
-     // Esta cuidadosamente deise�ada para mantener visibles las interfaces
-     // Note: this is a slightly backwards way of maintaining the forma en este
-     // proyecto limpio y simple de prop�sito educativo.
-    public void dibujar(Object referenciaObjeto, Color color, Shape forma)
-    {
-        objetos.remove(referenciaObjeto);   // solo en caso que ya estuviera all�
-        objetos.add(referenciaObjeto);      // agregar al final
-        formas.put(referenciaObjeto, new DescripcionForma(forma, color));
-        redibujar();
+        //frame.setVisible(visible);
     }
     
-    public void agregarCirculo(Object referenciaObjeto, Color color, int x, int y, int diametro)
+    public void agregarCirculo(Object referenciaObjeto, Color color, int xReal, int yReal, int diametro)
     {
+    	int anchoReal = area.getAncho();
+    	int altoReal = area.getAlto();
+    	float escX = (float)panel.getWidth()/(float)anchoReal;
+    	float escY = (float)panel.getHeight()/(float)altoReal;
+    	int x = (int)((float)xReal*escX);
+    	int y = (int)((float)yReal*escY);
     	objetos.remove(referenciaObjeto);   // solo en caso que ya estuviera all�
         objetos.add(referenciaObjeto);      // agregar al final
         formas.put(referenciaObjeto, new DescripcionForma(new Ellipse2D.Double(x, y, diametro, diametro), color));
     }
-    
-    public void dibujarMarca(int x, int y, Color color)
-    {
-        grafico.setColor(color);
-        grafico.fillRect(x * 10, y * 10, 10-1, 10-1);
-        canvas.repaint();
-    }
-    
+
  
     /**
      * Borrar de la pantalla una forma dada.
@@ -158,24 +140,6 @@ public class VisorSimulador
     }
 
     /**
-     * Esperar un n�mero espec�fico de milisegundos antes de terminar.
-     * Esto provee una forma f�cil de especificar una peque�a demora que
-     * puede usarse cuando se producen animaciones.
-     * @param  milisegundos  tel numero de milisegundos 
-     */
-    public void esperar(int milisegundos)
-    {
-        try
-        {
-            Thread.sleep(milisegundos);
-        } 
-        catch (Exception e)
-        {
-            // ignorar la excepcion por el momento
-        }
-    }
-
-    /**
      * Redibujar todas las formas actualmente sobre el canvas.
      */
     public void redibujar()
@@ -184,7 +148,7 @@ public class VisorSimulador
         for(Object forma : objetos) {
             formas.get(forma).dibujar(grafico);
         }
-        canvas.repaint();
+        panel.repaint();
     }
        
     /**
@@ -194,7 +158,7 @@ public class VisorSimulador
     {
         Color original = grafico.getColor();
         grafico.setColor(colorFondo);
-        Dimension tamano = canvas.getSize();
+        Dimension tamano = panel.getSize();
         grafico.fill(new Rectangle(0, 0, tamano.width, tamano.height));
         grafico.setColor(original);
     }
@@ -205,7 +169,7 @@ public class VisorSimulador
      * marco del canvas. Este es esencialmente un JPanel con la capacidad 
      * a�adida de refrescar la imagen dibujada sobre el.
      */
-    private class CristalCanvas extends JPanel
+    private class CristalPanel extends JPanel
     {
         public void paint(Graphics g)
         {

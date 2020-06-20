@@ -1,22 +1,31 @@
 package com.ingSoft.simulador;
 
-import java.util.ArrayList;
+import javax.swing.JFrame;
 
 public class Main {
 
 	public static void main(String[] args) {
-		Area area = new Area(300,300);
-		Poblacion p = new Poblacion(area, 1,0);
-	
-		ArrayList <Persona> sanas = p.getSanas();
+		Area area = new Area(600,600);
+		Poblacion p = new Poblacion(area, 150,10);
+		Log log = new Log();
+		Simulador simulador = new Simulador(area,p);
+		simulador.setMortalidad((float) 0.1);
+		simulador.setMovilidad(3);
+		simulador.setDuracionEnfermedad(500);
+		simulador.setTiempoSimulacion(2000);
+		simulador.setRadioContagio(10);
+		log.setPoblacion(p);
+		log.display();
 		
-		for(Persona sana:sanas) {
-			System.out.println(sana.getPos().getPosx()+" "+sana.getPos().getPosy());
-		}
-		p.animar();
-		for(Persona sana:sanas) {
-			System.out.println(sana.getPos().getPosx()+" "+sana.getPos().getPosy());
-		}
+        JFrame j1 = new JFrame();
+        j1.setVisible(true);
+        j1.add(simulador.getVisor().getPanel());
+        j1.pack();
+
+        
+        simulador.simular();
+        
+        
 	}
 
 }
