@@ -11,7 +11,7 @@ public class Poblacion implements Subject {
 	private ArrayList<Persona> muertas;
 	private Area area;
 	
-	private ArrayList<Object> observers;
+	private ArrayList<Observer> observers;
 	
 	public Poblacion(Area area, int cantPersonas, int cantEnfermas) {
 		this.area = area;
@@ -20,6 +20,7 @@ public class Poblacion implements Subject {
 		enfermas = new ArrayList<Persona>();
 		recuperadas = new ArrayList<Persona>();
 		muertas = new ArrayList<Persona>();
+		observers = new ArrayList<Observer>();
 		
 		iniciarSanos(cantPersonas-cantEnfermas);
 		iniciarEnfermos(cantEnfermas);
@@ -40,9 +41,6 @@ public class Poblacion implements Subject {
 	public Area getArea() {
 		return area;
 	}
-	public ArrayList<Object> getObservers() {
-		return observers;
-	}
 	public int getCantSanos() {
 		return sanas.size();
 	}
@@ -61,6 +59,7 @@ public class Poblacion implements Subject {
 	
 	public void iniciarSanos(int n)
 	{
+		sanas.clear();
 		for(int i=0;i<n;i++)
 		{
 			sanas.add(new Persona(area));
@@ -69,6 +68,7 @@ public class Poblacion implements Subject {
 	
 	public void iniciarEnfermos(int n)
 	{
+		enfermas.clear();
 		for(int i=0;i<n;i++)
 		{
 			enfermas.add(new Persona(area));
@@ -78,36 +78,74 @@ public class Poblacion implements Subject {
 	
 	public void enfermarPersona(Persona p)
 	{
-		enfermas.add(p);
 		sanas.remove(p);
+		enfermas.add(p);
 		p.enfermar();
+		notifyObserver();
 	}
 	public void morirPersona(Persona p)
 	{
 		enfermas.remove(p);
 		muertas.add(p);
 		p.morir();
+		notifyObserver();
 	}
-	public void sanarPersona(Persona p)
+	public void recuperarPersona(Persona p)
 	{
 		enfermas.remove(p);
 		recuperadas.add(p);
 		p.recuperar();
+		notifyObserver();
 	}
 	
 	public void animar()
 	{
 		for(Persona p:sanas) {
+			p.calcularVelocidad();
 			p.mover();
 		}
 		for(Persona p:enfermas) {
+			p.calcularVelocidad();
 			p.mover();
 		}
 		for(Persona p:recuperadas) {
+			p.calcularVelocidad();
 			p.mover();
 		}
 	}
+
+	public void setMortalidad(float mortalidad){
+		for (Persona p: enfermas) {
+			p.setMortalidad(mortalidad);
+		}
+		for (Persona p: sanas) {
+			p.setMortalidad(mortalidad);
+		}
+	}
 	
+	public void setMovilidad(int movilidad) {
+		for (Persona p: enfermas) {
+			p.setMovilidad(movilidad);
+		}
+		for (Persona p: sanas) {
+			p.setMovilidad(movilidad);
+		}
+		for (Persona p: recuperadas) {
+			p.setMovilidad(movilidad);
+		}
+	}
+	
+	public void setDuracionEnfermedad(int duracion) {
+		for (Persona p: enfermas) {
+			p.setDuracionEnfermedad(duracion);
+		}
+		for (Persona p: sanas) {
+			p.setDuracionEnfermedad(duracion);
+		}
+		for (Persona p: recuperadas) {
+			p.setDuracionEnfermedad(duracion);
+		}
+	}
 	@Override
 	public void atachObserver(Observer o) {
 		// TODO Auto-generated method stub
@@ -131,5 +169,9 @@ public class Poblacion implements Subject {
 			observer.update();
 		}
 	}
+
+
+
+
 
 }
