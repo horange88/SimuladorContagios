@@ -6,16 +6,15 @@ public class Main {
 
 	public static void main(String[] args) {
 		Area area = new Area(600,600);
-		Poblacion p = new Poblacion(area, 150,10);
-		Log log = new Log();
+		Poblacion p = new Poblacion(area, 250,10);
 		Simulador simulador = new Simulador(area,p);
+		Log log = new Log(simulador);
 		simulador.setVisor(VisorSimulador.getVisor());
 		simulador.setMortalidad((float) 0.1);
 		simulador.setMovilidad(3);
 		simulador.setDuracionEnfermedad(500);
 		simulador.setTiempoSimulacion(2000);
 		simulador.setRadioContagio(10);
-		log.setPoblacion(p);
 		log.display();
 		
         JFrame j1 = new JFrame();

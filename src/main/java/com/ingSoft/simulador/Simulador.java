@@ -14,10 +14,12 @@ public class Simulador {
 	private int movilidad;
 	private int tiempoSimulacion;
 	private VisorSimulador visor;
+	private int pasoActual;
 
 	public Simulador() {
 		radioContagio = 0;
 		mortalidad = 0;
+		pasoActual = 0;
 	}
 
 	public Simulador(Area a, Poblacion p) {
@@ -25,6 +27,11 @@ public class Simulador {
 		poblacion = p;
 		radioContagio = 0;
 		mortalidad = 0;
+		pasoActual = 0;
+	}
+
+	public int getPasoActual() {
+		return pasoActual;
 	}
 
 	public VisorSimulador getVisor() {
@@ -94,6 +101,7 @@ public class Simulador {
 	}
 
 	public void simularUnPaso() {
+		pasoActual++;
 		poblacion.animar();
 		evolucionarEnfermedad();
 		morirRecuperar();
