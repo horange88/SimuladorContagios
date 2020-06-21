@@ -1,5 +1,6 @@
 # SimuladorContagios
 
+
 El software es un simulador de contagios que permite visualizar y analizar la propagación de una enfermedad contagiosa entre la población de una cierta área. Dadas algunas condiciones iniciales (población, dimensiones del área, cantidad de enfermos, etc), el simulador funciona de la siguiente manera:
 • Genera N personas en una posición (x,y) aleatoria, dentro de una cierta área, donde alguna de ellas están enfermas. 
 • En cada paso, las personas se mueven aleatoriamente, y si una persona sana se encuentra cerca de una enferma, se contagia. 
@@ -36,3 +37,5 @@ Severini Montanari Alejo
 Vega Cuevas Silvia Jimena
 
 Wortley Agustina Daniela
+=======
+
