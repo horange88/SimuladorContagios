@@ -27,7 +27,7 @@ private JFrame ventana;
 	
 	public int poblacionTotal;
 	public int pobTotInfectados;
-	public Float tasaMortalidad;
+	public int tasaMortalidad;
 	public int tiempoIncubacion;
 	public int radioContagio;
 	public int inmunidad;
@@ -37,7 +37,8 @@ private JFrame ventana;
 	
 	
 	public Ventana2() {
-		// TODO Auto-generated constructor stub
+		
+		//Inicializacion de espacios en blancos para escritura y nombres de parametros
 		whiteSpaces = new ArrayList<JTextField>();
 		nombre      = new ArrayList<String>();
 	
@@ -50,27 +51,25 @@ private JFrame ventana;
 		nombre.add("movilidad");
 		nombre.add("tiempo de simulacion (seg)");
 		
-		
-		
+
 		for(int i=0; i<8;i++) {
 			whiteSpaces.add(new JTextField(10));
 		}
-		dummmy();
-		//Agregado de listener
+		
 		rb1 = new JRadioButton("Histograma");
 		rb2 = new JRadioButton("Diagrama cake");
 		aceptar = new JButton("Aceptar");
 		cancelar = new JButton("Cancelar");
 		
+		//Listeners de botones y whiteSpaces
+		addListeners();
+		//Se inicializa con "aceptar" deshabilitado
 		aceptar.setEnabled(false);
-		
+		//Se añade a ButtonGrup a los radioButton
 	    group = new ButtonGroup();
 		group.add(rb1);
 		group.add(rb2);
 		
-		
-		aceptar.addActionListener(this);
-		cancelar.addActionListener(this);
 
 		ventana = new JFrame("ventanita");
 		ventana.setSize(350,400); //ancho*largo
@@ -83,7 +82,6 @@ private JFrame ventana;
 		//Inicializacion de frames, botones y botones redondos
 	    for(int i=0;i<8;i++) {
 	    	
-	    	//System.out.println(i+" "+nombre.get(i));
 	    	panel.add(new JLabel(nombre.get(i)));
 	    	panel.add(whiteSpaces.get(i));
 	    	
@@ -110,27 +108,17 @@ private JFrame ventana;
 		
 	}
 	
+	//Metodos que permiten determinar si hay cambios en los espacios en blanco
 	@Override
-	public void changedUpdate(DocumentEvent arg0) {
-
-		validarDatos();
-		
-	}
+	public void changedUpdate(DocumentEvent arg0) {validarDatos();}
 
 	@Override
-	public void insertUpdate(DocumentEvent arg0) {
+	public void insertUpdate(DocumentEvent arg0) {validarDatos();}
+
+	@Override
+	public void removeUpdate(DocumentEvent arg0) {validarDatos();}
 	
-		validarDatos();
-		
-	}
-
-	@Override
-	public void removeUpdate(DocumentEvent arg0) {
-		
-		validarDatos();
-		
-	}
-
+    //Metodo que permite deterimar si hay cambio en los botones
 	@Override
 	public void actionPerformed(ActionEvent e) {
 
@@ -138,7 +126,7 @@ private JFrame ventana;
 	        try {     
 	             poblacionTotal   = Integer.valueOf(whiteSpaces.get(0).getText());
 				 pobTotInfectados = Integer.valueOf(whiteSpaces.get(1).getText());
-				 tasaMortalidad   = Float.valueOf(whiteSpaces.get(2).getText());
+				 tasaMortalidad   = Integer.valueOf(whiteSpaces.get(2).getText());
 				 tiempoIncubacion = Integer.valueOf(whiteSpaces.get(3).getText());
 				 radioContagio    = Integer.valueOf(whiteSpaces.get(4).getText());
 				 inmunidad        = Integer.valueOf(whiteSpaces.get(5).getText());
@@ -150,56 +138,59 @@ private JFrame ventana;
 	        catch(NumberFormatException error) {
 	        	JOptionPane.showMessageDialog(null, "Las casillas no pueden estar vacias", "Error", JOptionPane.ERROR_MESSAGE);
 	        }
+	        ventana.dispatchEvent(new WindowEvent(ventana, WindowEvent.WINDOW_CLOSING));
+	        //ACA se deberia llamar a la ventana3
 	           
 	        }
 		 else if(e.getSource() == cancelar) {
-			// cad=cancelar.getText();
 			 ventana.dispatchEvent(new WindowEvent(ventana, WindowEvent.WINDOW_CLOSING));
-		 }
-		 
-		
-	}
+		 } 
+	  }
 	
-	
-		//Incompleto
 		public void validarDatos() {
 			boolean isNull=false;
-			boolean isNegative = false;
-			
 			for(int i=0;i<whiteSpaces.size();i++) {
 				if(whiteSpaces.get(i).getText().equals("")) {
 					isNull = true;
 				}
 				if(Integer.valueOf(whiteSpaces.get(0).getText())<0) {
-					isNegative = true;
+					System.out.println("NEGATIVO= "+Integer.valueOf(whiteSpaces.get(0).getText()) );
 				}
 			}
-			 System.out.println("CAMBIE ");
 			if(isNull) {
 				aceptar.setEnabled(false);
-				//JOptionPane.showMessageDialog(null, "Las casillas no pueden estar vacias", "Error", JOptionPane.ERROR_MESSAGE);
-			}
-			else if(isNegative) {
-				aceptar.setEnabled(false);
-				//JOptionPane.showMessageDialog(null, "Dato inválido", "Error", JOptionPane.ERROR_MESSAGE);
+				//JOptionPane.showMessageDialog(null, "Las casillas no pueden estar vacias", "Error", JOptionPane.ERROR_MESSAGE)
 			}else {
 				aceptar.setEnabled(true);
 			}
 		}
-		public void dummmy() {
+		
+		public void addListeners() {
 			
+			//Agregado de listener botones
+			aceptar.addActionListener(this);
+			cancelar.addActionListener(this);
 			
-			whiteSpaces.get(0).getDocument().addDocumentListener(this);
-			whiteSpaces.get(1).getDocument().addDocumentListener(this);
-			whiteSpaces.get(2).getDocument().addDocumentListener(this);
-			whiteSpaces.get(3).getDocument().addDocumentListener(this);
-			whiteSpaces.get(4).getDocument().addDocumentListener(this);
-			whiteSpaces.get(5).getDocument().addDocumentListener(this);
-			whiteSpaces.get(6).getDocument().addDocumentListener(this);
-			whiteSpaces.get(7).getDocument().addDocumentListener(this);
-			
+			//Agregado listener espacios en blanco
+			for(int i=0; i<whiteSpaces.size();i++) {
+				whiteSpaces.get(i).getDocument().addDocumentListener(this);
+			}
+		}
+		public void armadoVentana() {
 			
 		}
-		
+		public ArrayList<Integer> getParametrosSimulacion(){
+			ArrayList<Integer> param = new ArrayList<Integer> ();
+			param.add(poblacionTotal);
+			param.add(pobTotInfectados);
+			param.add(tasaMortalidad);
+			param.add(tiempoIncubacion);
+			param.add(radioContagio);
+			param.add(inmunidad);
+			param.add(movilidad);
+			param.add(tiempoSimulacion);
+			
+			return param;
+		}
 
 }
