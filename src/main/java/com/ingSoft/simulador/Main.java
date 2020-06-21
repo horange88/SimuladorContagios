@@ -19,6 +19,7 @@ public class Main {
 		log.displayPoblacion();
 		
         JFrame j1 = new JFrame();
+        j1.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         j1.setVisible(true);
         j1.add(simulador.getVisor().getPanel());
         j1.pack();
