@@ -5,6 +5,9 @@ import javax.swing.JFrame;
 public class Main {
 
 	public static void main(String[] args) {
+		
+		Ventana2 v2 = new Ventana2();
+		
 		Area area = new Area(600,600);
 		Poblacion p = new Poblacion(area, 500,10);
 		Simulador simulador = new Simulador(area,p);
