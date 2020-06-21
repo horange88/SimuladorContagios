@@ -8,7 +8,7 @@ public class Main {
 		
 		Ventana2 v2 = new Ventana2();
 		
-		Area area = new Area(600,600);
+		/*Area area = new Area(600,600);
 		Poblacion p = new Poblacion(area, 500,10);
 		Simulador simulador = new Simulador(area,p);
 		Log log = new Log(simulador);
@@ -29,7 +29,7 @@ public class Main {
         Formulario f = new Formulario(simulador);
         f.setVisible(true);
         
-        simulador.simular();
+        simulador.simular();*/
         
         
 	}

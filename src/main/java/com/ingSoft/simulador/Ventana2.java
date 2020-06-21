@@ -2,6 +2,7 @@ package com.ingSoft.simulador;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.WindowEvent;
 
 import javax.swing.event.DocumentEvent;
 import javax.swing.event.DocumentListener;
@@ -54,12 +55,14 @@ private JFrame ventana;
 		for(int i=0; i<8;i++) {
 			whiteSpaces.add(new JTextField(10));
 		}
-		
+		dummmy();
 		//Agregado de listener
 		rb1 = new JRadioButton("Histograma");
 		rb2 = new JRadioButton("Diagrama cake");
 		aceptar = new JButton("Aceptar");
 		cancelar = new JButton("Cancelar");
+		
+		aceptar.setEnabled(false);
 		
 	    group = new ButtonGroup();
 		group.add(rb1);
@@ -106,23 +109,26 @@ private JFrame ventana;
 		ventana.setVisible(true);
 		
 	}
-
+	
 	@Override
 	public void changedUpdate(DocumentEvent arg0) {
-		// TODO Auto-generated method stub
-		changed();
+
+		validarDatos();
+		
 	}
 
 	@Override
 	public void insertUpdate(DocumentEvent arg0) {
-		// TODO Auto-generated method stub
-		changed();
+	
+		validarDatos();
+		
 	}
 
 	@Override
 	public void removeUpdate(DocumentEvent arg0) {
-		// TODO Auto-generated method stub
-		changed();
+		
+		validarDatos();
+		
 	}
 
 	@Override
@@ -148,40 +154,52 @@ private JFrame ventana;
 	        }
 		 else if(e.getSource() == cancelar) {
 			// cad=cancelar.getText();
+			 ventana.dispatchEvent(new WindowEvent(ventana, WindowEvent.WINDOW_CLOSING));
 		 }
 		 
-	     //debug shit
-		 System.out.println("koko: " + grafico);
-		
-		 System.out.println("PT: "+ poblacionTotal);
-		 System.out.println("PTI: "+ pobTotInfectados);
-		 System.out.println("tasaMortalidad: "+ tasaMortalidad);
-		 System.out.println("tiempoSimulacion: "+ tiempoSimulacion);
 		
 	}
 	
-	  public void changed() {
-		     if (whiteSpaces.get(0).getText().equals("")){
-		    	 aceptar.setEnabled(false);
-		     }
-		     else {
-		    	 aceptar.setEnabled(true);
-		    }
-	  }
+	
 		//Incompleto
-		public void validarDatos(String s) {
+		public void validarDatos() {
+			boolean isNull=false;
+			boolean isNegative = false;
 			
-			//Agregar funcionalida error dato valido
-			if(whiteSpaces.get(0).getText()=="") {
-				JOptionPane.showMessageDialog(null, "Dato inválido", "Error", JOptionPane.ERROR_MESSAGE);
+			for(int i=0;i<whiteSpaces.size();i++) {
+				if(whiteSpaces.get(i).getText().equals("")) {
+					isNull = true;
+				}
+				if(Integer.valueOf(whiteSpaces.get(0).getText())<0) {
+					isNegative = true;
+				}
+			}
+			 System.out.println("CAMBIE ");
+			if(isNull) {
+				aceptar.setEnabled(false);
+				//JOptionPane.showMessageDialog(null, "Las casillas no pueden estar vacias", "Error", JOptionPane.ERROR_MESSAGE);
+			}
+			else if(isNegative) {
+				aceptar.setEnabled(false);
+				//JOptionPane.showMessageDialog(null, "Dato inválido", "Error", JOptionPane.ERROR_MESSAGE);
+			}else {
+				aceptar.setEnabled(true);
 			}
 		}
-		public void Dummmy() {
+		public void dummmy() {
 			
 			
 			whiteSpaces.get(0).getDocument().addDocumentListener(this);
+			whiteSpaces.get(1).getDocument().addDocumentListener(this);
+			whiteSpaces.get(2).getDocument().addDocumentListener(this);
+			whiteSpaces.get(3).getDocument().addDocumentListener(this);
+			whiteSpaces.get(4).getDocument().addDocumentListener(this);
+			whiteSpaces.get(5).getDocument().addDocumentListener(this);
+			whiteSpaces.get(6).getDocument().addDocumentListener(this);
+			whiteSpaces.get(7).getDocument().addDocumentListener(this);
 			
 			
 		}
+		
 
 }
