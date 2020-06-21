@@ -37,44 +37,6 @@ private JFrame ventana;
 	
 	
 	public Ventana2() {
-		
-		//Inicializacion de espacios en blancos para escritura y nombres de parametros
-		whiteSpaces = new ArrayList<JTextField>();
-		nombre      = new ArrayList<String>();
-	
-		nombre.add("poblacion total");
-		nombre.add("poblacion inicial infectados");
-		nombre.add("tasa de mortaldiad");
-		nombre.add("tiempo de incubacion");
-		nombre.add("radio de contagio");
-		nombre.add("inmunidad");
-		nombre.add("movilidad");
-		nombre.add("tiempo de simulacion (seg)");
-		
-
-		for(int i=0; i<8;i++) {
-			whiteSpaces.add(new JTextField(10));
-		}
-		
-		rb1 = new JRadioButton("Histograma");
-		rb2 = new JRadioButton("Diagrama cake");
-		aceptar = new JButton("Aceptar");
-		cancelar = new JButton("Cancelar");
-		
-		//Listeners de botones y whiteSpaces
-		addListeners();
-		//Se inicializa con "aceptar" deshabilitado
-		aceptar.setEnabled(false);
-		//Se añade a ButtonGrup a los radioButton
-	    group = new ButtonGroup();
-		group.add(rb1);
-		group.add(rb2);
-		
-		//Se fabrica toda la ventana
-		armadoVentana();
-		
-
-
 	}
 	
 	//Metodos que permiten determinar si hay cambios en los espacios en blanco
@@ -103,6 +65,7 @@ private JFrame ventana;
 				 tiempoSimulacion = Integer.valueOf(whiteSpaces.get(7).getText());
 				 
 				 grafico = (group.getSelection()==rb1) ? "Histograma":"DiagramaCake";
+				 
 	        }
 	        catch(NumberFormatException error) {
 	        	JOptionPane.showMessageDialog(null, "Las casillas no pueden estar vacias", "Error", JOptionPane.ERROR_MESSAGE);
@@ -194,6 +157,43 @@ private JFrame ventana;
 			param.add(tiempoSimulacion);
 			
 			return param;
+		}
+		
+		public void showVentana() {
+			//Inicializacion de espacios en blancos para escritura y nombres de parametros
+			whiteSpaces = new ArrayList<JTextField>();
+			nombre      = new ArrayList<String>();
+		
+			nombre.add("poblacion total");
+			nombre.add("poblacion inicial infectados");
+			nombre.add("tasa de mortaldiad");
+			nombre.add("tiempo de incubacion");
+			nombre.add("radio de contagio");
+			nombre.add("inmunidad");
+			nombre.add("movilidad");
+			nombre.add("tiempo de simulacion (seg)");
+			
+
+			for(int i=0; i<8;i++) {
+				whiteSpaces.add(new JTextField(10));
+			}
+			
+			rb1 = new JRadioButton("Histograma");
+			rb2 = new JRadioButton("Diagrama cake");
+			aceptar = new JButton("Aceptar");
+			cancelar = new JButton("Cancelar");
+			
+			//Listeners de botones y whiteSpaces
+			addListeners();
+			//Se inicializa con "aceptar" deshabilitado
+			aceptar.setEnabled(false);
+			//Se añade a ButtonGrup a los radioButton
+		    group = new ButtonGroup();
+			group.add(rb1);
+			group.add(rb2);
+			
+			//Se fabrica toda la ventana
+			armadoVentana();
 		}
 
 }

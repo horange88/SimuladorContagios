@@ -1,4 +1,4 @@
-package Pruebas;
+package com.ingSoft.simulador;
 
 import java.awt.Color;
 import java.awt.GridBagConstraints;

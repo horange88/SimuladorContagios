@@ -1,4 +1,4 @@
-package Pruebas;
+package com.ingSoft.simulador;
 
 import java.awt.Color;
 import java.awt.GridBagConstraints;
@@ -6,6 +6,7 @@ import java.awt.GridBagLayout;
 import java.awt.Insets;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -13,7 +14,9 @@ import javax.swing.JPanel;
 
 public class MainMenu {
 		static JFrame ventana;
+		static Ventana2 v2;
 	public void main() {
+		v2 = new Ventana2();
 		ventana = new JFrame("Simulador de Contagios");
 		ventana.setVisible(true);
 		ventana.setSize(250, 250);
@@ -30,7 +33,7 @@ public class MainMenu {
 		b1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				ventana.setVisible(false);
-				simulation();
+				v2.showVentana();
 			}
 		});
 		
@@ -63,6 +66,10 @@ public class MainMenu {
 	public static void simulation() {
 		Histogram h = new Histogram();
 		h.main();
+	}
+	
+	public ArrayList<Integer> getParams() {
+		return v2.getParametrosSimulacion();
 	}
 
 }
