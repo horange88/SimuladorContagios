@@ -70,42 +70,11 @@ private JFrame ventana;
 		group.add(rb1);
 		group.add(rb2);
 		
+		//Se fabrica toda la ventana
+		armadoVentana();
+		
 
-		ventana = new JFrame("ventanita");
-		ventana.setSize(350,400); //ancho*largo
-		ventana.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		
-		JPanel panel = new JPanel();
-		GridLayout gl = new GridLayout(8,2,0,10);
-		panel.setLayout(gl);
-	
-		//Inicializacion de frames, botones y botones redondos
-	    for(int i=0;i<8;i++) {
-	    	
-	    	panel.add(new JLabel(nombre.get(i)));
-	    	panel.add(whiteSpaces.get(i));
-	    	
-	    }
-		
-		
-		JPanel panelBoton = new JPanel();
-		panelBoton.setLayout(new FlowLayout());
-		panelBoton.add(cancelar);
-		panelBoton.add(aceptar);
-		
-		JPanel panelRadio = new JPanel();
-		panelRadio.setLayout(new GridLayout(3,1));
-		panelRadio.add(new JLabel("Seleccionar:"));
-		panelRadio.add(rb1);
-		panelRadio.add(rb2);
-		
-	
-		cp = ventana.getContentPane();
-		cp.add(panel,BorderLayout.NORTH);
-		cp.add(panelRadio,BorderLayout.CENTER);
-		cp.add(panelBoton,BorderLayout.SOUTH);
-		ventana.setVisible(true);
-		
+
 	}
 	
 	//Metodos que permiten determinar si hay cambios en los espacios en blanco
@@ -177,6 +146,40 @@ private JFrame ventana;
 			}
 		}
 		public void armadoVentana() {
+			ventana = new JFrame("ventanita");
+			ventana.setSize(350,400); //ancho*largo
+			ventana.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+			
+			JPanel panel = new JPanel();
+			GridLayout gl = new GridLayout(8,2,0,10);
+			panel.setLayout(gl);
+		
+			//Inicializacion de frames, botones y botones redondos
+		    for(int i=0;i<8;i++) {
+		    	
+		    	panel.add(new JLabel(nombre.get(i)));
+		    	panel.add(whiteSpaces.get(i));
+		    	
+		    }
+			
+			
+			JPanel panelBoton = new JPanel();
+			panelBoton.setLayout(new FlowLayout());
+			panelBoton.add(cancelar);
+			panelBoton.add(aceptar);
+			
+			JPanel panelRadio = new JPanel();
+			panelRadio.setLayout(new GridLayout(3,1));
+			panelRadio.add(new JLabel("Seleccionar:"));
+			panelRadio.add(rb1);
+			panelRadio.add(rb2);
+			
+		
+			cp = ventana.getContentPane();
+			cp.add(panel,BorderLayout.NORTH);
+			cp.add(panelRadio,BorderLayout.CENTER);
+			cp.add(panelBoton,BorderLayout.SOUTH);
+			ventana.setVisible(true);
 			
 		}
 		public ArrayList<Integer> getParametrosSimulacion(){
