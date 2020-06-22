@@ -64,7 +64,6 @@ private JFrame ventana;
 				 inmunidad        = Integer.valueOf(whiteSpaces.get(5).getText());
 				 movilidad        = Integer.valueOf(whiteSpaces.get(6).getText());
 				 tiempoSimulacion = Integer.valueOf(whiteSpaces.get(7).getText());
-				 
 				 grafico = (group.getSelection()==rb1) ? "Histograma":"DiagramaCake";
 				 startSim(poblacionTotal,pobTotInfectados,tasaMortalidad,tiempoIncubacion,radioContagio,inmunidad,movilidad,tiempoSimulacion);
 				 
@@ -72,7 +71,7 @@ private JFrame ventana;
 	        catch(NumberFormatException error) {
 	        	JOptionPane.showMessageDialog(null, "Las casillas no pueden estar vacias", "Error", JOptionPane.ERROR_MESSAGE);
 	        }
-	        ventana.dispatchEvent(new WindowEvent(ventana, WindowEvent.WINDOW_CLOSING));
+	        //ventana.dispatchEvent(new WindowEvent(ventana, WindowEvent.WINDOW_CLOSING));
 	        //ACA se deberia llamar a la ventana3
 	           
 	        }
@@ -191,7 +190,7 @@ private JFrame ventana;
 			addListeners();
 			//Se inicializa con "aceptar" deshabilitado
 			aceptar.setEnabled(false);
-			//Se añade a ButtonGrup a los radioButton
+			//Se aï¿½ade a ButtonGrup a los radioButton
 		    group = new ButtonGroup();
 			group.add(rb1);
 			group.add(rb2);
@@ -202,6 +201,7 @@ private JFrame ventana;
 		
 		//Aca se ejecuta el simulador de contagios
 		public  void startSim(int poblacionTotal, int pobTotInfectados, int tasaMortalidad, int tiempoIncubacion, int radioContagio, int inmunidad, int movilidad, int tiempoSimulacion) {
+			
 			Area area = new Area(600,600);
 			Poblacion p = new Poblacion(area,500 ,10);
 			Simulador simulador = new Simulador(area,p);
@@ -215,13 +215,18 @@ private JFrame ventana;
 			simulador.setTiempoSimulacion(1000);
 			simulador.setRadioContagio(10);
 			
+			JFrame j1 = new JFrame();
+			j1.add(simulador.getVisor().getPanel());
+			j1.pack();
+			j1.setVisible(true);
+			
 			log.displayPoblacion();
-	        
+
 	       /* Formulario f = new Formulario(simulador);
 	        f.setVisible(true);*/
 	        //simulador.simular();
 	        
-	        Thread t = new Thread(new MyThread(simulador));
+	        MyThread t = new MyThread(simulador);
 	        t.start();
 	        System.out.println("Estado de hilo"+ Thread.currentThread().getName()+" : "+Thread.currentThread().getState());
 	        
