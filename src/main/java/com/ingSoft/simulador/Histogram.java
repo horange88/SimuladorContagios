@@ -50,15 +50,11 @@ public class Histogram implements ActionListener,ObserverPoblacion{
 
 	public void histogramCalling() {
 		data = new DefaultCategoryDataset();
-		final String var1 = "var1";
-		final String var2 = "var2";
-		final String var3 = "var3";
-		final String var4 = "var4";
 		
-		data.addValue(pobSana,var1,"Sanas");
-		data.addValue(pobEnfermo,var2,"Enfermas");
-		data.addValue(pobMuertos,var3,"Recuperadas");
-		data.addValue(pobRecuperados,var4,"Muertas");
+		data.addValue(pobSana,"1","Sanas");
+		data.addValue(pobEnfermo,"2","Enfermas");
+		data.addValue(pobMuertos,"3","Recuperadas");
+		data.addValue(pobRecuperados,"4","Muertas");
 		
 		JFreeChart graph = ChartFactory.createBarChart("", "", "Cantidad de Personas", data, PlotOrientation.VERTICAL, false, true, false);
 		histograma = new ChartPanel(graph);
@@ -77,14 +73,10 @@ public class Histogram implements ActionListener,ObserverPoblacion{
 	
 	@Override
 	public void updatePoblacion() {
-		pobSana        = poblacion.getCantSanos();
-		pobEnfermo     = poblacion.getCantEnfermos();
-		pobMuertos     = poblacion.getCantMuertos();
-		pobRecuperados = poblacion.getCantRecuperados();
-		histogramCalling();
-		ventana.add(histograma,BorderLayout.SOUTH);
-		ventana.setVisible(true);
-		data.clear();
+		data.setValue(poblacion.getCantSanos(),"1","Sanas");
+		data.setValue(poblacion.getCantEnfermos(),"2","Enfermas");
+		data.setValue(poblacion.getCantRecuperados(),"3","Recuperadas");
+		data.setValue(poblacion.getCantMuertos(),"4","Muertas");
 	}
 	
 	public void parametersCalling() {

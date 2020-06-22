@@ -222,7 +222,6 @@ private JFrame ventana;
 			//Observer
 			p.atachObserverPoblacion(histo);
 			
-			
 			JFrame j1 = new JFrame("Simulacion de contagios");
 		    j1.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	        j1.setVisible(true);
