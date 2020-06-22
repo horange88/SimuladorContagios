@@ -25,15 +25,16 @@ private JFrame ventana;
 	private ButtonGroup group;
 	private Container cp; 
 	
-	public int poblacionTotal;
-	public int pobTotInfectados;
-	public int tasaMortalidad;
-	public int tiempoIncubacion;
-	public int radioContagio;
-	public int inmunidad;
-	public int  movilidad;
-	public int tiempoSimulacion;
+	public static int poblacionTotal;
+	public static int pobTotInfectados;
+	public static int tasaMortalidad;
+	public static int tiempoIncubacion;
+	public static int radioContagio;
+	public static int inmunidad;
+	public static int movilidad;
+	public static int tiempoSimulacion;
 	public String grafico;
+	
 	
 	
 	public Ventana2() {
@@ -65,6 +66,7 @@ private JFrame ventana;
 				 tiempoSimulacion = Integer.valueOf(whiteSpaces.get(7).getText());
 				 
 				 grafico = (group.getSelection()==rb1) ? "Histograma":"DiagramaCake";
+				 startSim(poblacionTotal,pobTotInfectados,tasaMortalidad,tiempoIncubacion,radioContagio,inmunidad,movilidad,tiempoSimulacion);
 				 
 	        }
 	        catch(NumberFormatException error) {
@@ -111,6 +113,7 @@ private JFrame ventana;
 		public void armadoVentana() {
 			ventana = new JFrame("ventanita");
 			ventana.setSize(350,400); //ancho*largo
+			ventana.setLocationRelativeTo(null);
 			ventana.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 			
 			JPanel panel = new JPanel();
@@ -145,7 +148,8 @@ private JFrame ventana;
 			ventana.setVisible(true);
 			
 		}
-		public ArrayList<Integer> getParametrosSimulacion(){
+		
+		public static ArrayList<Integer> getParametrosSimulacion(){
 			ArrayList<Integer> param = new ArrayList<Integer> ();
 			param.add(poblacionTotal);
 			param.add(pobTotInfectados);
@@ -195,5 +199,33 @@ private JFrame ventana;
 			//Se fabrica toda la ventana
 			armadoVentana();
 		}
+		
+		//Aca se ejecuta el simulador de contagios
+		public  void startSim(int poblacionTotal, int pobTotInfectados, int tasaMortalidad, int tiempoIncubacion, int radioContagio, int inmunidad, int movilidad, int tiempoSimulacion) {
+			Area area = new Area(600,600);
+			Poblacion p = new Poblacion(area,500 ,10);
+			Simulador simulador = new Simulador(area,p);
+			Log log = new Log(simulador);
+			LogWriter logwriter = new LogWriter(simulador);
+			
+			simulador.setVisor(VisorSimulador.getVisor());
+			simulador.setMortalidad((float) 0.1);
+			simulador.setMovilidad(3);
+			simulador.setDuracionEnfermedad(1);
+			simulador.setTiempoSimulacion(1000);
+			simulador.setRadioContagio(10);
+			
+			log.displayPoblacion();
+	        
+	       /* Formulario f = new Formulario(simulador);
+	        f.setVisible(true);*/
+	        //simulador.simular();
+	        
+	        Thread t = new Thread(new MyThread(simulador));
+	        t.start();
+	        System.out.println("Estado de hilo"+ Thread.currentThread().getName()+" : "+Thread.currentThread().getState());
+	        
+		}
+
 
 }

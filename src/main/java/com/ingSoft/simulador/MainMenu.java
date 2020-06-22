@@ -17,6 +17,7 @@ public class MainMenu {
 		static Ventana2 v2;
 	public void main() {
 		v2 = new Ventana2();
+		
 		ventana = new JFrame("Simulador de Contagios");
 		ventana.setVisible(true);
 		ventana.setSize(250, 250);
@@ -30,10 +31,14 @@ public class MainMenu {
 		JButton b2 = new JButton("Historial de Simulaciones");
 		JButton b3 = new JButton("Comparar Simulaciones");
 		
+		
 		b1.addActionListener(new ActionListener() {
+			
 			public void actionPerformed(ActionEvent e) {
 				ventana.setVisible(false);
 				v2.showVentana();
+				
+				
 			}
 		});
 		
@@ -55,6 +60,8 @@ public class MainMenu {
 		panel.add(b3,c);
 		
 		ventana.add(panel);
+		
+		
 				
 	}
 	
@@ -63,13 +70,6 @@ public class MainMenu {
 		hm.main(ventana);
 	}
 	
-	public static void simulation() {
-		Histogram h = new Histogram();
-		h.main();
-	}
 	
-	public ArrayList<Integer> getParams() {
-		return v2.getParametrosSimulacion();
-	}
 
 }

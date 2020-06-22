@@ -4,7 +4,7 @@
 	<classpathentry kind="src" path="src/main/java"/>
 	<classpathentry kind="src" path="src/test/java"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
-	<classpathentry kind="lib" path="C:/Users/Alejo/Desktop/UNC/4 - Primer Semestre/Ingeniería de Software/Tp_Final/SimuladorContagios/libraries/jcommon-1.0.17.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Alejo/Desktop/UNC/4 - Primer Semestre/Ingeniería de Software/Tp_Final/SimuladorContagios/libraries/jfreechart-1.0.14.jar"/>
+	<classpathentry kind="lib" path="C:/Users/miner/Documents/JIME/4toAnio/ing_sw/proyecto/maven/libraries/jcommon-1.0.17.jar"/>
+	<classpathentry kind="lib" path="C:/Users/miner/Documents/JIME/4toAnio/ing_sw/proyecto/maven/libraries/jfreechart-1.0.14.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
