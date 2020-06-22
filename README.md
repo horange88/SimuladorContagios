@@ -25,7 +25,7 @@ https://drive.google.com/drive/folders/19ubgpriPBDchA6j1QlIhXV7PuHbEBm-b?usp=sha
 Este proyecto está bajo la Licencia GPL
 
 # Herramientas:
-GitHub - control de versiones y gestion de defectos
+GitHub - control de versiones y gestion de tareas
 
 Circlci - integracion continua
 
