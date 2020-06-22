@@ -26,9 +26,10 @@ public class Ventana3 implements ActionListener{
 	private Simulador sim;
 	private String graphChoice;
 	
-	public Ventana3(Poblacion pob,Simulador sim) {
-		this.pob = pob;
+	public Ventana3(Poblacion pob, Simulador sim) {
 		this.sim = sim;
+		this.pob = pob;
+		//showVentana();
 	}
 	
 	public void showVentana() {
@@ -36,18 +37,24 @@ public class Ventana3 implements ActionListener{
 		ventana.setSize(500,100);
 		ventana.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		ventana.setLocationRelativeTo(null);
+		
 		panel = new JPanel();
 		panel2 = new JPanel();
+		
 		tasaMortalidad = new JTextField("",6);
 		radioContagio = new JTextField("",6);
 		movilidad = new JTextField("",6);
 		graph = new JComboBox(s);
 		apply = new JButton("Apply");
+		
+		//panel.setLayout(new GridLayout(1,5));
 		panel.add(tasaMortalidad);
 		panel.add(radioContagio);
 		panel.add(movilidad);
 		panel.add(graph);
 		panel.add(apply);
+		
+		panel2.setLayout(new GridLayout(1,5));
 		panel2.add(new JLabel("Tasa Mortalidad /"));
 		panel2.add(new JLabel(" Radio Contagio /"));
 		panel2.add(new JLabel(" Movilidad /"));
@@ -65,5 +72,11 @@ public class Ventana3 implements ActionListener{
 			sim.setMovilidad(Integer.valueOf(movilidad.getText()));
 			graphChoice = graph.getSelectedItem().toString();
 		}
+	}
+	public JPanel getpanel1() {
+		return panel;
+	}
+	public JPanel getpanel2() {
+		return panel2;
 	}
 }

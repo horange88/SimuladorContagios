@@ -73,9 +73,9 @@ public class MainMenu {
 	public static void historialSim() {
 		/*HistorialMenu hm = new HistorialMenu();
 		hm.main(ventana);*/
-		Histogram histo = new Histogram();
+		//Histogram histo = new Histogram();
 		
-	    ventana3 = new JFrame("Histogramita");
+	   /* ventana3 = new JFrame("Histogramita");
 		ventana3.setSize(800,600);
 		ventana3.setLocationRelativeTo(null);
 		ventana3.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);	
@@ -95,7 +95,7 @@ public class MainMenu {
 		
 		cp.add(panel,BorderLayout.NORTH);
 		cp.add(panelDePaneles,BorderLayout.SOUTH);
-		ventana3.setVisible(true);
+		ventana3.setVisible(true);*/
 
 	}
 	

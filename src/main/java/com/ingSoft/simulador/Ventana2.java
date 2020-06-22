@@ -30,7 +30,7 @@ private JFrame ventana;
 	public static int tasaMortalidad;
 	public static int tiempoIncubacion;
 	public static int radioContagio;
-	public static int inmunidad;
+	public static int areaParam;
 	public static int movilidad;
 	public static int tiempoSimulacion;
 	public String grafico;
@@ -61,12 +61,13 @@ private JFrame ventana;
 				 tasaMortalidad   = Integer.valueOf(whiteSpaces.get(2).getText());
 				 tiempoIncubacion = Integer.valueOf(whiteSpaces.get(3).getText());
 				 radioContagio    = Integer.valueOf(whiteSpaces.get(4).getText());
-				 inmunidad        = Integer.valueOf(whiteSpaces.get(5).getText());
+				 areaParam        = Integer.valueOf(whiteSpaces.get(5).getText());
 				 movilidad        = Integer.valueOf(whiteSpaces.get(6).getText());
 				 tiempoSimulacion = Integer.valueOf(whiteSpaces.get(7).getText());
 				 
 				 grafico = (group.getSelection()==rb1) ? "Histograma":"DiagramaCake";
-				 startSim(poblacionTotal,pobTotInfectados,tasaMortalidad,tiempoIncubacion,radioContagio,inmunidad,movilidad,tiempoSimulacion);
+				 ventana.setVisible(false);
+				 startSim(poblacionTotal,pobTotInfectados,tasaMortalidad,tiempoIncubacion,radioContagio,areaParam,movilidad,tiempoSimulacion);
 				 
 	        }
 	        catch(NumberFormatException error) {
@@ -156,7 +157,7 @@ private JFrame ventana;
 			param.add(tasaMortalidad);
 			param.add(tiempoIncubacion);
 			param.add(radioContagio);
-			param.add(inmunidad);
+			param.add(areaParam);
 			param.add(movilidad);
 			param.add(tiempoSimulacion);
 			
@@ -170,10 +171,10 @@ private JFrame ventana;
 		
 			nombre.add("poblacion total");
 			nombre.add("poblacion inicial infectados");
-			nombre.add("tasa de mortaldiad");
+			nombre.add("tasa de mortalidad");
 			nombre.add("tiempo de incubacion");
 			nombre.add("radio de contagio");
-			nombre.add("inmunidad");
+			nombre.add("Area");
 			nombre.add("movilidad");
 			nombre.add("tiempo de simulacion (seg)");
 			
@@ -201,33 +202,33 @@ private JFrame ventana;
 		}
 		
 		//Aca se ejecuta el simulador de contagios
-		public  void startSim(int poblacionTotal, int pobTotInfectados, int tasaMortalidad, int tiempoIncubacion, int radioContagio, int inmunidad, int movilidad, int tiempoSimulacion) {
-			Area area = new Area(600,600);
-			Poblacion p = new Poblacion(area,500 ,10);
+		public  void startSim(int poblacionTotal, int pobTotInfectados, int tasaMortalidad, int tiempoIncubacion, int radioContagio, int areaParam, int movilidad, int tiempoSimulacion) {
+			Area area = new Area(areaParam,areaParam);
+			Poblacion p = new Poblacion(area,poblacionTotal ,pobTotInfectados);
 			Simulador simulador = new Simulador(area,p);
 			Log log = new Log(simulador);
 			LogWriter logwriter = new LogWriter(simulador);
 			
 			simulador.setVisor(VisorSimulador.getVisor());
-			simulador.setMortalidad((float) 0.1);
-			simulador.setMovilidad(3);
-			simulador.setDuracionEnfermedad(1);
-			simulador.setTiempoSimulacion(1000);
-			simulador.setRadioContagio(10);
+			simulador.setMortalidad((float)(0.01*tasaMortalidad));
+			simulador.setMovilidad(movilidad);
+			simulador.setDuracionEnfermedad(tiempoIncubacion);
+			simulador.setTiempoSimulacion(tiempoSimulacion);
+			simulador.setRadioContagio(radioContagio);
 			
 			log.displayPoblacion();
 	        
-	       /* Formulario f = new Formulario(simulador);
-	        f.setVisible(true);*/
-	        //simulador.simular();
+			Histogram histo = new Histogram(p,simulador);
+			//Observer
+			p.atachObserverPoblacion(histo);
 			
-			 JFrame j1 = new JFrame();
-		     //j1.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		     j1.setVisible(true);
-		     j1.add(simulador.getVisor().getPanel());
-		     j1.pack();
-	        
-	       //Thread t = new Thread(new MyThread(simulador));
+			
+			JFrame j1 = new JFrame("Simulacion de contagios");
+		    j1.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	        j1.setVisible(true);
+		    j1.add(simulador.getVisor().getPanel());
+		    j1.pack();
+     
 		    MyThread t = new MyThread(simulador);
 	        t.start();
 	        System.out.println("Estado de hilo"+ Thread.currentThread().getName()+" : "+Thread.currentThread().getState());
