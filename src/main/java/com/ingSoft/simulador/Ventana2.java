@@ -207,12 +207,12 @@ private JFrame ventana;
 			Simulador simulador = new Simulador(area,p);
 			Log log = new Log(simulador);
 			LogWriter logwriter = new LogWriter(simulador);
-			
+			PieChart pie = new PieChart(simulador);
 			simulador.setVisor(VisorSimulador.getVisor());
 			simulador.setMortalidad((float) 0.1);
 			simulador.setMovilidad(3);
-			simulador.setDuracionEnfermedad(1);
-			simulador.setTiempoSimulacion(1000);
+			simulador.setDuracionEnfermedad(100);
+			simulador.setTiempoSimulacion(5000);
 			simulador.setRadioContagio(10);
 			
 			JFrame j1 = new JFrame();
