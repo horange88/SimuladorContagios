@@ -10,8 +10,12 @@ import org.jfree.data.category.*;
 import org.jfree.chart.plot.*;
 
 public class Histogram {
+	
 	public static ChartPanel panel;
-	public void main() {
+	public Histogram(){
+		histogramFactory();
+	}
+	public void histogramFactory() {
 		DefaultCategoryDataset data = new DefaultCategoryDataset();
 		final String var1 = "var1";
 		final String var2 = "var2";
@@ -26,12 +30,13 @@ public class Histogram {
 		JFreeChart graph = ChartFactory.createBarChart("", "", "Cantidad de Personas", data, PlotOrientation.VERTICAL, false, true, false);
 		panel = new ChartPanel(graph);
 		panel.setBounds(100,100,10,10);
-		JFrame ventana = new JFrame("Histogram");
+		
+		/*JFrame ventana = new JFrame("Histogram");
 		ventana.setVisible(true);
 		ventana.setSize(400,400);
 		ventana.setLocationRelativeTo(null);
 		ventana.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);	
-		ventana.add(panel);
+		ventana.add(panel);*/
 	}
 	
 	public ChartPanel getPanel() {

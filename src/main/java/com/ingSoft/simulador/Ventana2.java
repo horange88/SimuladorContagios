@@ -72,7 +72,7 @@ private JFrame ventana;
 	        catch(NumberFormatException error) {
 	        	JOptionPane.showMessageDialog(null, "Las casillas no pueden estar vacias", "Error", JOptionPane.ERROR_MESSAGE);
 	        }
-	        ventana.dispatchEvent(new WindowEvent(ventana, WindowEvent.WINDOW_CLOSING));
+	       // ventana.dispatchEvent(new WindowEvent(ventana, WindowEvent.WINDOW_CLOSING));
 	        //ACA se deberia llamar a la ventana3
 	           
 	        }
@@ -220,8 +220,15 @@ private JFrame ventana;
 	       /* Formulario f = new Formulario(simulador);
 	        f.setVisible(true);*/
 	        //simulador.simular();
+			
+			 JFrame j1 = new JFrame();
+		     //j1.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		     j1.setVisible(true);
+		     j1.add(simulador.getVisor().getPanel());
+		     j1.pack();
 	        
-	        Thread t = new Thread(new MyThread(simulador));
+	       //Thread t = new Thread(new MyThread(simulador));
+		    MyThread t = new MyThread(simulador);
 	        t.start();
 	        System.out.println("Estado de hilo"+ Thread.currentThread().getName()+" : "+Thread.currentThread().getState());
 	        
