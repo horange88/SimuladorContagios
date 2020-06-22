@@ -13480,6 +13480,7 @@ Paso: 1. Sanos: 490. Enfermos: 3. Muertos: 0. Recuperados: 7
 Paso: 1. Sanos: 490. Enfermos: 2. Muertos: 0. Recuperados: 8
 Paso: 1. Sanos: 490. Enfermos: 1. Muertos: 0. Recuperados: 9
 Paso: 1. Sanos: 490. Enfermos: 0. Muertos: 0. Recuperados: 10
+<<<<<<< HEAD
 Parametros seteados: Movilidad: 0. Mortalidad: 0.1
 Parametros seteados: Movilidad: 3. Mortalidad: 0.1
 Paso: 1. Sanos: 490. Enfermos: 9. Muertos: 0. Recuperados: 1
@@ -13540,3 +13541,19 @@ Paso: 1. Sanos: 490. Enfermos: 3. Muertos: 0. Recuperados: 7
 Paso: 1. Sanos: 490. Enfermos: 2. Muertos: 0. Recuperados: 8
 Paso: 1. Sanos: 490. Enfermos: 1. Muertos: 0. Recuperados: 9
 Paso: 1. Sanos: 490. Enfermos: 0. Muertos: 0. Recuperados: 10
+=======
+Parametros seteados: Movilidad: 0. Mortalidad: 0.049999997
+Parametros seteados: Movilidad: 5. Mortalidad: 0.049999997
+Parametros seteados: Movilidad: 0. Mortalidad: 0.1
+Parametros seteados: Movilidad: 3. Mortalidad: 0.1
+Paso: 1. Sanos: 490. Enfermos: 9. Muertos: 1. Recuperados: 0
+Paso: 1. Sanos: 490. Enfermos: 8. Muertos: 2. Recuperados: 0
+Paso: 1. Sanos: 490. Enfermos: 7. Muertos: 3. Recuperados: 0
+Paso: 1. Sanos: 490. Enfermos: 6. Muertos: 3. Recuperados: 1
+Paso: 1. Sanos: 490. Enfermos: 5. Muertos: 3. Recuperados: 2
+Paso: 1. Sanos: 490. Enfermos: 4. Muertos: 3. Recuperados: 3
+Paso: 1. Sanos: 490. Enfermos: 3. Muertos: 3. Recuperados: 4
+Paso: 1. Sanos: 490. Enfermos: 2. Muertos: 3. Recuperados: 5
+Paso: 1. Sanos: 490. Enfermos: 1. Muertos: 3. Recuperados: 6
+Paso: 1. Sanos: 490. Enfermos: 0. Muertos: 3. Recuperados: 7
+>>>>>>> 6e55885a69083328970dd37b9b497c3ea5c90184
