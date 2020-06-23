@@ -203,16 +203,17 @@ private JFrame ventana;
 		public  void startSim(int poblacionTotal, int pobTotInfectados, int tasaMortalidad, int tiempoIncubacion, int radioContagio, int inmunidad, int movilidad, int tiempoSimulacion) {
 			
 			Area area = new Area(600,600);
-			Poblacion p = new Poblacion(area,500 ,10);
+			Poblacion p = new Poblacion(area,1000 ,10);
 			Simulador simulador = new Simulador(area,p);
 			Log log = new Log(simulador);
 			LogWriter logwriter = new LogWriter(simulador);
 			PieChart pie = new PieChart(simulador);
+			LineChart xy = new LineChart(simulador);
 			simulador.setVisor(VisorSimulador.getVisor());
 			simulador.setMortalidad((float) 0.1);
 			simulador.setMovilidad(3);
 			simulador.setDuracionEnfermedad(100);
-			simulador.setTiempoSimulacion(5000);
+			simulador.setTiempoSimulacion(3000);
 			simulador.setRadioContagio(10);
 			
 			JFrame j1 = new JFrame();

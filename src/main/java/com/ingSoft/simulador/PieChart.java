@@ -11,6 +11,7 @@ public class PieChart implements ObserverPoblacion {
 	DefaultPieDataset dataset;
 	Simulador simulador;
 	Poblacion p;
+	ChartPanel panel;
 
 	public PieChart(Simulador s) {
 		simulador = s;
@@ -24,7 +25,7 @@ public class PieChart implements ObserverPoblacion {
 		dataset.insertValue(3, "Muertos", p.getCantMuertos());
 
 		JFreeChart chart = ChartFactory.createPieChart("Repeticion de randoms", dataset, true, true, true);
-		ChartPanel panel = new ChartPanel(chart);
+		panel = new ChartPanel(chart);
 		
 		
 		JFrame frame = new JFrame("CrearGraficos - LineaDeCodigo");
@@ -33,6 +34,9 @@ public class PieChart implements ObserverPoblacion {
 		frame.pack();
 		frame.setVisible(true);
 
+	}
+	public ChartPanel getPanel() {
+		return panel;
 	}
 
 	@Override
