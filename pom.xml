@@ -31,14 +31,14 @@
 			<artifactId>jfreechart</artifactId>
 			<scope>system</scope>
 			<version>1.0</version>
-			<systemPath>${basedir}\libraries\jfreechart-1.0.14.jar</systemPath>
+			<systemPath>${basedir}/libraries/jfreechart-1.0.14.jar</systemPath>
 		</dependency>
 		<dependency>
 			<groupId>jcommon</groupId>
 			<artifactId>jcommon</artifactId>
 			<scope>system</scope>
 			<version>1.0</version>
-			<systemPath>${basedir}\libraries\jcommon-1.0.17.jar</systemPath>
+			<systemPath>${basedir}/libraries/jcommon-1.0.17.jar</systemPath>
 		</dependency>
 	</dependencies>
 
