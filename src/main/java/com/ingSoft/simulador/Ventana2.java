@@ -123,17 +123,20 @@ private JFrame ventana;
 	    //validar datos
 		public void validarDatos() {
 			boolean isNull=false;
+			try {
 			for(int i=0;i<whiteSpaces.size();i++) {
 				if(whiteSpaces.get(i).getText().equals("")) {
 					isNull = true;
 				}
-				if(Integer.valueOf(whiteSpaces.get(0).getText())<0) {
-					System.out.println("NEGATIVO= "+Integer.valueOf(whiteSpaces.get(0).getText()) );
-				}
+			  }
+			}
+			catch(NumberFormatException e) {
+				JOptionPane.showMessageDialog(null, "Las casillas no pueden estar vacias", "Error", JOptionPane.ERROR_MESSAGE);
+				isNull=true;
 			}
 			if(isNull) {
 				aceptar.setEnabled(false);
-				//JOptionPane.showMessageDialog(null, "Las casillas no pueden estar vacias", "Error", JOptionPane.ERROR_MESSAGE);
+			
 			}else {
 				aceptar.setEnabled(true);
 			}

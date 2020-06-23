@@ -29,8 +29,6 @@ public class LineChart implements ObserverPoblacion, GraphicBehaviour {
 		JFreeChart chart = ChartFactory.createLineChart("", "", "", dataset,
 				PlotOrientation.VERTICAL, true, true, true);
 		panel = new ChartPanel(chart);
-
-
 	}
 
 	public ChartPanel getPanel() {
