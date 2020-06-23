@@ -1,5 +1,7 @@
 package com.ingSoft.simulador;
 
+import java.awt.event.WindowEvent;
+
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
@@ -9,7 +11,6 @@ import org.jfree.chart.JFreeChart;
 public class FrameGrafico extends JFrame{
 
 	public FrameGrafico() {
-		// TODO Auto-generated constructor stub
 		this.setVisible(true);
 		setTitle("grafico variable");
 	}
@@ -20,5 +21,4 @@ public class FrameGrafico extends JFrame{
 		pack();
 		repaint();;
 	}
-
 }

@@ -33,7 +33,6 @@ private JFrame ventana;
 	private JComboBox  graph;
 	private JButton    apply;
 
-	
 	private Simulador simulador;
 	public static int poblacionTotal;
 	public static int pobTotInfectados;
@@ -44,9 +43,6 @@ private JFrame ventana;
 	public static int movilidad;
 	public static int tiempoSimulacion;
 	public String grafico;
-	
-	
-	
 	
 	public Ventana2() {
 	}
@@ -65,7 +61,6 @@ private JFrame ventana;
 	@Override
 	public void actionPerformed(ActionEvent e) {
          frameGrafico = new FrameGrafico();
-         
 		 if (e.getSource()==aceptar) {
 			 
 	        try {     
@@ -101,13 +96,26 @@ private JFrame ventana;
 	        	JOptionPane.showMessageDialog(null, "Las casillas no pueden estar vacias", "Error", JOptionPane.ERROR_MESSAGE);
 	        }
 	           
-	        }
+	     }
 		 else if(e.getSource() == cancelar) {
 			 ventana.dispatchEvent(new WindowEvent(ventana, WindowEvent.WINDOW_CLOSING));
 		 }
-		 else if (e.getSource() == apply){
-			 System.out.println("SON OF A BITCH. IM IN");
-			 
+		 else if (e.getSource() == apply){//"Histogram","Pie","Line"
+			
+			 if(graph.getSelectedItem()=="Histogram") {
+				 frameGrafico.setJChart(new  Histogram(simulador));
+			 }
+			 else if(graph.getSelectedItem()=="Pie") {
+				 frameGrafico.setJChart(new  PieChart(simulador));
+				
+			 }
+			 else if (graph.getSelectedItem()=="Line"){
+				 frameGrafico.setJChart(new  LineChart(simulador));
+			 }
+			 simulador.setMortalidad((float)(Integer.valueOf(tm.getText())));
+			 simulador.setRadioContagio(Integer.valueOf(rc.getText()));
+			 simulador.setMovilidad(Integer.valueOf(mov.getText()));
+			
 		 }
 	  }
 	
@@ -123,14 +131,13 @@ private JFrame ventana;
 			}
 			if(isNull) {
 				aceptar.setEnabled(false);
-				//JOptionPane.showMessageDialog(null, "Las casillas no pueden estar vacias", "Error", JOptionPane.ERROR_MESSAGE)
+				JOptionPane.showMessageDialog(null, "Las casillas no pueden estar vacias", "Error", JOptionPane.ERROR_MESSAGE);
 			}else {
 				aceptar.setEnabled(true);
 			}
 		}
 		
 		public void addListeners() {
-			
 			//Agregado de listener botones
 			aceptar.addActionListener(this);
 			cancelar.addActionListener(this);
@@ -140,6 +147,7 @@ private JFrame ventana;
 				whiteSpaces.get(i).getDocument().addDocumentListener(this);
 			}
 		}
+		
 		public void armadoVentana() {
 			ventana = new JFrame("ventanita");
 			ventana.setSize(350,400); //ancho*largo
@@ -152,11 +160,9 @@ private JFrame ventana;
 		
 			//Inicializacion de frames, botones y botones redondos
 		    for(int i=0;i<8;i++) {
-		    	
 		    	panel.add(new JLabel(nombre.get(i)));
 		    	panel.add(whiteSpaces.get(i));
 		    }
-			
 			
 			JPanel panelBoton = new JPanel();
 			panelBoton.setLayout(new FlowLayout());
@@ -206,7 +212,6 @@ private JFrame ventana;
 			nombre.add("movilidad");
 			nombre.add("tiempo de simulacion (seg)");
 			
-
 			for(int i=0; i<8;i++) {
 				whiteSpaces.add(new JTextField(10));
 			}
@@ -221,7 +226,7 @@ private JFrame ventana;
 			addListeners();
 			//Se inicializa con "aceptar" deshabilitado
 			aceptar.setEnabled(false);
-			//Se a�ade a ButtonGrup a los radioButton
+			//Se aniaade a ButtonGrup a los radioButton
 			
 		    group = new ButtonGroup();
 			group.add(rb1);
@@ -234,13 +239,13 @@ private JFrame ventana;
 		
 		//Aca se ejecuta el simulador de contagios
 		public  void startSim(int poblacionTotal, int pobTotInfectados, int tasaMortalidad, int tiempoIncubacion, int radioContagio, int areaParam, int movilidad, int tiempoSimulacion) {
-			
+			//Instancia parametros de simulacion
 			Area area = new Area(areaParam,areaParam);
 			Poblacion p = new Poblacion(area,poblacionTotal ,pobTotInfectados);
 		    simulador = new Simulador(area,p);
 			Log log = new Log(simulador);
 			LogWriter logwriter = new LogWriter(simulador);
-
+			//seteo de parametros del simulador
 			simulador.setVisor(VisorSimulador.getVisor());
 			simulador.setMortalidad((float)(0.01*tasaMortalidad));
 			simulador.setMovilidad(movilidad);
@@ -248,9 +253,6 @@ private JFrame ventana;
 			simulador.setTiempoSimulacion(tiempoSimulacion);
 			simulador.setRadioContagio(radioContagio);
 			
-			/*Formulario f = new Formulario(simulador);
-	        f.setVisible(true);*/
-		
 			log.displayPoblacion();
 		    //visor simulador
 			JFrame j1 = new JFrame("Simulacion de contagios");
@@ -260,10 +262,7 @@ private JFrame ventana;
 		    j1.pack();
      
 		    MyThread t = new MyThread(simulador);
-
-	        t.start();
-	       // System.out.println("Estado de hilo"+ Thread.currentThread().getName()+" : "+Thread.currentThread().getState());
-	        
+	        t.start();  
 		}
 		
 		public void parameterConfig() {
@@ -297,16 +296,9 @@ private JFrame ventana;
 			 panel2.add(new JLabel("Movilidad/"));
 			 panel2.add(new JLabel("Graph"));
    
-			 
 			 ventana.add(panel1,BorderLayout.CENTER);
 			 ventana.add(panel2,BorderLayout.NORTH);
 			 //ventana.add(histograma,BorderLayout.SOUTH);
 			 ventana.setVisible(true);
-			 
-			 
-		     
-			
 		}
-
-
 }
