@@ -12,11 +12,11 @@ public class FrameGrafico extends JFrame{
 
 	public FrameGrafico() {
 		this.setLocation(600,200);
-		this.setVisible(true);
 		setTitle("grafico variable");
 	}
 	
 	public void setJChart(GraphicBehaviour chart) {
+		this.setVisible(true);
 		getContentPane().removeAll();
 		add(chart.getPanel());
 		pack();

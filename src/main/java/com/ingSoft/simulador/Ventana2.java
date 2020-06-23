@@ -49,6 +49,8 @@ private JFrame ventana;
 	public String grafico;
 	
 	public Ventana2() {
+        frameGrafico = new FrameGrafico();
+
 	}
 	
 	//Metodos que permiten determinar si hay cambios en los espacios en blanco
@@ -64,7 +66,6 @@ private JFrame ventana;
     //Metodo que permite deterimar si hay cambio en los botones
 	@Override
 	public void actionPerformed(ActionEvent e) {
-         frameGrafico = new FrameGrafico();
 		 if (e.getSource()==aceptar) {
 			
 	        try {     
