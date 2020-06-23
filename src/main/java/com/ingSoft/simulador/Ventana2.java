@@ -22,6 +22,7 @@ private JFrame ventana;
 	private ArrayList<String>     nombre;
 	private JRadioButton rb1;	
 	private JRadioButton rb2;
+	private JRadioButton rb3;
 	private ButtonGroup group;
 	private Container cp; 
 	
@@ -64,7 +65,7 @@ private JFrame ventana;
 				 areaParam        = Integer.valueOf(whiteSpaces.get(5).getText());
 				 movilidad        = Integer.valueOf(whiteSpaces.get(6).getText());
 				 tiempoSimulacion = Integer.valueOf(whiteSpaces.get(7).getText());
-				 grafico = (group.getSelection()==rb1) ? "Histograma":"DiagramaCake";
+				 grafico = (group.getSelection()==rb1) ? "Histogram":(group.getSelection()==rb2) ? "Pie":"Line";
 				 ventana.setVisible(false);
 				 startSim(poblacionTotal,pobTotInfectados,tasaMortalidad,tiempoIncubacion,radioContagio,areaParam,movilidad,tiempoSimulacion);
 				 
@@ -134,10 +135,11 @@ private JFrame ventana;
 			panelBoton.add(aceptar);
 			
 			JPanel panelRadio = new JPanel();
-			panelRadio.setLayout(new GridLayout(3,1));
+			panelRadio.setLayout(new GridLayout(4,1));
 			panelRadio.add(new JLabel("Seleccionar:"));
 			panelRadio.add(rb1);
 			panelRadio.add(rb2);
+			panelRadio.add(rb3);
 			
 		
 			cp = ventana.getContentPane();
@@ -181,8 +183,9 @@ private JFrame ventana;
 				whiteSpaces.add(new JTextField(10));
 			}
 			
-			rb1 = new JRadioButton("Histograma");
-			rb2 = new JRadioButton("Diagrama cake");
+			rb1 = new JRadioButton("Histogram");
+			rb2 = new JRadioButton("Pie");
+			rb3 = new JRadioButton("Line");
 			aceptar = new JButton("Aceptar");
 			cancelar = new JButton("Cancelar");
 			
@@ -194,6 +197,7 @@ private JFrame ventana;
 		    group = new ButtonGroup();
 			group.add(rb1);
 			group.add(rb2);
+			group.add(rb3);
 			
 			//Se fabrica toda la ventana
 			armadoVentana();
