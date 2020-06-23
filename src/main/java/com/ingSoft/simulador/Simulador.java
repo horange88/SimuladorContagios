@@ -80,12 +80,12 @@ public class Simulador implements SubjectParametros {
 		return mortalidad;
 	}
 
-	public void setMortalidad(float mortalidad) {
-		this.mortalidad = mortalidad;
-		poblacion.setMortalidad(mortalidad);
+	public void setMortalidad(float d) {
+		this.mortalidad = d;
+		poblacion.setMortalidad(d);
 		notifyObserverParametros();
 	}
-
+	
 	public int getTiempoSimulacion() {
 		return tiempoSimulacion;
 	}
@@ -105,7 +105,15 @@ public class Simulador implements SubjectParametros {
 	public void simular() {
 		for (int i = 0; i < tiempoSimulacion; i++) {
 			simularUnPaso();
+			try {
+				Thread.sleep(100);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			
 		}
+		
 	}
 
 	public void simularUnPaso() {
