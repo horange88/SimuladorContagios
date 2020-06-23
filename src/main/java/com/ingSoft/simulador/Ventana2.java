@@ -64,7 +64,6 @@ private JFrame ventana;
 				 areaParam        = Integer.valueOf(whiteSpaces.get(5).getText());
 				 movilidad        = Integer.valueOf(whiteSpaces.get(6).getText());
 				 tiempoSimulacion = Integer.valueOf(whiteSpaces.get(7).getText());
-				 
 				 grafico = (group.getSelection()==rb1) ? "Histograma":"DiagramaCake";
 				 ventana.setVisible(false);
 				 startSim(poblacionTotal,pobTotInfectados,tasaMortalidad,tiempoIncubacion,radioContagio,areaParam,movilidad,tiempoSimulacion);
@@ -73,7 +72,6 @@ private JFrame ventana;
 	        catch(NumberFormatException error) {
 	        	JOptionPane.showMessageDialog(null, "Las casillas no pueden estar vacias", "Error", JOptionPane.ERROR_MESSAGE);
 	        }
-	       // ventana.dispatchEvent(new WindowEvent(ventana, WindowEvent.WINDOW_CLOSING));
 	        //ACA se deberia llamar a la ventana3
 	           
 	        }
@@ -192,7 +190,7 @@ private JFrame ventana;
 			addListeners();
 			//Se inicializa con "aceptar" deshabilitado
 			aceptar.setEnabled(false);
-			//Se añade a ButtonGrup a los radioButton
+			//Se aï¿½ade a ButtonGrup a los radioButton
 		    group = new ButtonGroup();
 			group.add(rb1);
 			group.add(rb2);
@@ -208,7 +206,8 @@ private JFrame ventana;
 			Simulador simulador = new Simulador(area,p);
 			Log log = new Log(simulador);
 			LogWriter logwriter = new LogWriter(simulador);
-			
+			PieChart pie = new PieChart(simulador);
+			LineChart xy = new LineChart(simulador);
 			simulador.setVisor(VisorSimulador.getVisor());
 			simulador.setMortalidad((float)(0.01*tasaMortalidad));
 			simulador.setMovilidad(movilidad);
@@ -229,6 +228,7 @@ private JFrame ventana;
 		    j1.pack();
      
 		    MyThread t = new MyThread(simulador);
+
 	        t.start();
 	        System.out.println("Estado de hilo"+ Thread.currentThread().getName()+" : "+Thread.currentThread().getState());
 	        

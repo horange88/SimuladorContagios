@@ -12,8 +12,11 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 
 public class HistorialMenu {
-	public void main(JFrame ventana) {
-		JFrame historial = new JFrame("Historial de Simulaciones");
+	private JFrame ventana;
+	private JFrame historial;
+	public void main(JFrame v) {
+		this.ventana = v;
+		historial = new JFrame("Historial de Simulaciones");
 		historial.setVisible(true);
 		historial.setSize(300,300);
 		historial.setLocationRelativeTo(null);
