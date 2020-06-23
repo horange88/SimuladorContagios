@@ -15,25 +15,29 @@ public class Ventana2 implements ActionListener, DocumentListener {
 
 	
 private JFrame ventana;
+
+	//Variables de GUI
+    private ArrayList<JTextField> whiteSpaces;
+    private ArrayList<String>     nombre;
+    private FrameGrafico frameGrafico;
+    private Simulador simulador;
 	
-	private JButton aceptar;
-	private JButton cancelar;
-	private ArrayList<JTextField> whiteSpaces;
-	private ArrayList<String>     nombre;
+	private ButtonGroup group;
 	private JRadioButton rb1;	
 	private JRadioButton rb2;
 	private JRadioButton rb3;
-	private ButtonGroup group;
+	private JButton cancelar;
+	private JButton aceptar;
 	private Container cp; 
 	
-	private FrameGrafico frameGrafico;
-	private JTextField tm; //tasa mortalidad
-	private JTextField rc; //radio de contagio 
-	private JTextField mov;//movilidad
 	private JComboBox  graph;
 	private JButton    apply;
-
-	private Simulador simulador;
+	private JTextField tm;     //tasa mortalidad
+	private JTextField rc;     //radio de contagio 
+	private JTextField mov;    //movilidad
+	
+	
+	//Variables de parametros de simulacion
 	public static int poblacionTotal;
 	public static int pobTotInfectados;
 	public static int tasaMortalidad;
@@ -62,9 +66,9 @@ private JFrame ventana;
 	public void actionPerformed(ActionEvent e) {
          frameGrafico = new FrameGrafico();
 		 if (e.getSource()==aceptar) {
-			 
+			
 	        try {     
-
+                 //Se recogen variables de la GUI
 	             poblacionTotal   = Integer.valueOf(whiteSpaces.get(0).getText());
 				 pobTotInfectados = Integer.valueOf(whiteSpaces.get(1).getText());
 				 tasaMortalidad   = Integer.valueOf(whiteSpaces.get(2).getText());
@@ -73,20 +77,17 @@ private JFrame ventana;
 				 areaParam        = Integer.valueOf(whiteSpaces.get(5).getText());
 				 movilidad        = Integer.valueOf(whiteSpaces.get(6).getText());
 				 tiempoSimulacion = Integer.valueOf(whiteSpaces.get(7).getText());
-				 
+				 //Variables actualiadas al simulador
 				 startSim(poblacionTotal,pobTotInfectados,tasaMortalidad,tiempoIncubacion,radioContagio,areaParam,movilidad,tiempoSimulacion);
-				
+				 //Controla que botones se presionaron y actualiza el modelo
 				 if(rb1.isSelected()) {
 					 frameGrafico.setJChart(new  Histogram(simulador));
-					 
 				 }
 				 else if(rb2.isSelected()) {
 					 frameGrafico.setJChart(new  PieChart(simulador));
-					
 				 }
 				 else if (rb3.isSelected()){
 					 frameGrafico.setJChart(new  LineChart(simulador));
-					
 				 }
 				 
 				 ventana.setVisible(false);
@@ -94,31 +95,29 @@ private JFrame ventana;
 	        }
 	        catch(NumberFormatException error) {
 	        	JOptionPane.showMessageDialog(null, "Las casillas no pueden estar vacias", "Error", JOptionPane.ERROR_MESSAGE);
-	        }
-	           
+	        }  
 	     }
 		 else if(e.getSource() == cancelar) {
 			 ventana.dispatchEvent(new WindowEvent(ventana, WindowEvent.WINDOW_CLOSING));
-		 }
-		 else if (e.getSource() == apply){//"Histogram","Pie","Line"
-			
+			 
+		 }   //Cambio del modelo en tiempo real
+		 else if (e.getSource() == apply){
 			 if(graph.getSelectedItem()=="Histogram") {
-				 frameGrafico.setJChart(new  Histogram(simulador));
+				 frameGrafico.setJChart(new Histogram(simulador));
 			 }
 			 else if(graph.getSelectedItem()=="Pie") {
-				 frameGrafico.setJChart(new  PieChart(simulador));
-				
+				 frameGrafico.setJChart(new PieChart(simulador));
 			 }
 			 else if (graph.getSelectedItem()=="Line"){
-				 frameGrafico.setJChart(new  LineChart(simulador));
+				 frameGrafico.setJChart(new LineChart(simulador));
 			 }
+			 //Setea los nuevos valores
 			 simulador.setMortalidad((float)(Integer.valueOf(tm.getText())));
 			 simulador.setRadioContagio(Integer.valueOf(rc.getText()));
 			 simulador.setMovilidad(Integer.valueOf(mov.getText()));
-			
-		 }
-	  }
-	
+		  }
+	    }
+	    //validar datos
 		public void validarDatos() {
 			boolean isNull=false;
 			for(int i=0;i<whiteSpaces.size();i++) {
@@ -131,26 +130,25 @@ private JFrame ventana;
 			}
 			if(isNull) {
 				aceptar.setEnabled(false);
-				JOptionPane.showMessageDialog(null, "Las casillas no pueden estar vacias", "Error", JOptionPane.ERROR_MESSAGE);
+				//JOptionPane.showMessageDialog(null, "Las casillas no pueden estar vacias", "Error", JOptionPane.ERROR_MESSAGE);
 			}else {
 				aceptar.setEnabled(true);
 			}
 		}
-		
+		//Agregado de listener botones y listener espacios en blanco
 		public void addListeners() {
-			//Agregado de listener botones
+			
 			aceptar.addActionListener(this);
 			cancelar.addActionListener(this);
-			
-			//Agregado listener espacios en blanco
+	
 			for(int i=0; i<whiteSpaces.size();i++) {
 				whiteSpaces.get(i).getDocument().addDocumentListener(this);
 			}
 		}
-		
+		//Armado de ventana
 		public void armadoVentana() {
 			ventana = new JFrame("ventanita");
-			ventana.setSize(350,400); //ancho*largo
+			ventana.setSize(350,400); 
 			ventana.setLocationRelativeTo(null);
 			ventana.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 			
@@ -175,7 +173,6 @@ private JFrame ventana;
 			panelRadio.add(rb1);
 			panelRadio.add(rb2);
 			panelRadio.add(rb3);
-			
 		
 			cp = ventana.getContentPane();
 			cp.add(panel,BorderLayout.NORTH);
@@ -215,18 +212,17 @@ private JFrame ventana;
 			for(int i=0; i<8;i++) {
 				whiteSpaces.add(new JTextField(10));
 			}
-			
-			rb1 = new JRadioButton("Histogram");
-			rb2 = new JRadioButton("Pie");
-			rb3 = new JRadioButton("Line");
-			aceptar = new JButton("Aceptar");
+			rb1      = new JRadioButton("Histogram");
+			rb2      = new JRadioButton("Pie");
+			rb3      = new JRadioButton("Line");
+			aceptar  = new JButton("Aceptar");
 			cancelar = new JButton("Cancelar");
 			
 			//Listeners de botones y whiteSpaces
 			addListeners();
 			//Se inicializa con "aceptar" deshabilitado
 			aceptar.setEnabled(false);
-			//Se aniaade a ButtonGrup a los radioButton
+			//Se aniade a ButtonGroup a los radioButton
 			
 		    group = new ButtonGroup();
 			group.add(rb1);
@@ -239,12 +235,14 @@ private JFrame ventana;
 		
 		//Aca se ejecuta el simulador de contagios
 		public  void startSim(int poblacionTotal, int pobTotInfectados, int tasaMortalidad, int tiempoIncubacion, int radioContagio, int areaParam, int movilidad, int tiempoSimulacion) {
+			
 			//Instancia parametros de simulacion
-			Area area = new Area(areaParam,areaParam);
+			Area area   = new Area(areaParam,areaParam);
 			Poblacion p = new Poblacion(area,poblacionTotal ,pobTotInfectados);
-		    simulador = new Simulador(area,p);
-			Log log = new Log(simulador);
+		    simulador   = new Simulador(area,p);
+			Log log     = new Log(simulador);
 			LogWriter logwriter = new LogWriter(simulador);
+			
 			//seteo de parametros del simulador
 			simulador.setVisor(VisorSimulador.getVisor());
 			simulador.setMortalidad((float)(0.01*tasaMortalidad));
@@ -252,8 +250,8 @@ private JFrame ventana;
 			simulador.setDuracionEnfermedad(tiempoIncubacion);
 			simulador.setTiempoSimulacion(tiempoSimulacion);
 			simulador.setRadioContagio(radioContagio);
-			
 			log.displayPoblacion();
+			
 		    //visor simulador
 			JFrame j1 = new JFrame("Simulacion de contagios");
 		    j1.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -280,6 +278,7 @@ private JFrame ventana;
 			 mov = new JTextField("",6);
 			 
 			 graph = new JComboBox(s);
+			 
 			 apply = new JButton("Apply");
 			 apply.addActionListener(this);
 
