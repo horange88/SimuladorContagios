@@ -27,7 +27,7 @@ public class Histogram implements ActionListener,ObserverPoblacion{
 	private JComboBox graph;
 	private JButton apply;
 	private JFrame ventana;
-	private String s[] = {"Histogram","Cake"};
+	private String s[] = {"Histogram","Pie","Line"};
 	private Poblacion pob;
 	private Simulador sim;
 	private String graphChoice;
