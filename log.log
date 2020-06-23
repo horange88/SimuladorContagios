@@ -16440,3 +16440,6 @@ Parametros seteados: Movilidad: 1. Mortalidad: 100.0
 Parametros seteados: Movilidad: 10. Mortalidad: 100.0
 Parametros seteados: Movilidad: 10. Mortalidad: 100.0
 Parametros seteados: Movilidad: 2000. Mortalidad: 100.0
+Parametros seteados: Movilidad: 0. Mortalidad: 0.01
+Parametros seteados: Movilidad: 1. Mortalidad: 0.01
+Paso: 1. Sanos: 0. Enfermos: 0. Muertos: 0. Recuperados: 1
