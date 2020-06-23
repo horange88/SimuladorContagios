@@ -80,12 +80,12 @@ public class Simulador implements SubjectParametros {
 		return mortalidad;
 	}
 
-	public void setMortalidad(float mortalidad) {
-		this.mortalidad = mortalidad;
-		poblacion.setMortalidad(mortalidad);
+	public void setMortalidad(float d) {
+		this.mortalidad = d;
+		poblacion.setMortalidad(d);
 		notifyObserverParametros();
 	}
-
+	
 	public int getTiempoSimulacion() {
 		return tiempoSimulacion;
 	}

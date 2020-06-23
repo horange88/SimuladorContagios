@@ -15568,3 +15568,875 @@ Paso: 484. Sanos: 64. Enfermos: 3. Muertos: 9. Recuperados: 24
 Paso: 530. Sanos: 64. Enfermos: 2. Muertos: 9. Recuperados: 25
 Paso: 548. Sanos: 64. Enfermos: 1. Muertos: 10. Recuperados: 25
 Paso: 582. Sanos: 64. Enfermos: 0. Muertos: 10. Recuperados: 26
+Parametros seteados: Movilidad: 0. Mortalidad: 0.1
+Parametros seteados: Movilidad: 5. Mortalidad: 0.1
+Paso: 2. Sanos: 89. Enfermos: 11. Muertos: 0. Recuperados: 0
+Paso: 3. Sanos: 88. Enfermos: 12. Muertos: 0. Recuperados: 0
+Paso: 4. Sanos: 87. Enfermos: 13. Muertos: 0. Recuperados: 0
+Paso: 8. Sanos: 86. Enfermos: 14. Muertos: 0. Recuperados: 0
+Paso: 11. Sanos: 85. Enfermos: 15. Muertos: 0. Recuperados: 0
+Paso: 21. Sanos: 84. Enfermos: 16. Muertos: 0. Recuperados: 0
+Paso: 22. Sanos: 83. Enfermos: 17. Muertos: 0. Recuperados: 0
+Paso: 22. Sanos: 82. Enfermos: 18. Muertos: 0. Recuperados: 0
+Paso: 22. Sanos: 81. Enfermos: 19. Muertos: 0. Recuperados: 0
+Paso: 27. Sanos: 80. Enfermos: 20. Muertos: 0. Recuperados: 0
+Paso: 29. Sanos: 79. Enfermos: 21. Muertos: 0. Recuperados: 0
+Paso: 33. Sanos: 78. Enfermos: 22. Muertos: 0. Recuperados: 0
+Paso: 62. Sanos: 77. Enfermos: 23. Muertos: 0. Recuperados: 0
+Paso: 64. Sanos: 76. Enfermos: 24. Muertos: 0. Recuperados: 0
+Paso: 72. Sanos: 75. Enfermos: 25. Muertos: 0. Recuperados: 0
+Paso: 81. Sanos: 74. Enfermos: 26. Muertos: 0. Recuperados: 0
+Paso: 98. Sanos: 73. Enfermos: 27. Muertos: 0. Recuperados: 0
+Paso: 109. Sanos: 72. Enfermos: 28. Muertos: 0. Recuperados: 0
+Paso: 112. Sanos: 71. Enfermos: 29. Muertos: 0. Recuperados: 0
+Paso: 114. Sanos: 70. Enfermos: 30. Muertos: 0. Recuperados: 0
+Paso: 116. Sanos: 69. Enfermos: 31. Muertos: 0. Recuperados: 0
+Paso: 151. Sanos: 68. Enfermos: 32. Muertos: 0. Recuperados: 0
+Paso: 153. Sanos: 67. Enfermos: 33. Muertos: 0. Recuperados: 0
+Paso: 161. Sanos: 66. Enfermos: 34. Muertos: 0. Recuperados: 0
+Paso: 162. Sanos: 65. Enfermos: 35. Muertos: 0. Recuperados: 0
+Paso: 173. Sanos: 64. Enfermos: 36. Muertos: 0. Recuperados: 0
+Paso: 175. Sanos: 63. Enfermos: 37. Muertos: 0. Recuperados: 0
+Paso: 176. Sanos: 62. Enfermos: 38. Muertos: 0. Recuperados: 0
+Paso: 195. Sanos: 61. Enfermos: 39. Muertos: 0. Recuperados: 0
+Paso: 203. Sanos: 60. Enfermos: 40. Muertos: 0. Recuperados: 0
+Paso: 285. Sanos: 59. Enfermos: 41. Muertos: 0. Recuperados: 0
+Paso: 293. Sanos: 58. Enfermos: 42. Muertos: 0. Recuperados: 0
+Paso: 297. Sanos: 57. Enfermos: 43. Muertos: 0. Recuperados: 0
+Paso: 300. Sanos: 57. Enfermos: 42. Muertos: 0. Recuperados: 1
+Paso: 300. Sanos: 57. Enfermos: 41. Muertos: 0. Recuperados: 2
+Paso: 300. Sanos: 57. Enfermos: 40. Muertos: 0. Recuperados: 3
+Paso: 300. Sanos: 57. Enfermos: 39. Muertos: 0. Recuperados: 4
+Paso: 300. Sanos: 57. Enfermos: 38. Muertos: 0. Recuperados: 5
+Paso: 300. Sanos: 57. Enfermos: 37. Muertos: 0. Recuperados: 6
+Paso: 300. Sanos: 57. Enfermos: 36. Muertos: 0. Recuperados: 7
+Paso: 300. Sanos: 57. Enfermos: 35. Muertos: 0. Recuperados: 8
+Paso: 300. Sanos: 57. Enfermos: 34. Muertos: 0. Recuperados: 9
+Paso: 300. Sanos: 57. Enfermos: 33. Muertos: 0. Recuperados: 10
+Paso: 302. Sanos: 57. Enfermos: 32. Muertos: 0. Recuperados: 11
+Paso: 302. Sanos: 56. Enfermos: 33. Muertos: 0. Recuperados: 11
+Paso: 303. Sanos: 56. Enfermos: 32. Muertos: 0. Recuperados: 12
+Paso: 304. Sanos: 56. Enfermos: 31. Muertos: 1. Recuperados: 12
+Paso: 308. Sanos: 56. Enfermos: 30. Muertos: 1. Recuperados: 13
+Paso: 310. Sanos: 55. Enfermos: 31. Muertos: 1. Recuperados: 13
+Paso: 311. Sanos: 55. Enfermos: 30. Muertos: 2. Recuperados: 13
+Paso: 321. Sanos: 55. Enfermos: 29. Muertos: 2. Recuperados: 14
+Paso: 322. Sanos: 55. Enfermos: 28. Muertos: 3. Recuperados: 14
+Paso: 322. Sanos: 55. Enfermos: 27. Muertos: 3. Recuperados: 15
+Paso: 322. Sanos: 55. Enfermos: 26. Muertos: 3. Recuperados: 16
+Paso: 327. Sanos: 55. Enfermos: 25. Muertos: 3. Recuperados: 17
+Paso: 329. Sanos: 55. Enfermos: 24. Muertos: 3. Recuperados: 18
+Paso: 333. Sanos: 55. Enfermos: 23. Muertos: 3. Recuperados: 19
+Paso: 362. Sanos: 55. Enfermos: 22. Muertos: 3. Recuperados: 20
+Paso: 364. Sanos: 55. Enfermos: 21. Muertos: 3. Recuperados: 21
+Paso: 372. Sanos: 55. Enfermos: 20. Muertos: 3. Recuperados: 22
+Paso: 381. Sanos: 55. Enfermos: 19. Muertos: 3. Recuperados: 23
+Paso: 384. Sanos: 54. Enfermos: 20. Muertos: 3. Recuperados: 23
+Paso: 388. Sanos: 53. Enfermos: 21. Muertos: 3. Recuperados: 23
+Paso: 398. Sanos: 53. Enfermos: 20. Muertos: 3. Recuperados: 24
+Paso: 409. Sanos: 53. Enfermos: 19. Muertos: 3. Recuperados: 25
+Paso: 412. Sanos: 53. Enfermos: 18. Muertos: 3. Recuperados: 26
+Paso: 414. Sanos: 53. Enfermos: 17. Muertos: 3. Recuperados: 27
+Paso: 416. Sanos: 53. Enfermos: 16. Muertos: 3. Recuperados: 28
+Paso: 427. Sanos: 52. Enfermos: 17. Muertos: 3. Recuperados: 28
+Paso: 428. Sanos: 51. Enfermos: 18. Muertos: 3. Recuperados: 28
+Paso: 431. Sanos: 50. Enfermos: 19. Muertos: 3. Recuperados: 28
+Paso: 443. Sanos: 49. Enfermos: 20. Muertos: 3. Recuperados: 28
+Paso: 443. Sanos: 48. Enfermos: 21. Muertos: 3. Recuperados: 28
+Paso: 451. Sanos: 48. Enfermos: 20. Muertos: 3. Recuperados: 29
+Paso: 453. Sanos: 48. Enfermos: 19. Muertos: 3. Recuperados: 30
+Paso: 461. Sanos: 48. Enfermos: 18. Muertos: 4. Recuperados: 30
+Paso: 462. Sanos: 48. Enfermos: 17. Muertos: 4. Recuperados: 31
+Paso: 471. Sanos: 47. Enfermos: 18. Muertos: 4. Recuperados: 31
+Paso: 473. Sanos: 47. Enfermos: 17. Muertos: 4. Recuperados: 32
+Paso: 475. Sanos: 47. Enfermos: 16. Muertos: 4. Recuperados: 33
+Paso: 476. Sanos: 47. Enfermos: 15. Muertos: 4. Recuperados: 34
+Paso: 495. Sanos: 47. Enfermos: 14. Muertos: 4. Recuperados: 35
+Paso: 503. Sanos: 47. Enfermos: 13. Muertos: 4. Recuperados: 36
+Paso: 569. Sanos: 46. Enfermos: 14. Muertos: 4. Recuperados: 36
+Paso: 585. Sanos: 46. Enfermos: 13. Muertos: 4. Recuperados: 37
+Paso: 588. Sanos: 45. Enfermos: 14. Muertos: 4. Recuperados: 37
+Paso: 593. Sanos: 45. Enfermos: 13. Muertos: 5. Recuperados: 37
+Paso: 597. Sanos: 45. Enfermos: 12. Muertos: 5. Recuperados: 38
+Paso: 602. Sanos: 45. Enfermos: 11. Muertos: 6. Recuperados: 38
+Paso: 610. Sanos: 45. Enfermos: 10. Muertos: 6. Recuperados: 39
+Paso: 639. Sanos: 44. Enfermos: 11. Muertos: 6. Recuperados: 39
+Paso: 684. Sanos: 44. Enfermos: 10. Muertos: 6. Recuperados: 40
+Paso: 688. Sanos: 44. Enfermos: 9. Muertos: 7. Recuperados: 40
+Paso: 713. Sanos: 43. Enfermos: 10. Muertos: 7. Recuperados: 40
+Paso: 727. Sanos: 43. Enfermos: 9. Muertos: 7. Recuperados: 41
+Paso: 728. Sanos: 43. Enfermos: 8. Muertos: 7. Recuperados: 42
+Paso: 731. Sanos: 43. Enfermos: 7. Muertos: 7. Recuperados: 43
+Paso: 743. Sanos: 43. Enfermos: 6. Muertos: 7. Recuperados: 44
+Paso: 743. Sanos: 43. Enfermos: 5. Muertos: 7. Recuperados: 45
+Paso: 771. Sanos: 43. Enfermos: 4. Muertos: 7. Recuperados: 46
+Paso: 869. Sanos: 43. Enfermos: 3. Muertos: 7. Recuperados: 47
+Paso: 888. Sanos: 43. Enfermos: 2. Muertos: 7. Recuperados: 48
+Paso: 893. Sanos: 42. Enfermos: 3. Muertos: 7. Recuperados: 48
+Paso: 903. Sanos: 41. Enfermos: 4. Muertos: 7. Recuperados: 48
+Paso: 939. Sanos: 41. Enfermos: 3. Muertos: 7. Recuperados: 49
+Paso: 1013. Sanos: 41. Enfermos: 2. Muertos: 7. Recuperados: 50
+Paso: 1193. Sanos: 41. Enfermos: 1. Muertos: 7. Recuperados: 51
+Paso: 1203. Sanos: 41. Enfermos: 0. Muertos: 7. Recuperados: 52
+Parametros seteados: Movilidad: 0. Mortalidad: 0.1
+Parametros seteados: Movilidad: 1. Mortalidad: 0.1
+Paso: 1. Sanos: 89. Enfermos: 11. Muertos: 0. Recuperados: 0
+Paso: 1. Sanos: 88. Enfermos: 12. Muertos: 0. Recuperados: 0
+Paso: 1. Sanos: 87. Enfermos: 13. Muertos: 0. Recuperados: 0
+Paso: 11. Sanos: 86. Enfermos: 14. Muertos: 0. Recuperados: 0
+Paso: 18. Sanos: 85. Enfermos: 15. Muertos: 0. Recuperados: 0
+Paso: 100. Sanos: 85. Enfermos: 14. Muertos: 1. Recuperados: 0
+Paso: 100. Sanos: 85. Enfermos: 13. Muertos: 1. Recuperados: 1
+Paso: 100. Sanos: 85. Enfermos: 12. Muertos: 1. Recuperados: 2
+Paso: 100. Sanos: 85. Enfermos: 11. Muertos: 1. Recuperados: 3
+Paso: 100. Sanos: 85. Enfermos: 10. Muertos: 1. Recuperados: 4
+Paso: 100. Sanos: 85. Enfermos: 9. Muertos: 1. Recuperados: 5
+Paso: 100. Sanos: 85. Enfermos: 8. Muertos: 1. Recuperados: 6
+Paso: 100. Sanos: 85. Enfermos: 7. Muertos: 1. Recuperados: 7
+Paso: 100. Sanos: 85. Enfermos: 6. Muertos: 1. Recuperados: 8
+Paso: 100. Sanos: 85. Enfermos: 5. Muertos: 1. Recuperados: 9
+Paso: 101. Sanos: 85. Enfermos: 4. Muertos: 2. Recuperados: 9
+Paso: 101. Sanos: 85. Enfermos: 3. Muertos: 2. Recuperados: 10
+Paso: 101. Sanos: 85. Enfermos: 2. Muertos: 2. Recuperados: 11
+Paso: 111. Sanos: 85. Enfermos: 1. Muertos: 2. Recuperados: 12
+Paso: 118. Sanos: 85. Enfermos: 0. Muertos: 2. Recuperados: 13
+Parametros seteados: Movilidad: 0. Mortalidad: 0.1
+Parametros seteados: Movilidad: 1. Mortalidad: 0.1
+Paso: 25. Sanos: 89. Enfermos: 11. Muertos: 0. Recuperados: 0
+Paso: 46. Sanos: 88. Enfermos: 12. Muertos: 0. Recuperados: 0
+Paso: 100. Sanos: 88. Enfermos: 11. Muertos: 1. Recuperados: 0
+Paso: 100. Sanos: 88. Enfermos: 10. Muertos: 2. Recuperados: 0
+Paso: 100. Sanos: 88. Enfermos: 9. Muertos: 2. Recuperados: 1
+Paso: 100. Sanos: 88. Enfermos: 8. Muertos: 2. Recuperados: 2
+Paso: 100. Sanos: 88. Enfermos: 7. Muertos: 2. Recuperados: 3
+Paso: 100. Sanos: 88. Enfermos: 6. Muertos: 2. Recuperados: 4
+Paso: 100. Sanos: 88. Enfermos: 5. Muertos: 2. Recuperados: 5
+Paso: 100. Sanos: 88. Enfermos: 4. Muertos: 2. Recuperados: 6
+Paso: 100. Sanos: 88. Enfermos: 3. Muertos: 2. Recuperados: 7
+Paso: 100. Sanos: 88. Enfermos: 2. Muertos: 2. Recuperados: 8
+Paso: 125. Sanos: 88. Enfermos: 1. Muertos: 2. Recuperados: 9
+Paso: 146. Sanos: 88. Enfermos: 0. Muertos: 2. Recuperados: 10
+Parametros seteados: Movilidad: 0. Mortalidad: 0.1
+Parametros seteados: Movilidad: 1. Mortalidad: 0.1
+Paso: 1. Sanos: 89. Enfermos: 11. Muertos: 0. Recuperados: 0
+Paso: 1. Sanos: 88. Enfermos: 12. Muertos: 0. Recuperados: 0
+Paso: 6. Sanos: 87. Enfermos: 13. Muertos: 0. Recuperados: 0
+Paso: 100. Sanos: 87. Enfermos: 12. Muertos: 0. Recuperados: 1
+Paso: 100. Sanos: 87. Enfermos: 11. Muertos: 0. Recuperados: 2
+Paso: 100. Sanos: 87. Enfermos: 10. Muertos: 0. Recuperados: 3
+Paso: 100. Sanos: 87. Enfermos: 9. Muertos: 0. Recuperados: 4
+Paso: 100. Sanos: 87. Enfermos: 8. Muertos: 0. Recuperados: 5
+Paso: 100. Sanos: 87. Enfermos: 7. Muertos: 0. Recuperados: 6
+Paso: 100. Sanos: 87. Enfermos: 6. Muertos: 0. Recuperados: 7
+Paso: 100. Sanos: 87. Enfermos: 5. Muertos: 0. Recuperados: 8
+Paso: 100. Sanos: 87. Enfermos: 4. Muertos: 0. Recuperados: 9
+Paso: 100. Sanos: 87. Enfermos: 3. Muertos: 0. Recuperados: 10
+Paso: 101. Sanos: 87. Enfermos: 2. Muertos: 1. Recuperados: 10
+Paso: 101. Sanos: 87. Enfermos: 1. Muertos: 1. Recuperados: 11
+Paso: 106. Sanos: 87. Enfermos: 0. Muertos: 1. Recuperados: 12
+Parametros seteados: Movilidad: 0. Mortalidad: 0.1
+Parametros seteados: Movilidad: 1. Mortalidad: 0.1
+Paso: 33. Sanos: 89. Enfermos: 11. Muertos: 0. Recuperados: 0
+Paso: 38. Sanos: 88. Enfermos: 12. Muertos: 0. Recuperados: 0
+Paso: 39. Sanos: 87. Enfermos: 13. Muertos: 0. Recuperados: 0
+Paso: 41. Sanos: 86. Enfermos: 14. Muertos: 0. Recuperados: 0
+Paso: 100. Sanos: 86. Enfermos: 13. Muertos: 1. Recuperados: 0
+Paso: 100. Sanos: 86. Enfermos: 12. Muertos: 1. Recuperados: 1
+Paso: 100. Sanos: 86. Enfermos: 11. Muertos: 1. Recuperados: 2
+Paso: 100. Sanos: 86. Enfermos: 10. Muertos: 1. Recuperados: 3
+Paso: 100. Sanos: 86. Enfermos: 9. Muertos: 1. Recuperados: 4
+Paso: 100. Sanos: 86. Enfermos: 8. Muertos: 1. Recuperados: 5
+Paso: 100. Sanos: 86. Enfermos: 7. Muertos: 1. Recuperados: 6
+Paso: 100. Sanos: 86. Enfermos: 6. Muertos: 1. Recuperados: 7
+Paso: 100. Sanos: 86. Enfermos: 5. Muertos: 1. Recuperados: 8
+Paso: 100. Sanos: 86. Enfermos: 4. Muertos: 1. Recuperados: 9
+Paso: 133. Sanos: 86. Enfermos: 3. Muertos: 1. Recuperados: 10
+Paso: 138. Sanos: 86. Enfermos: 2. Muertos: 2. Recuperados: 10
+Paso: 139. Sanos: 86. Enfermos: 1. Muertos: 2. Recuperados: 11
+Paso: 141. Sanos: 86. Enfermos: 0. Muertos: 3. Recuperados: 11
+Parametros seteados: Movilidad: 0. Mortalidad: 0.1
+Parametros seteados: Movilidad: 1. Mortalidad: 0.1
+Paso: 1. Sanos: 89. Enfermos: 11. Muertos: 0. Recuperados: 0
+Paso: 2. Sanos: 88. Enfermos: 12. Muertos: 0. Recuperados: 0
+Paso: 36. Sanos: 87. Enfermos: 13. Muertos: 0. Recuperados: 0
+Paso: 100. Sanos: 87. Enfermos: 12. Muertos: 0. Recuperados: 1
+Paso: 100. Sanos: 87. Enfermos: 11. Muertos: 0. Recuperados: 2
+Paso: 100. Sanos: 87. Enfermos: 10. Muertos: 0. Recuperados: 3
+Paso: 100. Sanos: 87. Enfermos: 9. Muertos: 0. Recuperados: 4
+Paso: 100. Sanos: 87. Enfermos: 8. Muertos: 0. Recuperados: 5
+Paso: 100. Sanos: 87. Enfermos: 7. Muertos: 0. Recuperados: 6
+Paso: 100. Sanos: 87. Enfermos: 6. Muertos: 0. Recuperados: 7
+Paso: 100. Sanos: 87. Enfermos: 5. Muertos: 0. Recuperados: 8
+Paso: 100. Sanos: 87. Enfermos: 4. Muertos: 0. Recuperados: 9
+Paso: 100. Sanos: 87. Enfermos: 3. Muertos: 0. Recuperados: 10
+Paso: 101. Sanos: 87. Enfermos: 2. Muertos: 0. Recuperados: 11
+Paso: 102. Sanos: 87. Enfermos: 1. Muertos: 0. Recuperados: 12
+Paso: 136. Sanos: 87. Enfermos: 0. Muertos: 0. Recuperados: 13
+Parametros seteados: Movilidad: 0. Mortalidad: 0.1
+Parametros seteados: Movilidad: 1. Mortalidad: 0.1
+Paso: 54. Sanos: 89. Enfermos: 11. Muertos: 0. Recuperados: 0
+Parametros seteados: Movilidad: 0. Mortalidad: 0.1
+Parametros seteados: Movilidad: 1. Mortalidad: 0.1
+Paso: 1. Sanos: 89. Enfermos: 11. Muertos: 0. Recuperados: 0
+Paso: 62. Sanos: 88. Enfermos: 12. Muertos: 0. Recuperados: 0
+Paso: 100. Sanos: 88. Enfermos: 11. Muertos: 0. Recuperados: 1
+Paso: 100. Sanos: 88. Enfermos: 10. Muertos: 0. Recuperados: 2
+Paso: 100. Sanos: 88. Enfermos: 9. Muertos: 0. Recuperados: 3
+Paso: 100. Sanos: 88. Enfermos: 8. Muertos: 0. Recuperados: 4
+Paso: 100. Sanos: 88. Enfermos: 7. Muertos: 0. Recuperados: 5
+Paso: 100. Sanos: 88. Enfermos: 6. Muertos: 0. Recuperados: 6
+Paso: 100. Sanos: 88. Enfermos: 5. Muertos: 0. Recuperados: 7
+Paso: 100. Sanos: 88. Enfermos: 4. Muertos: 0. Recuperados: 8
+Paso: 100. Sanos: 88. Enfermos: 3. Muertos: 0. Recuperados: 9
+Paso: 100. Sanos: 88. Enfermos: 2. Muertos: 0. Recuperados: 10
+Paso: 101. Sanos: 88. Enfermos: 1. Muertos: 0. Recuperados: 11
+Paso: 162. Sanos: 88. Enfermos: 0. Muertos: 0. Recuperados: 12
+Parametros seteados: Movilidad: 0. Mortalidad: 0.1
+Parametros seteados: Movilidad: 1. Mortalidad: 0.1
+Paso: 100. Sanos: 90. Enfermos: 9. Muertos: 0. Recuperados: 1
+Paso: 100. Sanos: 90. Enfermos: 8. Muertos: 0. Recuperados: 2
+Paso: 100. Sanos: 90. Enfermos: 7. Muertos: 0. Recuperados: 3
+Paso: 100. Sanos: 90. Enfermos: 6. Muertos: 0. Recuperados: 4
+Paso: 100. Sanos: 90. Enfermos: 5. Muertos: 0. Recuperados: 5
+Paso: 100. Sanos: 90. Enfermos: 4. Muertos: 0. Recuperados: 6
+Paso: 100. Sanos: 90. Enfermos: 3. Muertos: 0. Recuperados: 7
+Paso: 100. Sanos: 90. Enfermos: 2. Muertos: 0. Recuperados: 8
+Paso: 100. Sanos: 90. Enfermos: 1. Muertos: 0. Recuperados: 9
+Paso: 100. Sanos: 90. Enfermos: 0. Muertos: 0. Recuperados: 10
+Parametros seteados: Movilidad: 0. Mortalidad: 0.1
+Parametros seteados: Movilidad: 1. Mortalidad: 0.1
+Paso: 31. Sanos: 89. Enfermos: 11. Muertos: 0. Recuperados: 0
+Paso: 55. Sanos: 88. Enfermos: 12. Muertos: 0. Recuperados: 0
+Paso: 59. Sanos: 87. Enfermos: 13. Muertos: 0. Recuperados: 0
+Paso: 100. Sanos: 87. Enfermos: 12. Muertos: 0. Recuperados: 1
+Paso: 100. Sanos: 87. Enfermos: 11. Muertos: 0. Recuperados: 2
+Paso: 100. Sanos: 87. Enfermos: 10. Muertos: 0. Recuperados: 3
+Paso: 100. Sanos: 87. Enfermos: 9. Muertos: 0. Recuperados: 4
+Paso: 100. Sanos: 87. Enfermos: 8. Muertos: 0. Recuperados: 5
+Paso: 100. Sanos: 87. Enfermos: 7. Muertos: 0. Recuperados: 6
+Paso: 100. Sanos: 87. Enfermos: 6. Muertos: 0. Recuperados: 7
+Paso: 100. Sanos: 87. Enfermos: 5. Muertos: 0. Recuperados: 8
+Paso: 100. Sanos: 87. Enfermos: 4. Muertos: 0. Recuperados: 9
+Paso: 100. Sanos: 87. Enfermos: 3. Muertos: 0. Recuperados: 10
+Paso: 105. Sanos: 86. Enfermos: 4. Muertos: 0. Recuperados: 10
+Paso: 131. Sanos: 86. Enfermos: 3. Muertos: 0. Recuperados: 11
+Paso: 155. Sanos: 86. Enfermos: 2. Muertos: 0. Recuperados: 12
+Paso: 159. Sanos: 86. Enfermos: 1. Muertos: 1. Recuperados: 12
+Paso: 205. Sanos: 86. Enfermos: 0. Muertos: 1. Recuperados: 13
+Parametros seteados: Movilidad: 0. Mortalidad: 0.1
+Parametros seteados: Movilidad: 1. Mortalidad: 0.1
+Paso: 1. Sanos: 89. Enfermos: 11. Muertos: 0. Recuperados: 0
+Paso: 4. Sanos: 88. Enfermos: 12. Muertos: 0. Recuperados: 0
+Paso: 18. Sanos: 87. Enfermos: 13. Muertos: 0. Recuperados: 0
+Paso: 82. Sanos: 86. Enfermos: 14. Muertos: 0. Recuperados: 0
+Paso: 100. Sanos: 86. Enfermos: 13. Muertos: 1. Recuperados: 0
+Paso: 100. Sanos: 86. Enfermos: 12. Muertos: 2. Recuperados: 0
+Paso: 100. Sanos: 86. Enfermos: 11. Muertos: 2. Recuperados: 1
+Paso: 100. Sanos: 86. Enfermos: 10. Muertos: 2. Recuperados: 2
+Paso: 100. Sanos: 86. Enfermos: 9. Muertos: 2. Recuperados: 3
+Paso: 100. Sanos: 86. Enfermos: 8. Muertos: 2. Recuperados: 4
+Paso: 100. Sanos: 86. Enfermos: 7. Muertos: 2. Recuperados: 5
+Paso: 100. Sanos: 86. Enfermos: 6. Muertos: 2. Recuperados: 6
+Paso: 100. Sanos: 86. Enfermos: 5. Muertos: 2. Recuperados: 7
+Paso: 100. Sanos: 86. Enfermos: 4. Muertos: 2. Recuperados: 8
+Paso: 101. Sanos: 86. Enfermos: 3. Muertos: 2. Recuperados: 9
+Paso: 104. Sanos: 86. Enfermos: 2. Muertos: 2. Recuperados: 10
+Paso: 118. Sanos: 86. Enfermos: 1. Muertos: 2. Recuperados: 11
+Paso: 182. Sanos: 86. Enfermos: 0. Muertos: 2. Recuperados: 12
+Parametros seteados: Movilidad: 0. Mortalidad: 0.1
+Parametros seteados: Movilidad: 1. Mortalidad: 0.1
+Paso: 1. Sanos: 89. Enfermos: 11. Muertos: 0. Recuperados: 0
+Paso: 11. Sanos: 88. Enfermos: 12. Muertos: 0. Recuperados: 0
+Paso: 18. Sanos: 87. Enfermos: 13. Muertos: 0. Recuperados: 0
+Paso: 22. Sanos: 86. Enfermos: 14. Muertos: 0. Recuperados: 0
+Paso: 33. Sanos: 85. Enfermos: 15. Muertos: 0. Recuperados: 0
+Paso: 100. Sanos: 85. Enfermos: 14. Muertos: 1. Recuperados: 0
+Paso: 100. Sanos: 85. Enfermos: 13. Muertos: 2. Recuperados: 0
+Paso: 100. Sanos: 85. Enfermos: 12. Muertos: 3. Recuperados: 0
+Paso: 100. Sanos: 85. Enfermos: 11. Muertos: 3. Recuperados: 1
+Paso: 100. Sanos: 85. Enfermos: 10. Muertos: 3. Recuperados: 2
+Paso: 100. Sanos: 85. Enfermos: 9. Muertos: 3. Recuperados: 3
+Paso: 100. Sanos: 85. Enfermos: 8. Muertos: 3. Recuperados: 4
+Paso: 100. Sanos: 85. Enfermos: 7. Muertos: 3. Recuperados: 5
+Paso: 100. Sanos: 85. Enfermos: 6. Muertos: 3. Recuperados: 6
+Paso: 100. Sanos: 85. Enfermos: 5. Muertos: 3. Recuperados: 7
+Paso: 101. Sanos: 85. Enfermos: 4. Muertos: 3. Recuperados: 8
+Paso: 111. Sanos: 85. Enfermos: 3. Muertos: 3. Recuperados: 9
+Paso: 118. Sanos: 85. Enfermos: 2. Muertos: 3. Recuperados: 10
+Paso: 122. Sanos: 85. Enfermos: 1. Muertos: 3. Recuperados: 11
+Paso: 133. Sanos: 85. Enfermos: 0. Muertos: 4. Recuperados: 11
+Parametros seteados: Movilidad: 0. Mortalidad: 0.1
+Parametros seteados: Movilidad: 1. Mortalidad: 0.1
+Paso: 49. Sanos: 89. Enfermos: 11. Muertos: 0. Recuperados: 0
+Paso: 100. Sanos: 89. Enfermos: 10. Muertos: 0. Recuperados: 1
+Paso: 100. Sanos: 89. Enfermos: 9. Muertos: 0. Recuperados: 2
+Paso: 100. Sanos: 89. Enfermos: 8. Muertos: 0. Recuperados: 3
+Paso: 100. Sanos: 89. Enfermos: 7. Muertos: 0. Recuperados: 4
+Paso: 100. Sanos: 89. Enfermos: 6. Muertos: 0. Recuperados: 5
+Paso: 100. Sanos: 89. Enfermos: 5. Muertos: 0. Recuperados: 6
+Paso: 100. Sanos: 89. Enfermos: 4. Muertos: 0. Recuperados: 7
+Paso: 100. Sanos: 89. Enfermos: 3. Muertos: 0. Recuperados: 8
+Paso: 100. Sanos: 89. Enfermos: 2. Muertos: 0. Recuperados: 9
+Paso: 100. Sanos: 89. Enfermos: 1. Muertos: 0. Recuperados: 10
+Paso: 149. Sanos: 89. Enfermos: 0. Muertos: 0. Recuperados: 11
+Parametros seteados: Movilidad: 0. Mortalidad: 0.01
+Parametros seteados: Movilidad: 1. Mortalidad: 0.01
+Paso: 1. Sanos: 0. Enfermos: 0. Muertos: 0. Recuperados: 1
+Parametros seteados: Movilidad: 0. Mortalidad: 0.1
+Parametros seteados: Movilidad: 1. Mortalidad: 0.1
+Paso: 100. Sanos: 90. Enfermos: 9. Muertos: 1. Recuperados: 0
+Paso: 100. Sanos: 90. Enfermos: 8. Muertos: 1. Recuperados: 1
+Paso: 100. Sanos: 90. Enfermos: 7. Muertos: 1. Recuperados: 2
+Paso: 100. Sanos: 90. Enfermos: 6. Muertos: 1. Recuperados: 3
+Paso: 100. Sanos: 90. Enfermos: 5. Muertos: 1. Recuperados: 4
+Paso: 100. Sanos: 90. Enfermos: 4. Muertos: 1. Recuperados: 5
+Paso: 100. Sanos: 90. Enfermos: 3. Muertos: 1. Recuperados: 6
+Paso: 100. Sanos: 90. Enfermos: 2. Muertos: 1. Recuperados: 7
+Paso: 100. Sanos: 90. Enfermos: 1. Muertos: 1. Recuperados: 8
+Paso: 100. Sanos: 90. Enfermos: 0. Muertos: 1. Recuperados: 9
+Parametros seteados: Movilidad: 0. Mortalidad: 0.1
+Parametros seteados: Movilidad: 1. Mortalidad: 0.1
+Paso: 1. Sanos: 89. Enfermos: 11. Muertos: 0. Recuperados: 0
+Paso: 1. Sanos: 88. Enfermos: 12. Muertos: 0. Recuperados: 0
+Paso: 16. Sanos: 87. Enfermos: 13. Muertos: 0. Recuperados: 0
+Paso: 100. Sanos: 87. Enfermos: 12. Muertos: 1. Recuperados: 0
+Paso: 100. Sanos: 87. Enfermos: 11. Muertos: 1. Recuperados: 1
+Paso: 100. Sanos: 87. Enfermos: 10. Muertos: 1. Recuperados: 2
+Paso: 100. Sanos: 87. Enfermos: 9. Muertos: 1. Recuperados: 3
+Paso: 100. Sanos: 87. Enfermos: 8. Muertos: 1. Recuperados: 4
+Paso: 100. Sanos: 87. Enfermos: 7. Muertos: 1. Recuperados: 5
+Paso: 100. Sanos: 87. Enfermos: 6. Muertos: 1. Recuperados: 6
+Paso: 100. Sanos: 87. Enfermos: 5. Muertos: 1. Recuperados: 7
+Paso: 100. Sanos: 87. Enfermos: 4. Muertos: 1. Recuperados: 8
+Paso: 100. Sanos: 87. Enfermos: 3. Muertos: 1. Recuperados: 9
+Paso: 101. Sanos: 87. Enfermos: 2. Muertos: 1. Recuperados: 10
+Paso: 101. Sanos: 87. Enfermos: 1. Muertos: 1. Recuperados: 11
+Paso: 116. Sanos: 87. Enfermos: 0. Muertos: 2. Recuperados: 11
+Parametros seteados: Movilidad: 0. Mortalidad: 0.1
+Parametros seteados: Movilidad: 1. Mortalidad: 0.1
+Paso: 1. Sanos: 89. Enfermos: 11. Muertos: 0. Recuperados: 0
+Paso: 100. Sanos: 89. Enfermos: 10. Muertos: 1. Recuperados: 0
+Paso: 100. Sanos: 89. Enfermos: 9. Muertos: 1. Recuperados: 1
+Paso: 100. Sanos: 89. Enfermos: 8. Muertos: 1. Recuperados: 2
+Paso: 100. Sanos: 89. Enfermos: 7. Muertos: 1. Recuperados: 3
+Paso: 100. Sanos: 89. Enfermos: 6. Muertos: 1. Recuperados: 4
+Paso: 100. Sanos: 89. Enfermos: 5. Muertos: 1. Recuperados: 5
+Paso: 100. Sanos: 89. Enfermos: 4. Muertos: 1. Recuperados: 6
+Paso: 100. Sanos: 89. Enfermos: 3. Muertos: 1. Recuperados: 7
+Paso: 100. Sanos: 89. Enfermos: 2. Muertos: 1. Recuperados: 8
+Paso: 100. Sanos: 89. Enfermos: 1. Muertos: 1. Recuperados: 9
+Paso: 101. Sanos: 89. Enfermos: 0. Muertos: 1. Recuperados: 10
+Parametros seteados: Movilidad: 1. Mortalidad: 10.0
+Parametros seteados: Movilidad: 10. Mortalidad: 10.0
+Parametros seteados: Movilidad: 10. Mortalidad: 10.0
+Parametros seteados: Movilidad: 10. Mortalidad: 10.0
+Parametros seteados: Movilidad: 10. Mortalidad: 10.0
+Parametros seteados: Movilidad: 10. Mortalidad: 10.0
+Parametros seteados: Movilidad: 10. Mortalidad: 10.0
+Parametros seteados: Movilidad: 10. Mortalidad: 10.0
+Parametros seteados: Movilidad: 10. Mortalidad: 10.0
+Parametros seteados: Movilidad: 10. Mortalidad: 10.0
+Parametros seteados: Movilidad: 10. Mortalidad: 10.0
+Parametros seteados: Movilidad: 10. Mortalidad: 10.0
+Parametros seteados: Movilidad: 10. Mortalidad: 10.0
+Parametros seteados: Movilidad: 10. Mortalidad: 10.0
+Parametros seteados: Movilidad: 10. Mortalidad: 10.0
+Parametros seteados: Movilidad: 10. Mortalidad: 10.0
+Parametros seteados: Movilidad: 10. Mortalidad: 10.0
+Parametros seteados: Movilidad: 10. Mortalidad: 10.0
+Parametros seteados: Movilidad: 10. Mortalidad: 10.0
+Parametros seteados: Movilidad: 10. Mortalidad: 10.0
+Parametros seteados: Movilidad: 10. Mortalidad: 10.0
+Parametros seteados: Movilidad: 10. Mortalidad: 10.0
+Parametros seteados: Movilidad: 10. Mortalidad: 10.0
+Parametros seteados: Movilidad: 10. Mortalidad: 10.0
+Parametros seteados: Movilidad: 10. Mortalidad: 10.0
+Parametros seteados: Movilidad: 10. Mortalidad: 10.0
+Parametros seteados: Movilidad: 10. Mortalidad: 10.0
+Parametros seteados: Movilidad: 10. Mortalidad: 10.0
+Parametros seteados: Movilidad: 10. Mortalidad: 10.0
+Parametros seteados: Movilidad: 10. Mortalidad: 10.0
+Parametros seteados: Movilidad: 10. Mortalidad: 10.0
+Parametros seteados: Movilidad: 10. Mortalidad: 10.0
+Parametros seteados: Movilidad: 10. Mortalidad: 10.0
+Parametros seteados: Movilidad: 10. Mortalidad: 10.0
+Parametros seteados: Movilidad: 10. Mortalidad: 10.0
+Parametros seteados: Movilidad: 10. Mortalidad: 10.0
+Parametros seteados: Movilidad: 10. Mortalidad: 10.0
+Parametros seteados: Movilidad: 10. Mortalidad: 10.0
+Parametros seteados: Movilidad: 10. Mortalidad: 10.0
+Parametros seteados: Movilidad: 10. Mortalidad: 10.0
+Parametros seteados: Movilidad: 10. Mortalidad: 10.0
+Parametros seteados: Movilidad: 10. Mortalidad: 10.0
+Parametros seteados: Movilidad: 10. Mortalidad: 10.0
+Parametros seteados: Movilidad: 10. Mortalidad: 10.0
+Parametros seteados: Movilidad: 10. Mortalidad: 10.0
+Parametros seteados: Movilidad: 10. Mortalidad: 10.0
+Parametros seteados: Movilidad: 10. Mortalidad: 1.0
+Parametros seteados: Movilidad: 10. Mortalidad: 1.0
+Parametros seteados: Movilidad: 0. Mortalidad: 0.1
+Parametros seteados: Movilidad: 1. Mortalidad: 0.1
+Paso: 85. Sanos: 89. Enfermos: 11. Muertos: 0. Recuperados: 0
+Paso: 100. Sanos: 89. Enfermos: 10. Muertos: 1. Recuperados: 0
+Paso: 100. Sanos: 89. Enfermos: 9. Muertos: 2. Recuperados: 0
+Paso: 100. Sanos: 89. Enfermos: 8. Muertos: 2. Recuperados: 1
+Paso: 100. Sanos: 89. Enfermos: 7. Muertos: 2. Recuperados: 2
+Paso: 100. Sanos: 89. Enfermos: 6. Muertos: 2. Recuperados: 3
+Paso: 100. Sanos: 89. Enfermos: 5. Muertos: 2. Recuperados: 4
+Paso: 100. Sanos: 89. Enfermos: 4. Muertos: 2. Recuperados: 5
+Paso: 100. Sanos: 89. Enfermos: 3. Muertos: 2. Recuperados: 6
+Paso: 100. Sanos: 89. Enfermos: 2. Muertos: 2. Recuperados: 7
+Paso: 100. Sanos: 89. Enfermos: 1. Muertos: 2. Recuperados: 8
+Paso: 185. Sanos: 89. Enfermos: 0. Muertos: 3. Recuperados: 8
+Parametros seteados: Movilidad: 1. Mortalidad: 10.0
+Parametros seteados: Movilidad: 10. Mortalidad: 10.0
+Parametros seteados: Movilidad: 10. Mortalidad: 10.0
+Parametros seteados: Movilidad: 1. Mortalidad: 10.0
+Parametros seteados: Movilidad: 1. Mortalidad: 10.0
+Parametros seteados: Movilidad: 0. Mortalidad: 10.0
+Parametros seteados: Movilidad: 0. Mortalidad: 10.0
+Parametros seteados: Movilidad: 100. Mortalidad: 10.0
+Parametros seteados: Movilidad: 0. Mortalidad: 0.4
+Parametros seteados: Movilidad: 2. Mortalidad: 0.4
+Paso: 1. Sanos: 189. Enfermos: 11. Muertos: 0. Recuperados: 0
+Paso: 1. Sanos: 188. Enfermos: 12. Muertos: 0. Recuperados: 0
+Paso: 25. Sanos: 187. Enfermos: 13. Muertos: 0. Recuperados: 0
+Paso: 29. Sanos: 186. Enfermos: 14. Muertos: 0. Recuperados: 0
+Paso: 31. Sanos: 185. Enfermos: 15. Muertos: 0. Recuperados: 0
+Paso: 34. Sanos: 184. Enfermos: 16. Muertos: 0. Recuperados: 0
+Paso: 45. Sanos: 183. Enfermos: 17. Muertos: 0. Recuperados: 0
+Paso: 78. Sanos: 182. Enfermos: 18. Muertos: 0. Recuperados: 0
+Paso: 114. Sanos: 181. Enfermos: 19. Muertos: 0. Recuperados: 0
+Paso: 114. Sanos: 180. Enfermos: 20. Muertos: 0. Recuperados: 0
+Paso: 133. Sanos: 179. Enfermos: 21. Muertos: 0. Recuperados: 0
+Paso: 139. Sanos: 178. Enfermos: 22. Muertos: 0. Recuperados: 0
+Paso: 140. Sanos: 177. Enfermos: 23. Muertos: 0. Recuperados: 0
+Paso: 150. Sanos: 176. Enfermos: 24. Muertos: 0. Recuperados: 0
+Paso: 174. Sanos: 175. Enfermos: 25. Muertos: 0. Recuperados: 0
+Paso: 199. Sanos: 174. Enfermos: 26. Muertos: 0. Recuperados: 0
+Paso: 200. Sanos: 174. Enfermos: 25. Muertos: 1. Recuperados: 0
+Paso: 200. Sanos: 174. Enfermos: 24. Muertos: 2. Recuperados: 0
+Paso: 200. Sanos: 174. Enfermos: 23. Muertos: 3. Recuperados: 0
+Paso: 200. Sanos: 174. Enfermos: 22. Muertos: 3. Recuperados: 1
+Paso: 200. Sanos: 174. Enfermos: 21. Muertos: 3. Recuperados: 2
+Paso: 200. Sanos: 174. Enfermos: 20. Muertos: 3. Recuperados: 3
+Paso: 200. Sanos: 174. Enfermos: 19. Muertos: 3. Recuperados: 4
+Paso: 200. Sanos: 174. Enfermos: 18. Muertos: 3. Recuperados: 5
+Paso: 200. Sanos: 174. Enfermos: 17. Muertos: 3. Recuperados: 6
+Paso: 200. Sanos: 174. Enfermos: 16. Muertos: 3. Recuperados: 7
+Paso: 201. Sanos: 174. Enfermos: 15. Muertos: 3. Recuperados: 8
+Paso: 201. Sanos: 174. Enfermos: 14. Muertos: 3. Recuperados: 9
+Paso: 225. Sanos: 174. Enfermos: 13. Muertos: 4. Recuperados: 9
+Paso: 229. Sanos: 174. Enfermos: 12. Muertos: 4. Recuperados: 10
+Paso: 231. Sanos: 174. Enfermos: 11. Muertos: 4. Recuperados: 11
+Paso: 234. Sanos: 174. Enfermos: 10. Muertos: 5. Recuperados: 11
+Paso: 245. Sanos: 174. Enfermos: 9. Muertos: 6. Recuperados: 11
+Paso: 248. Sanos: 173. Enfermos: 10. Muertos: 6. Recuperados: 11
+Paso: 251. Sanos: 172. Enfermos: 11. Muertos: 6. Recuperados: 11
+Paso: 278. Sanos: 172. Enfermos: 10. Muertos: 6. Recuperados: 12
+Paso: 302. Sanos: 171. Enfermos: 11. Muertos: 6. Recuperados: 12
+Paso: 314. Sanos: 171. Enfermos: 10. Muertos: 7. Recuperados: 12
+Paso: 314. Sanos: 171. Enfermos: 9. Muertos: 7. Recuperados: 13
+Paso: 333. Sanos: 171. Enfermos: 8. Muertos: 7. Recuperados: 14
+Paso: 339. Sanos: 171. Enfermos: 7. Muertos: 7. Recuperados: 15
+Paso: 340. Sanos: 171. Enfermos: 6. Muertos: 7. Recuperados: 16
+Paso: 350. Sanos: 171. Enfermos: 5. Muertos: 7. Recuperados: 17
+Paso: 374. Sanos: 171. Enfermos: 4. Muertos: 7. Recuperados: 18
+Paso: 399. Sanos: 171. Enfermos: 3. Muertos: 7. Recuperados: 19
+Paso: 448. Sanos: 171. Enfermos: 2. Muertos: 7. Recuperados: 20
+Paso: 451. Sanos: 171. Enfermos: 1. Muertos: 8. Recuperados: 20
+Paso: 472. Sanos: 170. Enfermos: 2. Muertos: 8. Recuperados: 20
+Paso: 502. Sanos: 170. Enfermos: 1. Muertos: 8. Recuperados: 21
+Paso: 672. Sanos: 170. Enfermos: 0. Muertos: 8. Recuperados: 22
+Parametros seteados: Movilidad: 2. Mortalidad: 100.0
+Parametros seteados: Movilidad: 4. Mortalidad: 100.0
+Parametros seteados: Movilidad: 0. Mortalidad: 0.3
+Parametros seteados: Movilidad: 5. Mortalidad: 0.3
+Paso: 1. Sanos: 189. Enfermos: 11. Muertos: 0. Recuperados: 0
+Paso: 1. Sanos: 188. Enfermos: 12. Muertos: 0. Recuperados: 0
+Paso: 1. Sanos: 187. Enfermos: 13. Muertos: 0. Recuperados: 0
+Paso: 2. Sanos: 186. Enfermos: 14. Muertos: 0. Recuperados: 0
+Paso: 2. Sanos: 185. Enfermos: 15. Muertos: 0. Recuperados: 0
+Paso: 4. Sanos: 184. Enfermos: 16. Muertos: 0. Recuperados: 0
+Paso: 5. Sanos: 183. Enfermos: 17. Muertos: 0. Recuperados: 0
+Paso: 6. Sanos: 182. Enfermos: 18. Muertos: 0. Recuperados: 0
+Paso: 9. Sanos: 181. Enfermos: 19. Muertos: 0. Recuperados: 0
+Paso: 10. Sanos: 180. Enfermos: 20. Muertos: 0. Recuperados: 0
+Paso: 11. Sanos: 179. Enfermos: 21. Muertos: 0. Recuperados: 0
+Paso: 11. Sanos: 178. Enfermos: 22. Muertos: 0. Recuperados: 0
+Paso: 12. Sanos: 177. Enfermos: 23. Muertos: 0. Recuperados: 0
+Paso: 12. Sanos: 176. Enfermos: 24. Muertos: 0. Recuperados: 0
+Paso: 12. Sanos: 175. Enfermos: 25. Muertos: 0. Recuperados: 0
+Paso: 13. Sanos: 174. Enfermos: 26. Muertos: 0. Recuperados: 0
+Paso: 13. Sanos: 173. Enfermos: 27. Muertos: 0. Recuperados: 0
+Paso: 14. Sanos: 172. Enfermos: 28. Muertos: 0. Recuperados: 0
+Paso: 14. Sanos: 171. Enfermos: 29. Muertos: 0. Recuperados: 0
+Paso: 15. Sanos: 170. Enfermos: 30. Muertos: 0. Recuperados: 0
+Paso: 17. Sanos: 169. Enfermos: 31. Muertos: 0. Recuperados: 0
+Paso: 18. Sanos: 168. Enfermos: 32. Muertos: 0. Recuperados: 0
+Paso: 18. Sanos: 167. Enfermos: 33. Muertos: 0. Recuperados: 0
+Paso: 19. Sanos: 166. Enfermos: 34. Muertos: 0. Recuperados: 0
+Paso: 21. Sanos: 165. Enfermos: 35. Muertos: 0. Recuperados: 0
+Paso: 22. Sanos: 164. Enfermos: 36. Muertos: 0. Recuperados: 0
+Paso: 22. Sanos: 163. Enfermos: 37. Muertos: 0. Recuperados: 0
+Paso: 24. Sanos: 162. Enfermos: 38. Muertos: 0. Recuperados: 0
+Paso: 25. Sanos: 161. Enfermos: 39. Muertos: 0. Recuperados: 0
+Paso: 29. Sanos: 160. Enfermos: 40. Muertos: 0. Recuperados: 0
+Paso: 30. Sanos: 159. Enfermos: 41. Muertos: 0. Recuperados: 0
+Paso: 31. Sanos: 158. Enfermos: 42. Muertos: 0. Recuperados: 0
+Paso: 31. Sanos: 157. Enfermos: 43. Muertos: 0. Recuperados: 0
+Paso: 35. Sanos: 156. Enfermos: 44. Muertos: 0. Recuperados: 0
+Paso: 39. Sanos: 155. Enfermos: 45. Muertos: 0. Recuperados: 0
+Paso: 42. Sanos: 154. Enfermos: 46. Muertos: 0. Recuperados: 0
+Paso: 43. Sanos: 153. Enfermos: 47. Muertos: 0. Recuperados: 0
+Paso: 43. Sanos: 152. Enfermos: 48. Muertos: 0. Recuperados: 0
+Paso: 44. Sanos: 151. Enfermos: 49. Muertos: 0. Recuperados: 0
+Paso: 45. Sanos: 150. Enfermos: 50. Muertos: 0. Recuperados: 0
+Paso: 45. Sanos: 149. Enfermos: 51. Muertos: 0. Recuperados: 0
+Paso: 46. Sanos: 148. Enfermos: 52. Muertos: 0. Recuperados: 0
+Paso: 46. Sanos: 147. Enfermos: 53. Muertos: 0. Recuperados: 0
+Paso: 46. Sanos: 146. Enfermos: 54. Muertos: 0. Recuperados: 0
+Paso: 47. Sanos: 145. Enfermos: 55. Muertos: 0. Recuperados: 0
+Paso: 47. Sanos: 144. Enfermos: 56. Muertos: 0. Recuperados: 0
+Paso: 49. Sanos: 143. Enfermos: 57. Muertos: 0. Recuperados: 0
+Paso: 49. Sanos: 142. Enfermos: 58. Muertos: 0. Recuperados: 0
+Paso: 50. Sanos: 141. Enfermos: 59. Muertos: 0. Recuperados: 0
+Paso: 50. Sanos: 140. Enfermos: 60. Muertos: 0. Recuperados: 0
+Paso: 50. Sanos: 139. Enfermos: 61. Muertos: 0. Recuperados: 0
+Paso: 52. Sanos: 138. Enfermos: 62. Muertos: 0. Recuperados: 0
+Paso: 53. Sanos: 137. Enfermos: 63. Muertos: 0. Recuperados: 0
+Paso: 58. Sanos: 136. Enfermos: 64. Muertos: 0. Recuperados: 0
+Paso: 60. Sanos: 135. Enfermos: 65. Muertos: 0. Recuperados: 0
+Paso: 61. Sanos: 134. Enfermos: 66. Muertos: 0. Recuperados: 0
+Paso: 62. Sanos: 133. Enfermos: 67. Muertos: 0. Recuperados: 0
+Paso: 62. Sanos: 132. Enfermos: 68. Muertos: 0. Recuperados: 0
+Paso: 63. Sanos: 131. Enfermos: 69. Muertos: 0. Recuperados: 0
+Paso: 70. Sanos: 130. Enfermos: 70. Muertos: 0. Recuperados: 0
+Paso: 73. Sanos: 129. Enfermos: 71. Muertos: 0. Recuperados: 0
+Paso: 73. Sanos: 128. Enfermos: 72. Muertos: 0. Recuperados: 0
+Paso: 79. Sanos: 127. Enfermos: 73. Muertos: 0. Recuperados: 0
+Paso: 81. Sanos: 126. Enfermos: 74. Muertos: 0. Recuperados: 0
+Paso: 82. Sanos: 125. Enfermos: 75. Muertos: 0. Recuperados: 0
+Paso: 82. Sanos: 124. Enfermos: 76. Muertos: 0. Recuperados: 0
+Paso: 84. Sanos: 123. Enfermos: 77. Muertos: 0. Recuperados: 0
+Paso: 86. Sanos: 122. Enfermos: 78. Muertos: 0. Recuperados: 0
+Paso: 87. Sanos: 121. Enfermos: 79. Muertos: 0. Recuperados: 0
+Paso: 90. Sanos: 120. Enfermos: 80. Muertos: 0. Recuperados: 0
+Paso: 91. Sanos: 119. Enfermos: 81. Muertos: 0. Recuperados: 0
+Paso: 93. Sanos: 118. Enfermos: 82. Muertos: 0. Recuperados: 0
+Paso: 94. Sanos: 117. Enfermos: 83. Muertos: 0. Recuperados: 0
+Paso: 95. Sanos: 116. Enfermos: 84. Muertos: 0. Recuperados: 0
+Paso: 101. Sanos: 115. Enfermos: 85. Muertos: 0. Recuperados: 0
+Paso: 103. Sanos: 114. Enfermos: 86. Muertos: 0. Recuperados: 0
+Paso: 108. Sanos: 113. Enfermos: 87. Muertos: 0. Recuperados: 0
+Paso: 108. Sanos: 112. Enfermos: 88. Muertos: 0. Recuperados: 0
+Paso: 109. Sanos: 111. Enfermos: 89. Muertos: 0. Recuperados: 0
+Paso: 110. Sanos: 110. Enfermos: 90. Muertos: 0. Recuperados: 0
+Paso: 110. Sanos: 109. Enfermos: 91. Muertos: 0. Recuperados: 0
+Paso: 110. Sanos: 108. Enfermos: 92. Muertos: 0. Recuperados: 0
+Paso: 114. Sanos: 107. Enfermos: 93. Muertos: 0. Recuperados: 0
+Paso: 115. Sanos: 106. Enfermos: 94. Muertos: 0. Recuperados: 0
+Paso: 115. Sanos: 105. Enfermos: 95. Muertos: 0. Recuperados: 0
+Paso: 116. Sanos: 104. Enfermos: 96. Muertos: 0. Recuperados: 0
+Paso: 116. Sanos: 103. Enfermos: 97. Muertos: 0. Recuperados: 0
+Paso: 117. Sanos: 102. Enfermos: 98. Muertos: 0. Recuperados: 0
+Paso: 117. Sanos: 101. Enfermos: 99. Muertos: 0. Recuperados: 0
+Paso: 117. Sanos: 100. Enfermos: 100. Muertos: 0. Recuperados: 0
+Paso: 118. Sanos: 99. Enfermos: 101. Muertos: 0. Recuperados: 0
+Paso: 119. Sanos: 98. Enfermos: 102. Muertos: 0. Recuperados: 0
+Paso: 122. Sanos: 97. Enfermos: 103. Muertos: 0. Recuperados: 0
+Paso: 123. Sanos: 96. Enfermos: 104. Muertos: 0. Recuperados: 0
+Paso: 124. Sanos: 95. Enfermos: 105. Muertos: 0. Recuperados: 0
+Paso: 125. Sanos: 94. Enfermos: 106. Muertos: 0. Recuperados: 0
+Paso: 128. Sanos: 93. Enfermos: 107. Muertos: 0. Recuperados: 0
+Paso: 129. Sanos: 92. Enfermos: 108. Muertos: 0. Recuperados: 0
+Paso: 130. Sanos: 91. Enfermos: 109. Muertos: 0. Recuperados: 0
+Paso: 131. Sanos: 90. Enfermos: 110. Muertos: 0. Recuperados: 0
+Paso: 135. Sanos: 89. Enfermos: 111. Muertos: 0. Recuperados: 0
+Paso: 136. Sanos: 88. Enfermos: 112. Muertos: 0. Recuperados: 0
+Paso: 138. Sanos: 87. Enfermos: 113. Muertos: 0. Recuperados: 0
+Paso: 142. Sanos: 86. Enfermos: 114. Muertos: 0. Recuperados: 0
+Paso: 143. Sanos: 85. Enfermos: 115. Muertos: 0. Recuperados: 0
+Paso: 144. Sanos: 84. Enfermos: 116. Muertos: 0. Recuperados: 0
+Paso: 145. Sanos: 83. Enfermos: 117. Muertos: 0. Recuperados: 0
+Paso: 146. Sanos: 82. Enfermos: 118. Muertos: 0. Recuperados: 0
+Paso: 147. Sanos: 81. Enfermos: 119. Muertos: 0. Recuperados: 0
+Paso: 151. Sanos: 80. Enfermos: 120. Muertos: 0. Recuperados: 0
+Paso: 152. Sanos: 79. Enfermos: 121. Muertos: 0. Recuperados: 0
+Paso: 152. Sanos: 78. Enfermos: 122. Muertos: 0. Recuperados: 0
+Paso: 153. Sanos: 77. Enfermos: 123. Muertos: 0. Recuperados: 0
+Paso: 154. Sanos: 76. Enfermos: 124. Muertos: 0. Recuperados: 0
+Paso: 156. Sanos: 75. Enfermos: 125. Muertos: 0. Recuperados: 0
+Paso: 158. Sanos: 74. Enfermos: 126. Muertos: 0. Recuperados: 0
+Paso: 159. Sanos: 73. Enfermos: 127. Muertos: 0. Recuperados: 0
+Paso: 160. Sanos: 72. Enfermos: 128. Muertos: 0. Recuperados: 0
+Paso: 161. Sanos: 71. Enfermos: 129. Muertos: 0. Recuperados: 0
+Paso: 165. Sanos: 70. Enfermos: 130. Muertos: 0. Recuperados: 0
+Paso: 166. Sanos: 69. Enfermos: 131. Muertos: 0. Recuperados: 0
+Paso: 167. Sanos: 68. Enfermos: 132. Muertos: 0. Recuperados: 0
+Paso: 171. Sanos: 67. Enfermos: 133. Muertos: 0. Recuperados: 0
+Paso: 173. Sanos: 66. Enfermos: 134. Muertos: 0. Recuperados: 0
+Paso: 176. Sanos: 65. Enfermos: 135. Muertos: 0. Recuperados: 0
+Paso: 177. Sanos: 64. Enfermos: 136. Muertos: 0. Recuperados: 0
+Paso: 180. Sanos: 63. Enfermos: 137. Muertos: 0. Recuperados: 0
+Paso: 188. Sanos: 62. Enfermos: 138. Muertos: 0. Recuperados: 0
+Paso: 189. Sanos: 61. Enfermos: 139. Muertos: 0. Recuperados: 0
+Paso: 191. Sanos: 60. Enfermos: 140. Muertos: 0. Recuperados: 0
+Paso: 192. Sanos: 59. Enfermos: 141. Muertos: 0. Recuperados: 0
+Paso: 193. Sanos: 58. Enfermos: 142. Muertos: 0. Recuperados: 0
+Paso: 197. Sanos: 57. Enfermos: 143. Muertos: 0. Recuperados: 0
+Paso: 198. Sanos: 56. Enfermos: 144. Muertos: 0. Recuperados: 0
+Paso: 199. Sanos: 55. Enfermos: 145. Muertos: 0. Recuperados: 0
+Paso: 200. Sanos: 55. Enfermos: 144. Muertos: 1. Recuperados: 0
+Paso: 200. Sanos: 55. Enfermos: 143. Muertos: 1. Recuperados: 1
+Paso: 200. Sanos: 55. Enfermos: 142. Muertos: 1. Recuperados: 2
+Paso: 200. Sanos: 55. Enfermos: 141. Muertos: 1. Recuperados: 3
+Paso: 200. Sanos: 55. Enfermos: 140. Muertos: 1. Recuperados: 4
+Paso: 200. Sanos: 55. Enfermos: 139. Muertos: 1. Recuperados: 5
+Paso: 200. Sanos: 55. Enfermos: 138. Muertos: 1. Recuperados: 6
+Paso: 200. Sanos: 55. Enfermos: 137. Muertos: 1. Recuperados: 7
+Paso: 200. Sanos: 55. Enfermos: 136. Muertos: 1. Recuperados: 8
+Paso: 200. Sanos: 55. Enfermos: 135. Muertos: 1. Recuperados: 9
+Paso: 200. Sanos: 54. Enfermos: 136. Muertos: 1. Recuperados: 9
+Paso: 201. Sanos: 54. Enfermos: 135. Muertos: 2. Recuperados: 9
+Paso: 201. Sanos: 54. Enfermos: 134. Muertos: 3. Recuperados: 9
+Paso: 201. Sanos: 54. Enfermos: 133. Muertos: 3. Recuperados: 10
+Paso: 202. Sanos: 54. Enfermos: 132. Muertos: 4. Recuperados: 10
+Paso: 202. Sanos: 54. Enfermos: 131. Muertos: 4. Recuperados: 11
+Paso: 204. Sanos: 54. Enfermos: 130. Muertos: 4. Recuperados: 12
+Paso: 205. Sanos: 54. Enfermos: 129. Muertos: 4. Recuperados: 13
+Paso: 206. Sanos: 54. Enfermos: 128. Muertos: 4. Recuperados: 14
+Paso: 206. Sanos: 53. Enfermos: 129. Muertos: 4. Recuperados: 14
+Paso: 207. Sanos: 52. Enfermos: 130. Muertos: 4. Recuperados: 14
+Paso: 207. Sanos: 51. Enfermos: 131. Muertos: 4. Recuperados: 14
+Paso: 209. Sanos: 51. Enfermos: 130. Muertos: 4. Recuperados: 15
+Paso: 210. Sanos: 51. Enfermos: 129. Muertos: 5. Recuperados: 15
+Paso: 211. Sanos: 51. Enfermos: 128. Muertos: 5. Recuperados: 16
+Paso: 211. Sanos: 51. Enfermos: 127. Muertos: 5. Recuperados: 17
+Paso: 212. Sanos: 51. Enfermos: 126. Muertos: 5. Recuperados: 18
+Paso: 212. Sanos: 51. Enfermos: 125. Muertos: 5. Recuperados: 19
+Paso: 212. Sanos: 51. Enfermos: 124. Muertos: 5. Recuperados: 20
+Paso: 213. Sanos: 51. Enfermos: 123. Muertos: 5. Recuperados: 21
+Paso: 213. Sanos: 51. Enfermos: 122. Muertos: 5. Recuperados: 22
+Paso: 213. Sanos: 50. Enfermos: 123. Muertos: 5. Recuperados: 22
+Paso: 214. Sanos: 50. Enfermos: 122. Muertos: 6. Recuperados: 22
+Paso: 214. Sanos: 50. Enfermos: 121. Muertos: 6. Recuperados: 23
+Paso: 215. Sanos: 50. Enfermos: 120. Muertos: 6. Recuperados: 24
+Paso: 217. Sanos: 50. Enfermos: 119. Muertos: 6. Recuperados: 25
+Paso: 218. Sanos: 50. Enfermos: 118. Muertos: 7. Recuperados: 25
+Paso: 218. Sanos: 50. Enfermos: 117. Muertos: 7. Recuperados: 26
+Paso: 219. Sanos: 50. Enfermos: 116. Muertos: 8. Recuperados: 26
+Paso: 221. Sanos: 50. Enfermos: 115. Muertos: 8. Recuperados: 27
+Paso: 222. Sanos: 50. Enfermos: 114. Muertos: 8. Recuperados: 28
+Paso: 222. Sanos: 50. Enfermos: 113. Muertos: 8. Recuperados: 29
+Paso: 223. Sanos: 49. Enfermos: 114. Muertos: 8. Recuperados: 29
+Paso: 224. Sanos: 49. Enfermos: 113. Muertos: 9. Recuperados: 29
+Paso: 225. Sanos: 49. Enfermos: 112. Muertos: 9. Recuperados: 30
+Paso: 225. Sanos: 48. Enfermos: 113. Muertos: 9. Recuperados: 30
+Paso: 227. Sanos: 47. Enfermos: 114. Muertos: 9. Recuperados: 30
+Paso: 228. Sanos: 46. Enfermos: 115. Muertos: 9. Recuperados: 30
+Paso: 229. Sanos: 46. Enfermos: 114. Muertos: 9. Recuperados: 31
+Paso: 230. Sanos: 46. Enfermos: 113. Muertos: 9. Recuperados: 32
+Paso: 231. Sanos: 46. Enfermos: 112. Muertos: 10. Recuperados: 32
+Paso: 231. Sanos: 46. Enfermos: 111. Muertos: 10. Recuperados: 33
+Paso: 232. Sanos: 45. Enfermos: 112. Muertos: 10. Recuperados: 33
+Paso: 232. Sanos: 44. Enfermos: 113. Muertos: 10. Recuperados: 33
+Paso: 234. Sanos: 43. Enfermos: 114. Muertos: 10. Recuperados: 33
+Paso: 235. Sanos: 43. Enfermos: 113. Muertos: 10. Recuperados: 34
+Paso: 235. Sanos: 42. Enfermos: 114. Muertos: 10. Recuperados: 34
+Paso: 239. Sanos: 42. Enfermos: 113. Muertos: 10. Recuperados: 35
+Paso: 240. Sanos: 41. Enfermos: 114. Muertos: 10. Recuperados: 35
+Paso: 240. Sanos: 40. Enfermos: 115. Muertos: 10. Recuperados: 35
+Paso: 242. Sanos: 40. Enfermos: 114. Muertos: 10. Recuperados: 36
+Paso: 243. Sanos: 40. Enfermos: 113. Muertos: 10. Recuperados: 37
+Paso: 243. Sanos: 40. Enfermos: 112. Muertos: 10. Recuperados: 38
+Paso: 243. Sanos: 39. Enfermos: 113. Muertos: 10. Recuperados: 38
+Paso: 243. Sanos: 38. Enfermos: 114. Muertos: 10. Recuperados: 38
+Paso: 244. Sanos: 38. Enfermos: 113. Muertos: 11. Recuperados: 38
+Paso: 244. Sanos: 37. Enfermos: 114. Muertos: 11. Recuperados: 38
+Paso: 245. Sanos: 37. Enfermos: 113. Muertos: 11. Recuperados: 39
+Paso: 245. Sanos: 37. Enfermos: 112. Muertos: 11. Recuperados: 40
+Paso: 245. Sanos: 36. Enfermos: 113. Muertos: 11. Recuperados: 40
+Paso: 246. Sanos: 36. Enfermos: 112. Muertos: 11. Recuperados: 41
+Paso: 246. Sanos: 36. Enfermos: 111. Muertos: 11. Recuperados: 42
+Paso: 246. Sanos: 36. Enfermos: 110. Muertos: 11. Recuperados: 43
+Paso: 246. Sanos: 35. Enfermos: 111. Muertos: 11. Recuperados: 43
+Paso: 246. Sanos: 34. Enfermos: 112. Muertos: 11. Recuperados: 43
+Paso: 247. Sanos: 34. Enfermos: 111. Muertos: 12. Recuperados: 43
+Paso: 247. Sanos: 34. Enfermos: 110. Muertos: 12. Recuperados: 44
+Paso: 247. Sanos: 33. Enfermos: 111. Muertos: 12. Recuperados: 44
+Paso: 249. Sanos: 33. Enfermos: 110. Muertos: 12. Recuperados: 45
+Paso: 249. Sanos: 33. Enfermos: 109. Muertos: 12. Recuperados: 46
+Paso: 250. Sanos: 33. Enfermos: 108. Muertos: 12. Recuperados: 47
+Paso: 250. Sanos: 33. Enfermos: 107. Muertos: 12. Recuperados: 48
+Paso: 250. Sanos: 33. Enfermos: 106. Muertos: 12. Recuperados: 49
+Paso: 250. Sanos: 32. Enfermos: 107. Muertos: 12. Recuperados: 49
+Paso: 252. Sanos: 32. Enfermos: 106. Muertos: 13. Recuperados: 49
+Paso: 253. Sanos: 32. Enfermos: 105. Muertos: 13. Recuperados: 50
+Paso: 254. Sanos: 31. Enfermos: 106. Muertos: 13. Recuperados: 50
+Paso: 258. Sanos: 31. Enfermos: 105. Muertos: 13. Recuperados: 51
+Paso: 258. Sanos: 30. Enfermos: 106. Muertos: 13. Recuperados: 51
+Paso: 259. Sanos: 29. Enfermos: 107. Muertos: 13. Recuperados: 51
+Paso: 259. Sanos: 28. Enfermos: 108. Muertos: 13. Recuperados: 51
+Paso: 260. Sanos: 28. Enfermos: 107. Muertos: 13. Recuperados: 52
+Paso: 261. Sanos: 28. Enfermos: 106. Muertos: 14. Recuperados: 52
+Paso: 262. Sanos: 28. Enfermos: 105. Muertos: 15. Recuperados: 52
+Paso: 262. Sanos: 28. Enfermos: 104. Muertos: 15. Recuperados: 53
+Paso: 262. Sanos: 27. Enfermos: 105. Muertos: 15. Recuperados: 53
+Paso: 262. Sanos: 26. Enfermos: 106. Muertos: 15. Recuperados: 53
+Paso: 263. Sanos: 26. Enfermos: 105. Muertos: 15. Recuperados: 54
+Paso: 270. Sanos: 26. Enfermos: 104. Muertos: 16. Recuperados: 54
+Paso: 272. Sanos: 25. Enfermos: 105. Muertos: 16. Recuperados: 54
+Paso: 273. Sanos: 25. Enfermos: 104. Muertos: 17. Recuperados: 54
+Paso: 273. Sanos: 25. Enfermos: 103. Muertos: 17. Recuperados: 55
+Paso: 275. Sanos: 24. Enfermos: 104. Muertos: 17. Recuperados: 55
+Paso: 276. Sanos: 23. Enfermos: 105. Muertos: 17. Recuperados: 55
+Paso: 276. Sanos: 22. Enfermos: 106. Muertos: 17. Recuperados: 55
+Paso: 279. Sanos: 22. Enfermos: 105. Muertos: 17. Recuperados: 56
+Paso: 281. Sanos: 22. Enfermos: 104. Muertos: 17. Recuperados: 57
+Paso: 282. Sanos: 22. Enfermos: 103. Muertos: 18. Recuperados: 57
+Paso: 282. Sanos: 22. Enfermos: 102. Muertos: 18. Recuperados: 58
+Paso: 282. Sanos: 21. Enfermos: 103. Muertos: 18. Recuperados: 58
+Paso: 284. Sanos: 21. Enfermos: 102. Muertos: 18. Recuperados: 59
+Paso: 286. Sanos: 21. Enfermos: 101. Muertos: 18. Recuperados: 60
+Paso: 287. Sanos: 21. Enfermos: 100. Muertos: 18. Recuperados: 61
+Paso: 290. Sanos: 21. Enfermos: 99. Muertos: 19. Recuperados: 61
+Paso: 291. Sanos: 21. Enfermos: 98. Muertos: 19. Recuperados: 62
+Paso: 292. Sanos: 20. Enfermos: 99. Muertos: 19. Recuperados: 62
+Paso: 292. Sanos: 19. Enfermos: 100. Muertos: 19. Recuperados: 62
+Paso: 293. Sanos: 19. Enfermos: 99. Muertos: 19. Recuperados: 63
+Paso: 293. Sanos: 18. Enfermos: 100. Muertos: 19. Recuperados: 63
+Paso: 294. Sanos: 18. Enfermos: 99. Muertos: 20. Recuperados: 63
+Paso: 295. Sanos: 18. Enfermos: 98. Muertos: 20. Recuperados: 64
+Paso: 301. Sanos: 18. Enfermos: 97. Muertos: 21. Recuperados: 64
+Paso: 303. Sanos: 18. Enfermos: 96. Muertos: 21. Recuperados: 65
+Paso: 305. Sanos: 17. Enfermos: 97. Muertos: 21. Recuperados: 65
+Paso: 308. Sanos: 17. Enfermos: 96. Muertos: 21. Recuperados: 66
+Paso: 308. Sanos: 17. Enfermos: 95. Muertos: 21. Recuperados: 67
+Paso: 309. Sanos: 17. Enfermos: 94. Muertos: 21. Recuperados: 68
+Paso: 310. Sanos: 17. Enfermos: 93. Muertos: 22. Recuperados: 68
+Paso: 310. Sanos: 17. Enfermos: 92. Muertos: 22. Recuperados: 69
+Paso: 310. Sanos: 17. Enfermos: 91. Muertos: 22. Recuperados: 70
+Paso: 313. Sanos: 16. Enfermos: 92. Muertos: 22. Recuperados: 70
+Paso: 314. Sanos: 16. Enfermos: 91. Muertos: 23. Recuperados: 70
+Paso: 315. Sanos: 16. Enfermos: 90. Muertos: 24. Recuperados: 70
+Paso: 315. Sanos: 16. Enfermos: 89. Muertos: 24. Recuperados: 71
+Paso: 316. Sanos: 16. Enfermos: 88. Muertos: 24. Recuperados: 72
+Paso: 316. Sanos: 16. Enfermos: 87. Muertos: 24. Recuperados: 73
+Paso: 317. Sanos: 16. Enfermos: 86. Muertos: 25. Recuperados: 73
+Paso: 317. Sanos: 16. Enfermos: 85. Muertos: 26. Recuperados: 73
+Paso: 317. Sanos: 16. Enfermos: 84. Muertos: 26. Recuperados: 74
+Paso: 318. Sanos: 16. Enfermos: 83. Muertos: 27. Recuperados: 74
+Paso: 319. Sanos: 16. Enfermos: 82. Muertos: 28. Recuperados: 74
+Paso: 322. Sanos: 16. Enfermos: 81. Muertos: 29. Recuperados: 74
+Paso: 322. Sanos: 15. Enfermos: 82. Muertos: 29. Recuperados: 74
+Paso: 323. Sanos: 15. Enfermos: 81. Muertos: 30. Recuperados: 74
+Paso: 324. Sanos: 15. Enfermos: 80. Muertos: 30. Recuperados: 75
+Paso: 325. Sanos: 15. Enfermos: 79. Muertos: 30. Recuperados: 76
+Paso: 326. Sanos: 14. Enfermos: 80. Muertos: 30. Recuperados: 76
+Paso: 328. Sanos: 14. Enfermos: 79. Muertos: 31. Recuperados: 76
+Paso: 329. Sanos: 14. Enfermos: 78. Muertos: 31. Recuperados: 77
+Paso: 330. Sanos: 14. Enfermos: 77. Muertos: 32. Recuperados: 77
+Paso: 331. Sanos: 14. Enfermos: 76. Muertos: 33. Recuperados: 77
+Paso: 331. Sanos: 13. Enfermos: 77. Muertos: 33. Recuperados: 77
+Paso: 331. Sanos: 12. Enfermos: 78. Muertos: 33. Recuperados: 77
+Paso: 335. Sanos: 12. Enfermos: 77. Muertos: 33. Recuperados: 78
+Paso: 335. Sanos: 11. Enfermos: 78. Muertos: 33. Recuperados: 78
+Paso: 336. Sanos: 11. Enfermos: 77. Muertos: 34. Recuperados: 78
+Paso: 338. Sanos: 11. Enfermos: 76. Muertos: 35. Recuperados: 78
+Paso: 342. Sanos: 11. Enfermos: 75. Muertos: 36. Recuperados: 78
+Paso: 342. Sanos: 10. Enfermos: 76. Muertos: 36. Recuperados: 78
+Paso: 343. Sanos: 10. Enfermos: 75. Muertos: 36. Recuperados: 79
+Paso: 344. Sanos: 10. Enfermos: 74. Muertos: 36. Recuperados: 80
+Paso: 345. Sanos: 10. Enfermos: 73. Muertos: 36. Recuperados: 81
+Paso: 346. Sanos: 10. Enfermos: 72. Muertos: 37. Recuperados: 81
+Paso: 347. Sanos: 10. Enfermos: 71. Muertos: 38. Recuperados: 81
+Paso: 351. Sanos: 10. Enfermos: 70. Muertos: 38. Recuperados: 82
+Paso: 351. Sanos: 9. Enfermos: 71. Muertos: 38. Recuperados: 82
+Paso: 352. Sanos: 9. Enfermos: 70. Muertos: 38. Recuperados: 83
+Paso: 352. Sanos: 9. Enfermos: 69. Muertos: 38. Recuperados: 84
+Paso: 353. Sanos: 9. Enfermos: 68. Muertos: 38. Recuperados: 85
+Paso: 354. Sanos: 9. Enfermos: 67. Muertos: 38. Recuperados: 86
+Paso: 356. Sanos: 9. Enfermos: 66. Muertos: 38. Recuperados: 87
+Paso: 358. Sanos: 9. Enfermos: 65. Muertos: 38. Recuperados: 88
+Paso: 359. Sanos: 9. Enfermos: 64. Muertos: 38. Recuperados: 89
+Paso: 360. Sanos: 9. Enfermos: 63. Muertos: 39. Recuperados: 89
+Paso: 361. Sanos: 9. Enfermos: 62. Muertos: 40. Recuperados: 89
+Paso: 365. Sanos: 9. Enfermos: 61. Muertos: 40. Recuperados: 90
+Paso: 366. Sanos: 9. Enfermos: 60. Muertos: 40. Recuperados: 91
+Paso: 367. Sanos: 9. Enfermos: 59. Muertos: 40. Recuperados: 92
+Paso: 371. Sanos: 9. Enfermos: 58. Muertos: 40. Recuperados: 93
+Paso: 373. Sanos: 9. Enfermos: 57. Muertos: 40. Recuperados: 94
+Paso: 376. Sanos: 9. Enfermos: 56. Muertos: 40. Recuperados: 95
+Paso: 377. Sanos: 9. Enfermos: 55. Muertos: 40. Recuperados: 96
+Paso: 380. Sanos: 9. Enfermos: 54. Muertos: 41. Recuperados: 96
+Paso: 384. Sanos: 8. Enfermos: 55. Muertos: 41. Recuperados: 96
+Paso: 385. Sanos: 7. Enfermos: 56. Muertos: 41. Recuperados: 96
+Paso: 388. Sanos: 7. Enfermos: 55. Muertos: 41. Recuperados: 97
+Paso: 389. Sanos: 7. Enfermos: 54. Muertos: 41. Recuperados: 98
+Paso: 391. Sanos: 7. Enfermos: 53. Muertos: 42. Recuperados: 98
+Paso: 392. Sanos: 7. Enfermos: 52. Muertos: 42. Recuperados: 99
+Paso: 393. Sanos: 7. Enfermos: 51. Muertos: 43. Recuperados: 99
+Paso: 397. Sanos: 7. Enfermos: 50. Muertos: 43. Recuperados: 100
+Paso: 398. Sanos: 7. Enfermos: 49. Muertos: 43. Recuperados: 101
+Paso: 399. Sanos: 7. Enfermos: 48. Muertos: 44. Recuperados: 101
+Paso: 400. Sanos: 7. Enfermos: 47. Muertos: 44. Recuperados: 102
+Paso: 406. Sanos: 7. Enfermos: 46. Muertos: 44. Recuperados: 103
+Paso: 407. Sanos: 7. Enfermos: 45. Muertos: 45. Recuperados: 103
+Paso: 407. Sanos: 7. Enfermos: 44. Muertos: 45. Recuperados: 104
+Paso: 413. Sanos: 7. Enfermos: 43. Muertos: 46. Recuperados: 104
+Paso: 421. Sanos: 6. Enfermos: 44. Muertos: 46. Recuperados: 104
+Paso: 423. Sanos: 6. Enfermos: 43. Muertos: 46. Recuperados: 105
+Paso: 425. Sanos: 6. Enfermos: 42. Muertos: 47. Recuperados: 105
+Paso: 427. Sanos: 6. Enfermos: 41. Muertos: 47. Recuperados: 106
+Paso: 428. Sanos: 6. Enfermos: 40. Muertos: 47. Recuperados: 107
+Paso: 432. Sanos: 6. Enfermos: 39. Muertos: 47. Recuperados: 108
+Paso: 432. Sanos: 6. Enfermos: 38. Muertos: 47. Recuperados: 109
+Paso: 434. Sanos: 6. Enfermos: 37. Muertos: 47. Recuperados: 110
+Paso: 435. Sanos: 6. Enfermos: 36. Muertos: 47. Recuperados: 111
+Paso: 440. Sanos: 6. Enfermos: 35. Muertos: 47. Recuperados: 112
+Paso: 440. Sanos: 6. Enfermos: 34. Muertos: 47. Recuperados: 113
+Paso: 443. Sanos: 6. Enfermos: 33. Muertos: 48. Recuperados: 113
+Paso: 443. Sanos: 6. Enfermos: 32. Muertos: 48. Recuperados: 114
+Paso: 444. Sanos: 6. Enfermos: 31. Muertos: 48. Recuperados: 115
+Paso: 445. Sanos: 6. Enfermos: 30. Muertos: 48. Recuperados: 116
+Paso: 446. Sanos: 6. Enfermos: 29. Muertos: 48. Recuperados: 117
+Paso: 446. Sanos: 6. Enfermos: 28. Muertos: 48. Recuperados: 118
+Paso: 447. Sanos: 6. Enfermos: 27. Muertos: 48. Recuperados: 119
+Paso: 450. Sanos: 6. Enfermos: 26. Muertos: 48. Recuperados: 120
+Paso: 454. Sanos: 6. Enfermos: 25. Muertos: 49. Recuperados: 120
+Paso: 458. Sanos: 6. Enfermos: 24. Muertos: 50. Recuperados: 120
+Paso: 459. Sanos: 6. Enfermos: 23. Muertos: 51. Recuperados: 120
+Paso: 459. Sanos: 6. Enfermos: 22. Muertos: 52. Recuperados: 120
+Paso: 462. Sanos: 6. Enfermos: 21. Muertos: 52. Recuperados: 121
+Paso: 462. Sanos: 6. Enfermos: 20. Muertos: 52. Recuperados: 122
+Paso: 472. Sanos: 6. Enfermos: 19. Muertos: 53. Recuperados: 122
+Paso: 473. Sanos: 5. Enfermos: 20. Muertos: 53. Recuperados: 122
+Paso: 475. Sanos: 5. Enfermos: 19. Muertos: 54. Recuperados: 122
+Paso: 476. Sanos: 5. Enfermos: 18. Muertos: 55. Recuperados: 122
+Paso: 476. Sanos: 5. Enfermos: 17. Muertos: 55. Recuperados: 123
+Paso: 482. Sanos: 5. Enfermos: 16. Muertos: 55. Recuperados: 124
+Paso: 492. Sanos: 5. Enfermos: 15. Muertos: 56. Recuperados: 124
+Paso: 492. Sanos: 5. Enfermos: 14. Muertos: 56. Recuperados: 125
+Paso: 493. Sanos: 5. Enfermos: 13. Muertos: 56. Recuperados: 126
+Paso: 505. Sanos: 5. Enfermos: 12. Muertos: 56. Recuperados: 127
+Paso: 513. Sanos: 5. Enfermos: 11. Muertos: 56. Recuperados: 128
+Paso: 522. Sanos: 5. Enfermos: 10. Muertos: 56. Recuperados: 129
+Paso: 526. Sanos: 5. Enfermos: 9. Muertos: 56. Recuperados: 130
+Paso: 531. Sanos: 5. Enfermos: 8. Muertos: 57. Recuperados: 130
+Paso: 531. Sanos: 5. Enfermos: 7. Muertos: 57. Recuperados: 131
+Paso: 535. Sanos: 5. Enfermos: 6. Muertos: 57. Recuperados: 132
+Paso: 542. Sanos: 5. Enfermos: 5. Muertos: 57. Recuperados: 133
+Paso: 551. Sanos: 5. Enfermos: 4. Muertos: 57. Recuperados: 134
+Paso: 584. Sanos: 5. Enfermos: 3. Muertos: 57. Recuperados: 135
+Paso: 585. Sanos: 5. Enfermos: 2. Muertos: 57. Recuperados: 136
+Paso: 621. Sanos: 5. Enfermos: 1. Muertos: 57. Recuperados: 137
+Paso: 673. Sanos: 5. Enfermos: 0. Muertos: 57. Recuperados: 138
+Parametros seteados: Movilidad: 5. Mortalidad: 100.0
+Parametros seteados: Movilidad: 1. Mortalidad: 100.0
+Parametros seteados: Movilidad: 1. Mortalidad: 100.0
+Parametros seteados: Movilidad: 1. Mortalidad: 100.0
+Parametros seteados: Movilidad: 1. Mortalidad: 100.0
+Parametros seteados: Movilidad: 10. Mortalidad: 100.0
+Parametros seteados: Movilidad: 10. Mortalidad: 100.0
+Parametros seteados: Movilidad: 2000. Mortalidad: 100.0

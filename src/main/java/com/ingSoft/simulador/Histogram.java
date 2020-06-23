@@ -38,7 +38,7 @@ public class Histogram implements ActionListener,ObserverPoblacion{
 	public Histogram(Poblacion p, Simulador s){
 		
 		poblacion      = p;
-		simulacion     = s;
+		sim     = s;
 		pobSana        = poblacion.getCantSanos();
 		pobEnfermo     = poblacion.getCantEnfermos();
 		pobMuertos     = poblacion.getCantMuertos();
@@ -64,7 +64,7 @@ public class Histogram implements ActionListener,ObserverPoblacion{
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		if(e.getSource()==apply) {
-			sim.setMovilidad(Integer.valueOf(tasaMortalidad.getText()));
+			sim.setMortalidad((float)(Integer.valueOf(tasaMortalidad.getText())));
 			sim.setRadioContagio(Integer.valueOf(radioContagio.getText()));
 			sim.setMovilidad(Integer.valueOf(movilidad.getText()));
 			graphChoice = graph.getSelectedItem().toString();
@@ -94,6 +94,7 @@ public class Histogram implements ActionListener,ObserverPoblacion{
 		movilidad = new JTextField("",6);
 		graph = new JComboBox(s);
 		apply = new JButton("Apply");
+		apply.addActionListener(this);
 		
 		panel1.add(tasaMortalidad);
 		panel1.add(radioContagio);
