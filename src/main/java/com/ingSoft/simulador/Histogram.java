@@ -28,7 +28,7 @@ public class Histogram implements ObserverPoblacion,GraphicBehaviour{
 		data.addValue(pobMuertos,"3","Recuperadas");
 		data.addValue(pobRecuperados,"4","Muertas");
 		
-		JFreeChart graph = ChartFactory.createBarChart("", "", "Cantidad de Personas", data, PlotOrientation.VERTICAL, false, true, false);
+		JFreeChart graph = ChartFactory.createBarChart("", "", "", data, PlotOrientation.VERTICAL, false, true, false);
 		histograma = new ChartPanel(graph);
 		histograma.setBounds(100,100,10,10);
 	}

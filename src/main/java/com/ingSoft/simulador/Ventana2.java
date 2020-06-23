@@ -115,7 +115,7 @@ private JFrame ventana;
 		 }
 		 else if(e.getSource() == applyParam) {
 			//Setea los nuevos valores
-			 simulador.setMortalidad((float)(Integer.valueOf(tm.getText())));
+			 simulador.setMortalidad((float)(Integer.valueOf(tm.getText()))*(float)0.01);
 			 simulador.setRadioContagio(Integer.valueOf(rc.getText()));
 			 simulador.setMovilidad(Integer.valueOf(mov.getText()));
 		 }
@@ -280,7 +280,6 @@ private JFrame ventana;
 			 tm  = new JTextField("",6);
 			 rc  = new JTextField("",6);
 			 mov = new JTextField("",6);
-			 
 			 graph = new JComboBox(s);
 			 
 			 applyParam = new JButton("Params");
