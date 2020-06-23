@@ -1,19 +1,16 @@
 package com.ingSoft.simulador;
 
-import javax.swing.JFrame;
+
 
 public class MyThread extends Thread {
-
-	 private  Simulador s;
+	
+    private  Simulador s;
    
     public MyThread (Simulador s) {
-		     this.s = s;
-		     
+		     this.s = s;	     
 	}
 
-	
 	public void run() {
 		 s.simular();
 	}
-
 }

@@ -26,6 +26,15 @@ private JFrame ventana;
 	private ButtonGroup group;
 	private Container cp; 
 	
+	private FrameGrafico frameGrafico;
+	private JTextField tm; //tasa mortalidad
+	private JTextField rc; //radio de contagio 
+	private JTextField mov;//movilidad
+	private JComboBox  graph;
+	private JButton    apply;
+
+	
+	private Simulador simulador;
 	public static int poblacionTotal;
 	public static int pobTotInfectados;
 	public static int tasaMortalidad;
@@ -35,6 +44,7 @@ private JFrame ventana;
 	public static int movilidad;
 	public static int tiempoSimulacion;
 	public String grafico;
+	
 	
 	
 	
@@ -54,9 +64,12 @@ private JFrame ventana;
     //Metodo que permite deterimar si hay cambio en los botones
 	@Override
 	public void actionPerformed(ActionEvent e) {
-
+         frameGrafico = new FrameGrafico();
+         
 		 if (e.getSource()==aceptar) {
+			 
 	        try {     
+
 	             poblacionTotal   = Integer.valueOf(whiteSpaces.get(0).getText());
 				 pobTotInfectados = Integer.valueOf(whiteSpaces.get(1).getText());
 				 tasaMortalidad   = Integer.valueOf(whiteSpaces.get(2).getText());
@@ -65,20 +78,37 @@ private JFrame ventana;
 				 areaParam        = Integer.valueOf(whiteSpaces.get(5).getText());
 				 movilidad        = Integer.valueOf(whiteSpaces.get(6).getText());
 				 tiempoSimulacion = Integer.valueOf(whiteSpaces.get(7).getText());
-				 grafico = (group.getSelection()==rb1) ? "Histogram":(group.getSelection()==rb2) ? "Pie":"Line";
-				 ventana.setVisible(false);
-				 startSim(poblacionTotal,pobTotInfectados,tasaMortalidad,tiempoIncubacion,radioContagio,areaParam,movilidad,tiempoSimulacion);
 				 
+				 startSim(poblacionTotal,pobTotInfectados,tasaMortalidad,tiempoIncubacion,radioContagio,areaParam,movilidad,tiempoSimulacion);
+				
+				 if(rb1.isSelected()) {
+					 frameGrafico.setJChart(new  Histogram(simulador));
+					 
+				 }
+				 else if(rb2.isSelected()) {
+					 frameGrafico.setJChart(new  PieChart(simulador));
+					
+				 }
+				 else if (rb3.isSelected()){
+					 frameGrafico.setJChart(new  LineChart(simulador));
+					
+				 }
+				 
+				 ventana.setVisible(false);
+				 parameterConfig();
 	        }
 	        catch(NumberFormatException error) {
 	        	JOptionPane.showMessageDialog(null, "Las casillas no pueden estar vacias", "Error", JOptionPane.ERROR_MESSAGE);
 	        }
-	        //ACA se deberia llamar a la ventana3
 	           
 	        }
 		 else if(e.getSource() == cancelar) {
 			 ventana.dispatchEvent(new WindowEvent(ventana, WindowEvent.WINDOW_CLOSING));
-		 } 
+		 }
+		 else if (e.getSource() == apply){
+			 System.out.println("SON OF A BITCH. IM IN");
+			 
+		 }
 	  }
 	
 		public void validarDatos() {
@@ -125,7 +155,6 @@ private JFrame ventana;
 		    	
 		    	panel.add(new JLabel(nombre.get(i)));
 		    	panel.add(whiteSpaces.get(i));
-		    	
 		    }
 			
 			
@@ -147,7 +176,6 @@ private JFrame ventana;
 			cp.add(panelRadio,BorderLayout.CENTER);
 			cp.add(panelBoton,BorderLayout.SOUTH);
 			ventana.setVisible(true);
-			
 		}
 		
 		public static ArrayList<Integer> getParametrosSimulacion(){
@@ -194,6 +222,7 @@ private JFrame ventana;
 			//Se inicializa con "aceptar" deshabilitado
 			aceptar.setEnabled(false);
 			//Se a�ade a ButtonGrup a los radioButton
+			
 		    group = new ButtonGroup();
 			group.add(rb1);
 			group.add(rb2);
@@ -205,28 +234,25 @@ private JFrame ventana;
 		
 		//Aca se ejecuta el simulador de contagios
 		public  void startSim(int poblacionTotal, int pobTotInfectados, int tasaMortalidad, int tiempoIncubacion, int radioContagio, int areaParam, int movilidad, int tiempoSimulacion) {
+			
 			Area area = new Area(areaParam,areaParam);
 			Poblacion p = new Poblacion(area,poblacionTotal ,pobTotInfectados);
-			Simulador simulador = new Simulador(area,p);
+		    simulador = new Simulador(area,p);
 			Log log = new Log(simulador);
 			LogWriter logwriter = new LogWriter(simulador);
-			//PieChart pie = new PieChart(simulador);
-			//LineChart xy = new LineChart(simulador);
+
 			simulador.setVisor(VisorSimulador.getVisor());
 			simulador.setMortalidad((float)(0.01*tasaMortalidad));
 			simulador.setMovilidad(movilidad);
 			simulador.setDuracionEnfermedad(tiempoIncubacion);
 			simulador.setTiempoSimulacion(tiempoSimulacion);
 			simulador.setRadioContagio(radioContagio);
-			Formulario f = new Formulario(simulador);
-	        f.setVisible(true);
+			
+			/*Formulario f = new Formulario(simulador);
+	        f.setVisible(true);*/
 		
 			log.displayPoblacion();
-	        
-			Histogram histo = new Histogram(p,simulador);
-			//Observer
-			p.atachObserverPoblacion(histo);
-			
+		    //visor simulador
 			JFrame j1 = new JFrame("Simulacion de contagios");
 		    j1.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	        j1.setVisible(true);
@@ -236,8 +262,50 @@ private JFrame ventana;
 		    MyThread t = new MyThread(simulador);
 
 	        t.start();
-	        System.out.println("Estado de hilo"+ Thread.currentThread().getName()+" : "+Thread.currentThread().getState());
+	       // System.out.println("Estado de hilo"+ Thread.currentThread().getName()+" : "+Thread.currentThread().getState());
 	        
+		}
+		
+		public void parameterConfig() {
+			 String s[] = {"Histogram","Pie","Line"};
+			 JFrame ventana = new JFrame();
+		     ventana.setSize(500,100);
+		     ventana.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+			 ventana.setLocationRelativeTo(null);
+			
+			 JPanel panel1 = new JPanel();
+			 JPanel panel2 = new JPanel();
+
+			 tm  = new JTextField("",6);
+			 rc  = new JTextField("",6);
+			 mov = new JTextField("",6);
+			 
+			 graph = new JComboBox(s);
+			 apply = new JButton("Apply");
+			 apply.addActionListener(this);
+
+			 //creacion de panel 1 y 2
+			 panel1.add(tm);
+			 panel1.add(rc);
+			 panel1.add(mov);
+			 panel1.add(graph);
+			 panel1.add(apply);
+
+			 panel2.setLayout(new GridLayout(1,5));
+			 panel2.add(new JLabel("Tasa Mortalidad/"));
+			 panel2.add(new JLabel("Radio Contagio/"));
+			 panel2.add(new JLabel("Movilidad/"));
+			 panel2.add(new JLabel("Graph"));
+   
+			 
+			 ventana.add(panel1,BorderLayout.CENTER);
+			 ventana.add(panel2,BorderLayout.NORTH);
+			 //ventana.add(histograma,BorderLayout.SOUTH);
+			 ventana.setVisible(true);
+			 
+			 
+		     
+			
 		}
 
 
