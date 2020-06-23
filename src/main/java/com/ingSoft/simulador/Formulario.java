@@ -5,6 +5,7 @@ import java.awt.event.*;
 public class Formulario extends JFrame implements ActionListener {
     JButton boton1, boton2;
     Simulador simulador;
+    FrameGrafico frame;
     public Formulario(Simulador s) {
     	simulador = s;
         setLayout(null);
@@ -17,16 +18,21 @@ public class Formulario extends JFrame implements ActionListener {
         boton1.addActionListener(this);
         boton2.addActionListener(this);
         pack();
+        frame = new FrameGrafico();
+        
         
     }
     
     public void actionPerformed(ActionEvent e) {
     	if (e.getSource()==boton1) {
-            simulador.setMovilidad(simulador.getMovilidad()+1);
+    		frame.setJChart(new LineChart(simulador));
+    		
         }
     	if (e.getSource()==boton2) {
-            simulador.setMovilidad(simulador.getMovilidad()-1);
+    		frame.setJChart(new PieChart(simulador));
+
         }
+    	
     }
 
     

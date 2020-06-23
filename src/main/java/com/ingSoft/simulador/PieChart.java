@@ -7,7 +7,7 @@ import org.jfree.chart.ChartPanel;
 import org.jfree.chart.JFreeChart;
 import org.jfree.data.general.DefaultPieDataset;
 
-public class PieChart implements ObserverPoblacion {
+public class PieChart implements ObserverPoblacion, GraphicBehaviour {
 	DefaultPieDataset dataset;
 	Simulador simulador;
 	Poblacion p;
@@ -26,13 +26,6 @@ public class PieChart implements ObserverPoblacion {
 
 		JFreeChart chart = ChartFactory.createPieChart("Repeticion de randoms", dataset, true, true, true);
 		panel = new ChartPanel(chart);
-		
-		
-		JFrame frame = new JFrame("CrearGraficos - LineaDeCodigo");
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		frame.add(panel);
-		frame.pack();
-		frame.setVisible(true);
 
 	}
 	public ChartPanel getPanel() {

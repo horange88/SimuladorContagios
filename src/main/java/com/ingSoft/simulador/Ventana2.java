@@ -210,15 +210,17 @@ private JFrame ventana;
 			Simulador simulador = new Simulador(area,p);
 			Log log = new Log(simulador);
 			LogWriter logwriter = new LogWriter(simulador);
-			PieChart pie = new PieChart(simulador);
-			LineChart xy = new LineChart(simulador);
+			//PieChart pie = new PieChart(simulador);
+			//LineChart xy = new LineChart(simulador);
 			simulador.setVisor(VisorSimulador.getVisor());
 			simulador.setMortalidad((float)(0.01*tasaMortalidad));
 			simulador.setMovilidad(movilidad);
 			simulador.setDuracionEnfermedad(tiempoIncubacion);
 			simulador.setTiempoSimulacion(tiempoSimulacion);
 			simulador.setRadioContagio(radioContagio);
-			
+			Formulario f = new Formulario(simulador);
+	        f.setVisible(true);
+		
 			log.displayPoblacion();
 	        
 			Histogram histo = new Histogram(p,simulador);

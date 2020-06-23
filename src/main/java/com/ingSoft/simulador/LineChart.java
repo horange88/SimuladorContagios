@@ -8,7 +8,7 @@ import org.jfree.chart.JFreeChart;
 import org.jfree.chart.plot.PlotOrientation;
 import org.jfree.data.category.DefaultCategoryDataset;
 
-public class LineChart implements ObserverPoblacion {
+public class LineChart implements ObserverPoblacion, GraphicBehaviour {
 	DefaultCategoryDataset dataset;
 	Simulador simulador;
 	Poblacion p;
@@ -28,12 +28,6 @@ public class LineChart implements ObserverPoblacion {
 		JFreeChart chart = ChartFactory.createLineChart("Repeticion de randoms", "", "", dataset,
 				PlotOrientation.VERTICAL, true, true, true);
 		panel = new ChartPanel(chart);
-
-		JFrame frame = new JFrame("CrearGraficos - LineaDeCodigo");
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		frame.add(panel);
-		frame.pack();
-		frame.setVisible(true);
 
 	}
 
