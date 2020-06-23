@@ -13,6 +13,7 @@ public class LineChart implements ObserverPoblacion, GraphicBehaviour {
 	Simulador simulador;
 	Poblacion p;
 	ChartPanel panel;
+	JFrame frame;
 
 	public LineChart(Simulador s) {
 		simulador = s;
@@ -28,6 +29,7 @@ public class LineChart implements ObserverPoblacion, GraphicBehaviour {
 		JFreeChart chart = ChartFactory.createLineChart("Repeticion de randoms", "", "", dataset,
 				PlotOrientation.VERTICAL, true, true, true);
 		panel = new ChartPanel(chart);
+
 
 	}
 

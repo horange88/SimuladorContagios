@@ -12,6 +12,7 @@ public class PieChart implements ObserverPoblacion, GraphicBehaviour {
 	Simulador simulador;
 	Poblacion p;
 	ChartPanel panel;
+	JFrame frame;
 
 	public PieChart(Simulador s) {
 		simulador = s;

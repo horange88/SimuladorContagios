@@ -17,6 +17,7 @@ public class FrameGrafico extends JFrame{
 	public void setJChart(GraphicBehaviour chart) {
 		getContentPane().removeAll();
 		add(chart.getPanel());
+		pack();
 		repaint();;
 	}
 

@@ -6,6 +6,8 @@ public class Formulario extends JFrame implements ActionListener {
     JButton boton1, boton2;
     Simulador simulador;
     FrameGrafico frame;
+    LineChart lc;
+    PieChart pc;
     public Formulario(Simulador s) {
     	simulador = s;
         setLayout(null);
@@ -19,17 +21,19 @@ public class Formulario extends JFrame implements ActionListener {
         boton2.addActionListener(this);
         pack();
         frame = new FrameGrafico();
+        lc = new LineChart(simulador);
+        pc = new PieChart(simulador);
         
         
     }
     
     public void actionPerformed(ActionEvent e) {
     	if (e.getSource()==boton1) {
-    		frame.setJChart(new LineChart(simulador));
+    		frame.setJChart(lc);
     		
         }
     	if (e.getSource()==boton2) {
-    		frame.setJChart(new PieChart(simulador));
+    		frame.setJChart(pc);
 
         }
     	
