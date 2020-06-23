@@ -13,10 +13,7 @@ public class MyThread extends Thread {
 
 	
 	public void run() {
-		// TODO Auto-generated method stub
 		 s.simular();
-		 System.out.println("SON OF A BITCH, IM IN");
-	
 	}
 
 }
