@@ -190,30 +190,22 @@ public class Simulador implements SubjectParametros {
 		}
 		visor.redibujar();
 		try {
-
 			Thread.sleep(10);
 		} catch (Exception e) {
-
 		}
-
 	}
-
 	@Override
 	public void atachObserverParametros(ObserverParametros o) {
 		observers.add(o);
-
 	}
 
 	@Override
 	public void detachObserverParametros(ObserverParametros o) {
 		int i = observers.lastIndexOf(o);
 		if (i >= 0) {
-
 			observers.remove(i);
 		}
-
 	}
-
 	@Override
 	public void notifyObserverParametros() {
 		for (int i = 0; i < observers.size(); i++) {
@@ -221,5 +213,4 @@ public class Simulador implements SubjectParametros {
 			observer.updateParametros();
 		}
 	}
-
 }

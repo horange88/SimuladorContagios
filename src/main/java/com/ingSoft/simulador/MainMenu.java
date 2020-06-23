@@ -20,11 +20,6 @@ public class MainMenu {
 		static JFrame ventana;
 		static Ventana2 v2;
 		
-		//---------------------
-		private static  JFrame ventana3;
-		private  JPanel p2;
-		//----------------------
-		
 	public void main() {
 		v2 = new Ventana2();
 		
@@ -73,30 +68,6 @@ public class MainMenu {
 	public static void historialSim() {
 		/*HistorialMenu hm = new HistorialMenu();
 		hm.main(ventana);*/
-		//Histogram histo = new Histogram();
-		
-	   /* ventana3 = new JFrame("Histogramita");
-		ventana3.setSize(800,600);
-		ventana3.setLocationRelativeTo(null);
-		ventana3.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);	
-		//ventana3.add(panel);
-		JPanel panel = new JPanel();
-		panel.setLayout(new FlowLayout());
-		panel.add(new JButton("presioname :)"));
-		
-		JPanel panelDePaneles = new JPanel();
-		
-		panelDePaneles.setLayout(new FlowLayout());
-		panelDePaneles.add(histo.getPanel(),BorderLayout.WEST);
-		panelDePaneles.add(new JButton("holis"));
-		
-		Container cp = ventana3.getContentPane();
-		//cp.setLayout(new FlowLayout());
-		
-		cp.add(panel,BorderLayout.NORTH);
-		cp.add(panelDePaneles,BorderLayout.SOUTH);
-		ventana3.setVisible(true);*/
-
 	}
 	
 	
