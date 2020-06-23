@@ -255,6 +255,7 @@ private JFrame ventana;
 		    //visor simulador
 			JFrame j1 = new JFrame("Simulacion de contagios");
 		    j1.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		    j1.setLocation(80,320);
 	        j1.setVisible(true);
 		    j1.add(simulador.getVisor().getPanel());
 		    j1.pack();
@@ -266,9 +267,9 @@ private JFrame ventana;
 		public void parameterConfig() {
 			 String s[] = {"Histogram","Pie","Line"};
 			 JFrame ventana = new JFrame();
-		     ventana.setSize(500,100);
+		     ventana.setSize(520,100);
 		     ventana.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-			 ventana.setLocationRelativeTo(null);
+			 ventana.setLocation(80,200);
 			
 			 JPanel panel1 = new JPanel();
 			 JPanel panel2 = new JPanel();

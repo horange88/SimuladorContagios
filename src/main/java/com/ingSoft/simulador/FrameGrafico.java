@@ -11,6 +11,7 @@ import org.jfree.chart.JFreeChart;
 public class FrameGrafico extends JFrame{
 
 	public FrameGrafico() {
+		this.setLocation(600,200);
 		this.setVisible(true);
 		setTitle("grafico variable");
 	}
