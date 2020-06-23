@@ -31,7 +31,7 @@ private JFrame ventana;
 	private Container cp; 
 	
 	private JComboBox  graph;
-	private JButton    apply;
+	private JButton    applyParam,applyGraph;
 	private JTextField tm;     //tasa mortalidad
 	private JTextField rc;     //radio de contagio 
 	private JTextField mov;    //movilidad
@@ -102,7 +102,7 @@ private JFrame ventana;
 			 ventana.dispatchEvent(new WindowEvent(ventana, WindowEvent.WINDOW_CLOSING));
 			 
 		 }   //Cambio del modelo en tiempo real
-		 else if (e.getSource() == apply){
+		 else if (e.getSource() == applyGraph){
 			 if(graph.getSelectedItem()=="Histogram") {
 				 frameGrafico.setJChart(new Histogram(simulador));
 			 }
@@ -112,12 +112,14 @@ private JFrame ventana;
 			 else if (graph.getSelectedItem()=="Line"){
 				 frameGrafico.setJChart(new LineChart(simulador));
 			 }
-			 //Setea los nuevos valores
+		 }
+		 else if(e.getSource() == applyParam) {
+			//Setea los nuevos valores
 			 simulador.setMortalidad((float)(Integer.valueOf(tm.getText())));
 			 simulador.setRadioContagio(Integer.valueOf(rc.getText()));
 			 simulador.setMovilidad(Integer.valueOf(mov.getText()));
-		  }
-	    }
+		 }
+	}
 	    //validar datos
 		public void validarDatos() {
 			boolean isNull=false;
@@ -281,15 +283,18 @@ private JFrame ventana;
 			 
 			 graph = new JComboBox(s);
 			 
-			 apply = new JButton("Apply");
-			 apply.addActionListener(this);
+			 applyParam = new JButton("Params");
+			 applyParam.addActionListener(this);
+			 applyGraph = new JButton("Graph");
+			 applyGraph.addActionListener(this);
 
 			 //creacion de panel 1 y 2
 			 panel1.add(tm);
 			 panel1.add(rc);
 			 panel1.add(mov);
 			 panel1.add(graph);
-			 panel1.add(apply);
+			 panel1.add(applyParam);
+			 panel1.add(applyGraph);
 
 			 panel2.setLayout(new GridLayout(1,5));
 			 panel2.add(new JLabel("Tasa Mortalidad/"));
