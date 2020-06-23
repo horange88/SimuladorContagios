@@ -150,7 +150,7 @@ private JFrame ventana;
 		}
 		//Armado de ventana
 		public void armadoVentana() {
-			ventana = new JFrame("ventanita");
+			ventana = new JFrame("Nueva Simulacion");
 			ventana.setSize(350,400); 
 			ventana.setLocationRelativeTo(null);
 			ventana.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -203,14 +203,14 @@ private JFrame ventana;
 			whiteSpaces = new ArrayList<JTextField>();
 			nombre      = new ArrayList<String>();
 		
-			nombre.add("poblacion total");
-			nombre.add("poblacion inicial infectados");
-			nombre.add("tasa de mortalidad");
-			nombre.add("tiempo de incubacion");
-			nombre.add("radio de contagio");
+			nombre.add("Poblacion Total");
+			nombre.add("Poblacion Inicial Infectados");
+			nombre.add("Tasa de Mortalidad");
+			nombre.add("Tiempo de Incubacion");
+			nombre.add("Radio de Contagio");
 			nombre.add("Area");
-			nombre.add("movilidad");
-			nombre.add("tiempo de simulacion (seg)");
+			nombre.add("Movilidad");
+			nombre.add("Pasos de Simulacion");
 			
 			for(int i=0; i<8;i++) {
 				whiteSpaces.add(new JTextField(10));
@@ -256,7 +256,7 @@ private JFrame ventana;
 			log.displayPoblacion();
 			
 		    //visor simulador
-			JFrame j1 = new JFrame("Simulacion de contagios");
+			JFrame j1 = new JFrame("Simulacion de Contagios");
 		    j1.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		    j1.setLocation(80,320);
 	        j1.setVisible(true);
@@ -296,14 +296,14 @@ private JFrame ventana;
 			 panel1.add(applyParam);
 			 panel1.add(applyGraph);
 
-			 panel2.setLayout(new GridLayout(1,5));
+			 panel2.setLayout(new GridLayout(1,4));
 			 panel2.add(new JLabel("Tasa Mortalidad/"));
 			 panel2.add(new JLabel("Radio Contagio/"));
 			 panel2.add(new JLabel("Movilidad/"));
 			 panel2.add(new JLabel("Graph"));
    
-			 ventana.add(panel1,BorderLayout.CENTER);
-			 ventana.add(panel2,BorderLayout.NORTH);
+			 ventana.add(panel1,BorderLayout.SOUTH);
+			 ventana.add(panel2,BorderLayout.WEST);
 			 //ventana.add(histograma,BorderLayout.SOUTH);
 			 ventana.setVisible(true);
 		}
