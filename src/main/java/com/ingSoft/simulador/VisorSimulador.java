@@ -9,14 +9,14 @@ import java.util.*;
 
 /**
  * Lienzo es una clase para permitir el dibujo de gr�ficos simples sobre un canvas.
- * Esta es una modificaci�n de la clase Canvas de prop�sitos generales, desarrollada
+ * Esta es una modificacin de la clase Canvas de prop�sitos generales, desarrollada
  * especialmente para el ejemplo de "formas" en BlueJ.
  *
  * @author: Bruce Quig
  * @author: Michael Kolling (mik)
  *
  * @version 2006.03.30
- * Traducci�n Carlos A. Bart�
+ * 
  */
 public class VisorSimulador
 {

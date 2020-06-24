@@ -1,5 +1,7 @@
 package com.ingSoft.simulador;
 
+import java.io.File;
+import java.io.FileWriter;
 import java.util.ArrayList;
 
 public class Simulador implements SubjectParametros {
@@ -80,12 +82,12 @@ public class Simulador implements SubjectParametros {
 		return mortalidad;
 	}
 
-	public void setMortalidad(float mortalidad) {
-		this.mortalidad = mortalidad;
-		poblacion.setMortalidad(mortalidad);
+	public void setMortalidad(float d) {
+		this.mortalidad = d;
+		poblacion.setMortalidad(d);
 		notifyObserverParametros();
 	}
-
+	
 	public int getTiempoSimulacion() {
 		return tiempoSimulacion;
 	}
@@ -100,12 +102,19 @@ public class Simulador implements SubjectParametros {
 
 	public void setRadioContagio(int radioContagio) {
 		this.radioContagio = radioContagio;
+		notifyObserverParametros();
 	}
 
 	public void simular() {
 		for (int i = 0; i < tiempoSimulacion; i++) {
 			simularUnPaso();
+			try {
+				Thread.sleep(100);
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
 		}
+		simulationEnd();
 	}
 
 	public void simularUnPaso() {
@@ -182,30 +191,25 @@ public class Simulador implements SubjectParametros {
 		}
 		visor.redibujar();
 		try {
-
 			Thread.sleep(10);
-		} catch (Exception e) {
-
+		} 
+		catch (Exception e) {
 		}
-
 	}
-
+	
 	@Override
 	public void atachObserverParametros(ObserverParametros o) {
 		observers.add(o);
-
 	}
 
 	@Override
 	public void detachObserverParametros(ObserverParametros o) {
 		int i = observers.lastIndexOf(o);
 		if (i >= 0) {
-
 			observers.remove(i);
 		}
-
 	}
-
+	
 	@Override
 	public void notifyObserverParametros() {
 		for (int i = 0; i < observers.size(); i++) {
@@ -213,5 +217,24 @@ public class Simulador implements SubjectParametros {
 			observer.updateParametros();
 		}
 	}
-
+	
+	public void simulationEnd() {
+		try {
+		File historial = new File("historial.log");
+		FileWriter fw = new FileWriter(historial,true);
+		
+		fw.write("Cantidad de sanos: "+poblacion.getCantSanos());
+		fw.write("\r\n");
+		fw.write("Cantidad de enfermos: "+poblacion.getCantEnfermos());
+		fw.write("\r\n");
+		fw.write("Cantidad de muertos: "+poblacion.getCantMuertos());
+		fw.write("\r\n");
+		fw.write("Cantidad de recuperados: "+poblacion.getCantRecuperados());
+		fw.write("\r\n");
+		fw.close();
+		}
+		catch(Exception e){
+			e.printStackTrace();
+		}
+	}
 }
