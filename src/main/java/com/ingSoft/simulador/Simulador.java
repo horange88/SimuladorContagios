@@ -1,5 +1,7 @@
 package com.ingSoft.simulador;
 
+import java.io.File;
+import java.io.FileWriter;
 import java.util.ArrayList;
 
 public class Simulador implements SubjectParametros {
@@ -108,12 +110,10 @@ public class Simulador implements SubjectParametros {
 			try {
 				Thread.sleep(100);
 			} catch (InterruptedException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-			
 		}
-		
+		simulationEnd();
 	}
 
 	public void simularUnPaso() {
@@ -191,9 +191,11 @@ public class Simulador implements SubjectParametros {
 		visor.redibujar();
 		try {
 			Thread.sleep(10);
-		} catch (Exception e) {
+		} 
+		catch (Exception e) {
 		}
 	}
+	
 	@Override
 	public void atachObserverParametros(ObserverParametros o) {
 		observers.add(o);
@@ -206,11 +208,32 @@ public class Simulador implements SubjectParametros {
 			observers.remove(i);
 		}
 	}
+	
 	@Override
 	public void notifyObserverParametros() {
 		for (int i = 0; i < observers.size(); i++) {
 			ObserverParametros observer = (ObserverParametros) observers.get(i);
 			observer.updateParametros();
+		}
+	}
+	
+	public void simulationEnd() {
+		try {
+		File historial = new File("historial.log");
+		FileWriter fw = new FileWriter(historial,true);
+		
+		fw.write("Cantidad de sanos: "+poblacion.getCantSanos());
+		fw.write("\r\n");
+		fw.write("Cantidad de enfermos: "+poblacion.getCantEnfermos());
+		fw.write("\r\n");
+		fw.write("Cantidad de muertos: "+poblacion.getCantMuertos());
+		fw.write("\r\n");
+		fw.write("Cantidad de recuperados: "+poblacion.getCantRecuperados());
+		fw.write("\r\n");
+		fw.close();
+		}
+		catch(Exception e){
+			e.printStackTrace();
 		}
 	}
 }
