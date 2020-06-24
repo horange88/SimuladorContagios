@@ -25,7 +25,7 @@ public class PieChart implements ObserverPoblacion, GraphicBehaviour {
 		dataset.insertValue(2, "Recuperados", p.getCantRecuperados());
 		dataset.insertValue(3, "Muertos", p.getCantMuertos());
 
-		JFreeChart chart = ChartFactory.createPieChart("Repeticion de randoms", dataset, true, true, true);
+		JFreeChart chart = ChartFactory.createPieChart("", dataset, true, true, true);
 		panel = new ChartPanel(chart);
 
 	}

@@ -26,7 +26,7 @@ public class LineChart implements ObserverPoblacion, GraphicBehaviour {
 		dataset.addValue(p.getCantRecuperados(), "Recuperados", "0");
 		dataset.addValue(p.getCantMuertos(), "Muertos", "0");
 
-		JFreeChart chart = ChartFactory.createLineChart("Repeticion de randoms", "", "", dataset,
+		JFreeChart chart = ChartFactory.createLineChart("", "", "", dataset,
 				PlotOrientation.VERTICAL, true, true, true);
 		panel = new ChartPanel(chart);
 	}

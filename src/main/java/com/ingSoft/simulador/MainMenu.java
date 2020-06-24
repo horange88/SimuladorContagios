@@ -66,8 +66,8 @@ public class MainMenu {
 	}
 	
 	public static void historialSim() {
-		/*HistorialMenu hm = new HistorialMenu();
-		hm.main(ventana);*/
+		HistorialMenu hm = new HistorialMenu();
+		hm.main(ventana);
 	}
 	
 	
