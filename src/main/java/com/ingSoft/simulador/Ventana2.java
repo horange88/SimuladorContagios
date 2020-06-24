@@ -273,12 +273,16 @@ private JFrame ventana;
 		public void parameterConfig() {
 			 String s[] = {"Histogram","Pie","Line"};
 			 JFrame ventana = new JFrame();
-		     ventana.setSize(520,100);
+			 
+			 
+			 DisplayInfo display = new DisplayInfo(simulador);
+			 
+		     ventana.setSize(700,100);
 		     ventana.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 			 ventana.setLocation(80,200);
 			
 			 JPanel panel1 = new JPanel();
-			 JPanel panel2 = new JPanel();
+			 JPanel panel3 = new JPanel();
 
 			 tm  = new JTextField("",6);
 			 rc  = new JTextField("",6);
@@ -298,14 +302,17 @@ private JFrame ventana;
 			 panel1.add(applyParam);
 			 panel1.add(applyGraph);
 
-			 panel2.setLayout(new GridLayout(1,4));
-			 panel2.add(new JLabel("Tasa Mortalidad/"));
-			 panel2.add(new JLabel("Radio Contagio/"));
-			 panel2.add(new JLabel("Movilidad/"));
-			 panel2.add(new JLabel("Graph"));
-   
+			 panel3.add(display.getLabelMortalidad());
+			 panel3.add(display.getLabelRadio());
+			 panel3.add(display.getLabelMovilidad());
+			 panel3.add(display.getLabelSanos());
+			 panel3.add(display.getLabelEnfermos());
+			 panel3.add(display.getLabelRecuperados());
+			 panel3.add(display.getLabelMuertos());
+
 			 ventana.add(panel1,BorderLayout.SOUTH);
-			 ventana.add(panel2,BorderLayout.WEST);
+			 ventana.add(panel3,BorderLayout.WEST);
+
 			 //ventana.add(histograma,BorderLayout.SOUTH);
 			 ventana.setVisible(true);
 		}

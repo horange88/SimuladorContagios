@@ -100,6 +100,7 @@ public class Simulador implements SubjectParametros {
 
 	public void setRadioContagio(int radioContagio) {
 		this.radioContagio = radioContagio;
+		notifyObserverParametros();
 	}
 
 	public void simular() {
