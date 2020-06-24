@@ -293,7 +293,7 @@ private JFrame ventana;
 			 
 			 DisplayInfo display = new DisplayInfo(simulador);
 			 
-		     ventana.setSize(700,100);
+		     ventana.setSize(530,100);
 		     ventana.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 			 ventana.setLocation(80,200);
 			

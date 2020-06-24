@@ -28,9 +28,9 @@ public class DisplayInfo implements ObserverPoblacion, ObserverParametros {
 		labelRecuperados.setText("Recuperados: "+poblacion.getCantRecuperados());
 		labelMuertos.setText("Muertos: "+poblacion.getCantMuertos());
 		
-		labelMortalidad.setText("Tasa de Mortalidad: "+(int)(simulador.getMortalidad()*100)+"%");
-		labelMovilidad.setText("Movilidad: "+simulador.getMovilidad());
-		labelRadio.setText("R. Contagio: "+simulador.getRadioContagio());
+		labelMortalidad.setText("T.de Mort.: "+(int)(simulador.getMortalidad()*100)+"%");
+		labelMovilidad.setText("Mov.: "+simulador.getMovilidad());
+		labelRadio.setText("R.Cont.: "+simulador.getRadioContagio());
 	}
 	
 	public JLabel getLabelRadio() {
