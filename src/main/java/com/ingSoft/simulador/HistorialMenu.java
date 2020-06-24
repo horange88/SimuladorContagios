@@ -7,14 +7,18 @@ import java.awt.GridBagLayout;
 import java.awt.Insets;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.io.IOException;
 
 import javax.swing.JButton;
+import javax.swing.JEditorPane;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
+import javax.swing.JTextPane;
 
 public class HistorialMenu implements ActionListener {
 	private JFrame ventana,historial;
@@ -23,13 +27,28 @@ public class HistorialMenu implements ActionListener {
 	private JTextField enterField;
 	private File file;
 	private FileReader fr;
+	private BufferedReader br;
+	private StringBuffer sb;
+	private String line;
+	private JTextPane editor;
+	private int counter = 0;
+	
 	public void main(JFrame v) {
 		this.ventana = v;
+		editor = new JTextPane();
 		
 		file = new File("historial.log");
 		try {
 			fr = new FileReader(file);
-		} catch (FileNotFoundException e) {
+			br = new BufferedReader(fr);
+			sb = new StringBuffer();
+		while((line=br.readLine()) != null) {
+			sb.append(line);
+			sb.append("\n");
+			editor.setText("Todavia no funciona :(");
+		}
+			
+		} catch (IOException e) {
 			e.printStackTrace();
 		}
 		
@@ -58,6 +77,8 @@ public class HistorialMenu implements ActionListener {
 		c.insets = new Insets(10,10,10,10);
 		c.gridx = 0; c.gridy = 1;
 		
+		
+		historialPanel.add(editor);
 		enterPanel.add(enterField);
 		enterPanel.add(enterButton);
 		closePanel.add(closeButton);	
