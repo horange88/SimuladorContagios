@@ -21,8 +21,8 @@ public class MainMenu {
 		static Ventana2 v2;
 		
 	public void main() {
-		v2 = new Ventana2();
 		
+		v2 = new Ventana2();
 		ventana = new JFrame("Simulador de Contagios");
 		ventana.setVisible(true);
 		ventana.setSize(250, 250);

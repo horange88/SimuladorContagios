@@ -10,5 +10,6 @@ public class Main {
 		
 		MainMenu mm = new MainMenu();
 		mm.main();
+		
 	}
 }

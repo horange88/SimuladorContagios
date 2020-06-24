@@ -119,6 +119,10 @@ private JFrame ventana;
 			 simulador.setRadioContagio(Integer.valueOf(rc.getText()));
 			 simulador.setMovilidad(Integer.valueOf(mov.getText()));
 		 }
+		 else {
+			 System.out.println("Elemento: "+e.getActionCommand());
+			 PanelEditor pe = new PanelEditor();
+		 }
 	}
 	    //validar datos
 		public void validarDatos() {
@@ -161,6 +165,18 @@ private JFrame ventana;
 			JPanel panel = new JPanel();
 			GridLayout gl = new GridLayout(8,2,0,10);
 			panel.setLayout(gl);
+			
+			
+			JMenuBar barraDeMenu = new JMenuBar();
+		    ventana.setJMenuBar(barraDeMenu);
+		    
+		    JMenu ayuda = new JMenu("Open");
+		    barraDeMenu.add(ayuda);
+		    
+		    JMenuItem elementoAbrir = new JMenuItem("Help");
+		    elementoAbrir.addActionListener(this);
+		    ayuda.add(elementoAbrir);
+		
 		
 			//Inicializacion de frames, botones y botones redondos
 		    for(int i=0;i<8;i++) {
