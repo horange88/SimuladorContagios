@@ -1,4 +1,5 @@
 package com.ingSoft.simulador;
+//prueba
 
 public class Area {
 	private int ancho;
