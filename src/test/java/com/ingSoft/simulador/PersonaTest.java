@@ -7,7 +7,7 @@ import org.junit.Test;
 public class PersonaTest {
 
 	@Test
-	public void testVelocidadCalculaaDebeSerCero() {
+	public void testVelocidadCalculadaDebeSerCero() {
 		Area a = new Area(100,100);
 		Persona p = new Persona(a);
 		p.calcularVelocidad();
