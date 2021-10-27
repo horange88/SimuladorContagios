@@ -18,43 +18,43 @@ public class PosicionTest {
 		}
 	}
 
-	@Test
-	public void testMover() {
-		Area a = new Area(100,80);
-		Posicion p= new Posicion(a);
-		Velocidad v = new Velocidad();
-		p.setPosx(0);
-		p.setPosy(0);
-		v.setVelx(15);
-		v.setVely(10);
-		p.mover(v);
+	// @Test
+	// public void testMover() {
+	// 	Area a = new Area(100,80);
+	// 	Posicion p= new Posicion(a);
+	// 	Velocidad v = new Velocidad();
+	// 	p.setPosx(0);
+	// 	p.setPosy(0);
+	// 	v.setVelx(15);
+	// 	v.setVely(10);
+	// 	p.mover(v);
 		
-		assertEquals(15, p.getPosx());
-		assertEquals(10, p.getPosy());
-	}
+	// 	assertEquals(15, p.getPosx());
+	// 	assertEquals(10, p.getPosy());
+	// }
 	
-	@Test
-	public void testMoverNoDebeExcederLimites() {
-		Area a = new Area(100,80);
-		Posicion p= new Posicion(a);
-		Velocidad v = new Velocidad();
-		p.setPosx(0);
-		p.setPosy(0);
-		v.setVelx(-15);
-		v.setVely(-10);
-		p.mover(v);
+	// @Test
+	// public void testMoverNoDebeExcederLimites() {
+	// 	Area a = new Area(100,80);
+	// 	Posicion p= new Posicion(a);
+	// 	Velocidad v = new Velocidad();
+	// 	p.setPosx(0);
+	// 	p.setPosy(0);
+	// 	v.setVelx(-15);
+	// 	v.setVely(-10);
+	// 	p.mover(v);
 		
-		assertEquals(0, p.getPosx());
-		assertEquals(0, p.getPosy());
+	// 	assertEquals(0, p.getPosx());
+	// 	assertEquals(0, p.getPosy());
 		
-		p.setPosx(90);
-		p.setPosy(90);
-		v.setVelx(20);
-		v.setVely(30);
-		p.mover(v);
+	// 	p.setPosx(90);
+	// 	p.setPosy(90);
+	// 	v.setVelx(20);
+	// 	v.setVely(30);
+	// 	p.mover(v);
 		
-		assertEquals(90, p.getPosx());
-		assertEquals(90, p.getPosy());
-	}
+	// 	assertEquals(90, p.getPosx());
+	// 	assertEquals(90, p.getPosy());
+	// }
 
 }

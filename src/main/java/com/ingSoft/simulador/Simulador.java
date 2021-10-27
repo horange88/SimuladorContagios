@@ -99,7 +99,7 @@ public class Simulador implements SubjectParametros {
 	public int getRadioContagio() {
 		return radioContagio;
 	}
-
+// -------------------------------------------------------
 	public void setRadioContagio(int radioContagio) {
 		this.radioContagio = radioContagio;
 		notifyObserverParametros();
